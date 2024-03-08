@@ -60,12 +60,12 @@ Para dúvidas sobre como escrever a documentação, acesse a [documentação do 
 Para adição de conteúdo à documentação, você pode especificar que sua branch foca no desenvolvimento de uma feature.
 Por exemplo, para a adição de documentação sobre o deploy realizado pela diretoria de projetos, você pode nomear sua branch de:
 
-> feat:deploy-projetos
+> feat/deploy-projetos
 
 Para correção de algo na documentação, você pode agora especificar que sua branch foca em uma fix.
 Por exemplo, para correção da documentação de typescript, você pode nomear sua branch de:
 
-> fix:typescript
+> fix/typescript
 
 ### Crie uma PR com o nome da sua branch e elabore uma descrição explicativa
 
