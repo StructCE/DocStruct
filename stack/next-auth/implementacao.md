@@ -121,7 +121,7 @@ Com as credenciais armazenadas de forma segura em seu arquivo .env, você pode c
 ### Credentials (Interno)
 
 !!!warning
-É **necessário ter um serviço de autenticação externo, ou criar um do zero**, para poder usar o CredentialsProvider de forma realmente útil! O NextAuth nesse caso é muito menos útil! Considere recorrer a outras bibliotecas, como [Lucia Auth](https://lucia-auth.com/) ou [bcrypt](https://www.npmjs.com/package/bcrypt) para criptografar senhas.
+É **necessário ter um serviço de autenticação externo, ou criar um do zero**, para poder usar o CredentialsProvider de forma realmente útil! O NextAuth nesse caso é muito menos útil! Considere recorrer a outras bibliotecas, como [Lucia Auth](https://lucia-auth.com/) ou [bcrypt](https://www.npmjs.com/package/bcrypt) (criptografia de senhas).
 !!!
 
 O `credentials provider` permite lidar com o login usando credenciais arbitrárias, como nome de usuário e senha. A validação de sessão com base no banco de dados deve ser realizada de forma manual por meio da função `authorize()` na configuração dos providers no NextAuth.
@@ -180,7 +180,6 @@ providers: [
         name: user.name,
         email: user.email,
         image: user.image,
-        isAuthorized: user.isAuthorized,
       }
     }
   })
@@ -189,9 +188,8 @@ providers: [
 
 ```
 
-!!!
 Você também pode rejeitar este retorno de chamada com um erro, assim o `client-side` pode lidar com o erro dependendo do status e da mensagem passada como um parâmetro de consulta. No tratamento desse erro o usuário pode, por exemplo, receber um aviso ou ser redirecionado para uma página de registro, ajuda, etc.
-!!!
+
 
 ## Route Handler
 
@@ -309,7 +307,7 @@ Execução:
 
 !!!
 
-Quando chamado, o método `signOut()` encerra a sessão e por padrão redireciona o usuário à página inicial (`/`). Como na função de login você pode especificar o `callbackUrl` dentro do segundo parâmetro ou desativar o redirecionamento utilizando `redirect: false`.
+Quando chamado, o método `signOut()` encerra a sessão e por padrão redireciona o usuário à página inicial (`/`). Assim como na função de login, você pode especificar o `callbackUrl` dentro do segundo parâmetro ou desativar o redirecionamento utilizando `redirect: false`.
 
 ```js signOutButton.tsx
 import { signOut } from "next-auth/react";
@@ -325,11 +323,13 @@ export default function SignOutButton() {
 }
 ```
 
-!!!
-Se após o logout você precisar redirecionar para outra página sem recarregar a atual, você pode capturar a resposta da chamada da função: `const response = await signOut({redirect: false, callbackUrl: "/homepage"})`.
+
+Se após o logout você precisar redirecionar para outra página sem recarregar a atual, você pode capturar a resposta da chamada da função: 
+
+`const response = await signOut({redirect: false, callbackUrl: "/homepage"})`.
 
 Nessa linha, `response.url` é a URL validada para a qual você pode redirecionar o usuário, usando `useRouter().push(response.url)` do Next.js.
-!!!
+
 
 ### Session Fetching
 
@@ -438,7 +438,7 @@ O `session callback` é chamado sempre que uma sessão é verificada (`getSessio
 
 Podemos também passar parâmetros extras retirados da database e passá-los junto com os dados de sessão padrão (dependem do `Session Provider`, no caso do google são `email`, `name` e `image`)
 
-```go
+```go prisma/schema.prisma
 model User {
     id            String    @id @default(cuid())
     name          String?
@@ -454,7 +454,7 @@ model User {
 
 Para fazer com que o session inclua esse novo parâmetro, basta ir no arquivo de configurações do NextAuth em `src/server/auth.ts` e adicionar esse parâmetro ao `session callback` do `authOptions`:
 
-```js
+```js src/server/auth.ts
 export const authOptions: NextAuthOptions = {
   callbacks: {
     session: ({ session, user }) => ({
@@ -469,7 +469,7 @@ export const authOptions: NextAuthOptions = {
 
 Quando você adicionar esse novo parâmetro ele já será passado dentro da sessão, mas o typescript apontará um erro de tipagem não segura. Para corrigir será necessário declarar uma nova interface para o user object da sessão no módulo `next-auth`:
 
-```js
+```js src/server/auth.ts
 declare module "next-auth" {
   interface Session extends DefaultSession {
     user: {
@@ -491,7 +491,7 @@ declare module "next-auth" {
 
 O `SignIn Callback` é chamado sempre que uma requisição de login é feita a um provedor do NextAuth.
 
-Quando você utiliza o NextAuth.js com uma database, o objeto `User` será um objeto da database (id, name, isAuthorized, etc.) se o usuário já realizou login anteriormente, senão ele será um protótipo simples.
+Quando você utiliza o NextAuth.js com uma database, o objeto `User` será um objeto da database (id, name, newParam, etc.) se o usuário já realizou login anteriormente, senão ele será um protótipo simples.
 Por exemplo, quando o usuário realiza login pelo Google sem conexão com a database, o `session.user` possui os parâmetros _name_, _email_ e _image_.
 
 Já no caso do `Credentials Provider` o objeto `user` será a resposta do `authorize callback` e o objeto `profile` será a resposta do HTTP POST.
@@ -525,7 +525,7 @@ Por exemplo, podemos separar nossas rotas em dois tipos agrupando todas páginas
 
 Utilizando esses dois recursos juntamente com o NextAuth, podemos criar rotas seguras que agrupam determinadas páginas protegidas por login. Para isso, podemos criar um arquivo `layout.tsx` como no exemplo abaixo:
 
-```js src/app/(user)/layout.tsx
+```js src/app/(auth)/(user)/layout.tsx
 import { getServerAuthSession } from "~/server/auth";
 import { permanentRedirect } from "next/navigation";
 import { AuthProvider } from "~/components/authProvider";
@@ -567,7 +567,7 @@ export default AuthProvider;
 !!!
 Dentro do grupo `(user)`, podemos ter uma página para o perfil do usuário `(user)/profile/page.tsx`.
 
-```js src/app/(user)/profile/page.tsx
+```js src/app/(auth)/(user)/profile/page.tsx
 import { getServerAuthSession } from "~/server/auth";
 
 export default async function ProfilePage() {
@@ -586,7 +586,7 @@ export default async function ProfilePage() {
 
 Também podemos criar uma nova rota para uma página de login `login/page.tsx`. Nessa página de login, de maneira análoga ao layout, direcionamos o usuário para seu perfil caso ele já esteja logado.
 
-```js src/app/login/page.tsx
+```js src/app/(public)/login/page.tsx
 import { permanentRedirect } from "next/navigation";
 import SessionControlButton from "~/components/user/signIn";
 import { getServerAuthSession } from "~/server/auth";
@@ -595,7 +595,7 @@ export default async function LoginPage() {
   const session = await getServerAuthSession();
 
   if (session?.user) {
-    permanentRedirect(`/profile/${session.user.email}`);
+    permanentRedirect(`/profile`);
   }
 
   return (
