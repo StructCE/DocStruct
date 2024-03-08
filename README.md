@@ -2,16 +2,14 @@
 
 Este é um repositório de documentação com o objetivo de concentrar todo o conhecimento possível da Struct em um só lugar.
 
-## Conteúdo
-
-Por favor, contribua toda vez que verificar que algo está faltando. Caso tenha dúvidas de como trabalhar aqui, acesse a documentação do [Retype](https://retype.com).
+Por favor, contribua toda vez que verificar que algo está faltando.
 
 ## Como trabalhar no projeto
 
 ### 1 - Clone o Projeto
 
 ```bash
-git clone REPO_DOCSTRUCT
+git clone https://github.com/StructCE/DocStruct.git
 ```
 
 ### 2 - Instale o retypeapp
