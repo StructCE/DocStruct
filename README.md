@@ -67,7 +67,7 @@ Por exemplo, para correção da documentação de typescript, você pode nomear 
 
 > fix:typescript
 
-### Crie uma PR com o nome da sua branch e elabora uma descrição explicativa
+### Crie uma PR com o nome da sua branch e elabore uma descrição explicativa
 
 Finalizado o desenvolvimento, vc pode agora criar uma PR (Pull Request) no GitHub, com o nome da sua branch.
 
