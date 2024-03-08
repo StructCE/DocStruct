@@ -1,6 +1,6 @@
 input: .
 output: .retype
-# url: docs.structej.com/
+url: docs.structej.com/stack/
 edit:
   repo: "https://github.com/StructCE/DocStruct"
   label: Altere essa página no GitHub.
