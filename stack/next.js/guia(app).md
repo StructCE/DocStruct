@@ -744,13 +744,13 @@ Uma rota estática pode ser forçada a ser dinâmica ou pode receber um tempo en
 
 O next cria um `cache` de rotas no navegador do usuário. Se esse `cache` estiver atrapalhando alguma funcionalidade, poderá ser utilizada a função [`router.refresh()` do hook `useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter).
 
-## Optimizações
+## Otimizações
 
-O next apresenta optimizações `built-in` para melhorar a velocidade da aplicação e as [métricas da web](https://web.dev/articles/vitals?hl=pt-br). As `Images`, `Fonts` e `Metadata` serão abordadas nesse tópico. Para mais recursos de optimização acesse [_optimizing_](https://nextjs.org/docs/app/building-your-application/optimizing).
+O next apresenta otimizações `built-in` para melhorar a velocidade da aplicação e as [métricas da web](https://web.dev/articles/vitals?hl=pt-br). As `Images`, `Fonts` e `Metadata` serão abordadas nesse tópico. Para mais recursos de otimização acesse [_optimizing_](https://nextjs.org/docs/app/building-your-application/optimizing).
 
 ### Imagens
 
-O next tem um componente chamado `Image` que extende a funcionalidade da `img` do html. Esse componente optimiza
+O next tem um componente chamado `Image` que extende a funcionalidade da `img` do html. Esse componente otimiza
 o tamanho do arquivo de imagem, promove estabilidade visual e utiliza `lazy loading`.
 
 O componente automaticamente converte a imagem para formatos modernos de imagem como `WebP` e `AVIF`.
