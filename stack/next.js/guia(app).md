@@ -511,13 +511,13 @@ export default function Page() {
 
 ## Interações via Server Actions
 
-Outra forma interessante de realizar interações com o servidor é a `Server Action`, com ela é possível criar componentes que fazem chamadas ao servidor para realizar alguma ação. Essas ações podem ser mudanças no banco de dados com validação feita no servidor, por exemplo.
+Outra forma interessante de realizar interações com o servidor é a `Server Action`. Com ela é possível criar componentes que fazem chamadas ao servidor para realizar alguma ação. Essas ações podem ser mudanças no banco de dados com validação feita no servidor, por exemplo.
 
 ### Criando uma Server Action
 
-Para criar uma `Server Action` é necessário inserir a diretiva `"use server"` no início de uma função assíncrona, nela será inserida a lógica que rodará no servidor. Aqui será explicada utilizando `Forms`, se quiser aprender utilizando `useEffect` ou `event handlers` entre [aqui](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#non-form-elements).
+Para criar uma `Server Action` é necessário inserir a diretiva `"use server"` no início de uma função assíncrona. Nela será inserida a lógica que rodará no servidor. Aqui será explicada utilizando `Forms`. Se quiser aprender utilizando `useEffect` ou `event handlers` entre [aqui](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#non-form-elements).
 
-Para conseguir acessar os dados do ´Forms´, deverá ser adicionado um parâmetro `formData` do tipo `FormData` na função que define a `server action`. Depois, na tag `<form action={ServerAction}>` do forms adicione a função criada no atributo `action`.
+Para conseguir acessar os dados do `Forms`, deverá ser adicionado um parâmetro `formData` do tipo `FormData` na função que define a `server action`. Depois, na tag `<form action={ServerAction}>` do forms, adicione a função criada no atributo `action`.
 
 ```tsx page.tsx
 import prisma from "@/../prisma/index";
@@ -589,11 +589,11 @@ export default async function Page() {
 ```
 
 !!!
-A função `revalidatePath` possui uma interação interessante com o uso de `Server Actions`, quando juntas elas podem criar certo grau de interatividade na página.
+A função `revalidatePath` possui uma interação interessante com o uso de `Server Actions`. Quando juntas elas podem criar certo grau de interatividade na página.
 !!!
 
 !!!
-O uso de um `input` com atributo `hidden` pode ser útil quando precisar de passar alguma informação para a `server action` que não será fornecida pelo usuário.
+O uso de um `input` com atributo `hidden` pode ser útil quando precisar passar alguma informação para a `server action` que não será fornecida pelo usuário.
 !!!
 
 ## Renderização
@@ -602,7 +602,7 @@ A renderização de aplicações next ocorrem tanto em `server-side` quanto em `
 
 ### Server Components
 
-Os `server components` são utilizados para renderização de UI no lado do servidor e podem sofrer `cache`.
+Os `server components` são utilizados para renderização de UI no lado do servidor e podem ser beneficiados com `caching`.
 
 #### Benefícios
 
@@ -680,13 +680,13 @@ O next apresenta diferentes tipos de `cache` que poderão ser vistos na [documen
 Se o cache for mal feito, a página pode conter erros como dados desatualizados.
 !!!
 
-Por padrão, o next coloca pedaços estáticos de páginas e resultados de `fetch` no `cache`, contudo, é possível manipular se algo irá para `cache` ou não, quanto tempo permancerá em `cache` e até atualizar o `cache` após certo evento. Para isso, poderão ser utilizados diferentes métodos como `cache()`, `revalidatePath()` e configurações de rota, por exemplo.
+Por padrão, o next coloca pedaços estáticos de páginas e resultados de `fetch` no `cache`. Contudo, é possível manipular se algo irá para `cache` ou não, quanto tempo permancerá em `cache` e até atualizar o `cache` após certo evento. Para isso, poderão ser utilizados diferentes métodos como `cache()`, `revalidatePath()` e configurações de rota, por exemplo.
 
 ### Server Cache
 
 #### Fetch
 
-Resultados recebidos pelo `fetch`, quando utilizado `server side` são memorizados até que o componente seja renderizado, por padrão, mas podem ser ajustados passando mais parâmetros para a função.
+Resultados recebidos pelo `fetch`, quando utilizado o `server side`, são memorizados até que o componente seja renderizado, por padrão, mas podem ser ajustados passando mais parâmetros para a função.
 
 É possível não gerar cache utilizando:
 
@@ -718,7 +718,7 @@ export const getItens = cache(async () => {
 
 ### revalidatePath
 
-A função revalidatePath é bem interessante quando alguma rota precisa de sofrer alguma atualização devido um evento.
+A função `revalidatePath` é bem interessante quando alguma rota precisa sofrer alguma atualização devido a um evento.
 
 Exemplo com server action:
 
@@ -738,22 +738,22 @@ export default async function Page() {
 
 ### Configurações de rota
 
-Uma rota estática pode ser forçada a ser dinâmica ou pode receber um tempo entre revalidações recebendo "atributos". Para forçar a página a ser dinâmica, é preciso colocar a linha `export const dynamic = "force-dynamic";` e para revalidar é possível adicionando `export const revalidate = 3600; // tempo em segundos`.
+Uma rota estática pode ser forçada a ser dinâmica ou pode receber um tempo entre revalidações recebendo "atributos". Para forçar a página a ser dinâmica, é preciso colocar a linha `export const dynamic = "force-dynamic";` e para revalidar, é necessário adicionar `export const revalidate = 3600; // tempo em segundos`.
 
 ### Client cache
 
-O next cria um `cache` de rotas no navegador do usuário. Se esse `cache` estiver atrapalhando alguma funcionalidade, poderá ser utilizada a função `router.refresh()` do hook `useRouter`.
+O next cria um `cache` de rotas no navegador do usuário. Se esse `cache` estiver atrapalhando alguma funcionalidade, poderá ser utilizada a função [`router.refresh()` do hook `useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter).
 
 ## Optimizações
 
-O next apresenta optimizações `built-in` para melhorar a velocidade da aplicação e as [métricas da web](https://web.dev/articles/vitals?hl=pt-br). As `Images`, `Fonts` e `Metadata` serão abordadas nesse tópico, para mais recursos de optimização acesse [optimizações](https://nextjs.org/docs/app/building-your-application/optimizing).
+O next apresenta optimizações `built-in` para melhorar a velocidade da aplicação e as [métricas da web](https://web.dev/articles/vitals?hl=pt-br). As `Images`, `Fonts` e `Metadata` serão abordadas nesse tópico. Para mais recursos de optimização acesse [_optimizing_](https://nextjs.org/docs/app/building-your-application/optimizing).
 
 ### Imagens
 
 O next tem um componente chamado `Image` que extende a funcionalidade da `img` do html. Esse componente optimiza
 o tamanho do arquivo de imagem, promove estabilidade visual e utiliza `lazy loading`.
 
-O componente automaticamente converte a imagem para formatos modernos de imagem como `WebP` e `ÀVIF`.
+O componente automaticamente converte a imagem para formatos modernos de imagem como `WebP` e `AVIF`.
 
 #### Imagens locais
 
@@ -826,7 +826,7 @@ Para gerar prioridade a uma imagem, adicione a propriedade `priority` a ela.
 Se estiver usando tailwind no projeto, acesse [com TailWind](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css)
 !!!
 
-As `google fonts` podem ser importadas do next e utilizadas sem nenhuma configuração em outra arquivo.
+As `google fonts` podem ser importadas no next e utilizadas sem nenhuma configuração em outro arquivo.
 
 É recomendado o uso de [fontes variáveis](https://fonts.google.com/variablefonts), pois apresentam melhor performance e flexibilidade.
 
