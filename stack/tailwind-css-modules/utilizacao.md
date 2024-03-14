@@ -31,7 +31,95 @@ Como exemplo:
 
 ![Cor de Background de um Botão](../assets/exemplos/tailwindBgColor_example.png)
 
-## Flexbox & Grid
+## Valores Arbitrários
+
+É possível utilizar um valor que não esteja disponível por padrão no Tailwind.
+
+Vários componentes do Tailwind seguem a definição de sintaxe explicada acima. Assim como para cores, valores pré-definidos são usados para definir posição de elementos, como `top-0`, largura (`w-80`), altura (`h-80`), etc.
+
+Mas caso você precise utilizar um [valor customizado apenas uma vez dentro de uma classe](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values), Tailwind permite utilizar a sintaxe `classe-[valor]`, onde o valor que você quer utilizar aparece dentro dos colchetes. Por exemplo,
+
+```html
+<div class="top-[117px]">
+  <!-- ... -->
+</div>
+```
+
+Aqui, `top-[117px]` define o alinhamento no topo da página desse elemento, utilizando um valor não definido pelo Tailwind.
+
+## Customização com `tailwind.config.ts`
+
+Também é possível definir valores customizados que ficam disponível e perduram por toda a sua aplicação.
+
+O arquivo `tailwind.config.ts` é onde podemos definir customizações de todos os tipos para utilizar no Tailwind. Por exemplo, podemos [substituir as paleta de cores padrão](https://tailwindcss.com/docs/customizing-colors#using-custom-colors):
+
+```ts tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+module.exports = {
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'white': '#ffffff',
+      'purple': '#3f3cbb',
+      'midnight': '#121063',
+      'metal': '#565584',
+      'tahiti': '#3ab7bf',
+      'silver': '#ecebff',
+      'bubble-gum': '#ff77e9',
+      'bermuda': '#78dcca',
+    },
+  },
+};
+export default config;
+```
+
+E, depois, utilizá-las em qualquer lugar que use cores:
+
+```html
+<div class="bg-midnight text-tahiti">
+  <!-- ... -->
+</div>
+```
+
+É possível, também, adicionar uma cor à paleta do Tailwind:
+
+```ts tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brown: {
+          50: '#fdf8f6',
+          100: '#f2e8e5',
+          200: '#eaddd7',
+          300: '#e0cec7',
+          400: '#d2bab0',
+          500: '#bfa094',
+          600: '#a18072',
+          700: '#977669',
+          800: '#846358',
+          900: '#43302b',
+        },
+      }
+    },
+  },
+};
+export default config;
+```
+
+O arquivo `tailwind.config.ts` permite definir várias customizações além das mostradas aqui. Em várias partes da documentação é possível achar exemplos de como fazer isso.
+
+## Display
+
+As [classes de display](https://tailwindcss.com/docs/display) do Tailwind permitem controlar a forma como um elemento será exibido, muitas vezes em relação a outros elementos.
+
+Aqui, serão destacadas as propriedades `flex` e `grid`.
+
+### Flexbox
 
 Tailwind possui classes que permitem definir o comportamento de elementos HTML com a propriedade *flex* (*flexible*), ou seja, definir posicionamento, tamanho, etc.
 
@@ -45,6 +133,8 @@ Nome da Classe   | Definição em CSS
 `flex-none`      | `flex: none;`
 
 [A documentação](https://tailwindcss.com/docs/flex) possui exemplos interativos de como essa propriedade age em um elemento.
+
+### Grid
 
 As propriedades [*Grid*](https://tailwindcss.com/docs/grid-template-columns) permitem especificar o comportamento e organização de elementos em um layout estilos *grid*. Como exemplo da documentação, os utilitários *Grid Template Columns*:
 
