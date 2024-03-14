@@ -8,12 +8,14 @@ date: 2024-03-07
 category: Instalação
 ---
 
+# Utilizando Tailwind Em Seus Projetos
+
 Essa página contém alguns exemplos de uso de Tailwind, mostrando algumas classes úteis e comuns.
 Todos os exemplos podem ser encontrados [na documentação oficial](https://tailwindcss.com/docs/installation) (dê uma olhada na aba a esquerda da tela).
 
 ## Cores Pré-Definidas
 
-[Tailwind conta com cores já definidas](https://tailwindcss.com/docs/customizing-colors) para utilizarmos em componentes. Como mencionado na seção de Instalação - [!ref Instalando Tailwind e CSS no Next](/tailwind-css-modules/instalacao.md), podemos obter um *auto-complete* por meio da extensão [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) para VSCode, o que facilita verificar quais cores estão disponíveis para uso.
+[Tailwind conta com cores já definidas](https://tailwindcss.com/docs/customizing-colors) para utilizarmos em componentes. Como mencionado na seção de Instalação - [!ref Instalando Tailwind e CSS no Next](./instalacao.md), podemos obter um *auto-complete* por meio da extensão [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) para VSCode, o que facilita verificar quais cores estão disponíveis para uso.
 
 Por padrão, Tailwind utiliza uma convenção para nomenclatura de suas cores: o nome da cor em si (red, green, etc.) seguido por uma escala numérica, onde 50 indica que a cor é clara e 900 que é escura.
 
@@ -27,7 +29,7 @@ Como exemplo:
 </button>
 ```
 
-![Cor de Background de um Botão](/assets/exemplos/tailwindBgColor_example.png)
+![Cor de Background de um Botão](../assets/exemplos/tailwindBgColor_example.png)
 
 ## Flexbox & Grid
 
@@ -59,7 +61,7 @@ As propriedades [*Grid*](https://tailwindcss.com/docs/grid-template-columns) per
 </div>
 ```
 
-![Organização das colunas em um *grid*](/assets/exemplos/tailwindGrid_example.png)
+![Organização das colunas em um *grid*](../assets/exemplos/tailwindGrid_example.png)
 
 Relacionada tanto a elementos flex quanto grid, [a propriedade *gap*](https://tailwindcss.com/docs/gap) permite definir o espaçamento entre os elementos. É possível controlar espaços verticais e horizontais separadamente ou ambos de uma vez.
 
