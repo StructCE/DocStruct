@@ -11,6 +11,8 @@ tags:
     - explicacao
 ---
 
+# O que são TailwindCSS e CSS Modules?
+
 ## Estilos em NextJS
 
 NextJS permite utilizar várias formas de estilizar sua aplicação, como *inline CSS*, *Global CSS*, *CSS Modules*, *Tailwind CSS*, *Sass* e *CSS-in-JS*. Todos são explicados na [documentação oficial](https://nextjs.org/docs/app/building-your-application/styling), mas aqui vamos focar em **Tailwind** e **CSS Modules**.

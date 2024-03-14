@@ -8,6 +8,8 @@ date: 2024-02-28
 category: Instalação
 ---
 
+# Instalando Tailwind e CSS no Next
+
 ## Instalando TailwindCSS
 
 Quando você cria um projeto Next utilizando o comando `npx create-next-app@latest`, aparecerá a opção `Would you like to use Tailwind CSS?`. Nesse caso, ao optar por `Yes`, Tailwind já será adicionado ao projeto.
