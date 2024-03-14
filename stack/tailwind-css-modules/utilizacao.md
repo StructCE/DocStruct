@@ -117,8 +117,6 @@ O arquivo `tailwind.config.ts` permite definir várias customizações além das
 
 As [classes de display](https://tailwindcss.com/docs/display) do Tailwind permitem controlar a forma como um elemento será exibido, muitas vezes em relação a outros elementos.
 
-Aqui, serão destacadas as propriedades `flex` e `grid`.
-
 ### Flexbox
 
 Tailwind possui classes que permitem definir o comportamento de elementos HTML com a propriedade *flex* (*flexible*), ou seja, definir posicionamento, tamanho, etc.
@@ -169,6 +167,106 @@ Relacionada tanto a elementos flex quanto grid, [a propriedade *gap*](https://ta
   <div>06</div>
 </div>
 ```
+
+### Justify
+
+Tailwind possui alguns utilitários para controlar como os itens *flex* e *grid* são posicionados em relação a um contêiner.
+
+Alguns exemplos das classes [`Justify Content`](https://tailwindcss.com/docs/justify-content) e [`Justify Items`](https://tailwindcss.com/docs/justify-items):
+
+==- Justify Content
+
+```html
+<div class="flex justify-center ...">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div>
+```
+
+![Itens justificados ao longo do centro do eixo principal do contêiner](../assets/exemplos/tailwindJustifyContent-example.png)
+
+===
+
+==- Justify Items
+
+```html
+<div class="grid justify-items-end ...">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+  <div>04</div>
+  <div>05</div>
+  <div>06</div>
+</div>
+```
+
+![Itens grid justificados em relação ao final de seu eixo inline](../assets/exemplos/tailwindJustifyItems_example.png)
+
+===
+
+### Align
+
+De maneira similar a justify, Tailwind possui [classes de alinhamento](https://tailwindcss.com/docs/align-items) de items, como `items-center`:
+
+```html
+<div class="flex items-center ...">
+  <div class="py-4">01</div>
+  <div class="py-12">02</div>
+  <div class="py-8">03</div>
+</div>
+```
+
+![Items alinhados no centro em relação ao eixo horizontal do contêiner](../assets/exemplos/tailwindAlignItems_example.png)
+
+## Classes de Tamanho
+
+Algumas classes permitem modificar o tamanho de um elemento.
+
+Por exemplo, [**width**](https://tailwindcss.com/docs/width) altera a largura:
+
+```html Valores pré-fixados de largura
+<div class="w-96 ...">w-96</div>
+<div class="w-80 ...">w-80</div>
+```
+
+![Comparação de larguras pré-definidas pelo Tailwind](../assets/exemplos/tailwindWidth_example.png)
+
+Já o [**height**](https://tailwindcss.com/docs/height) permite alterar a altura:
+
+```html
+<div class="h-32 ...">h-32</div>
+<div class="h-24 ...">h-24</div>
+```
+
+![Comparação de alturas pré-definidas](../assets/exemplos/tailwindHeight_example.png)
+
+A classe [**size**](https://tailwindcss.com/docs/size) permite mudar a largura e altura de um elemento ao mesmo tempo:
+
+```html
+<div class="size-16 ...">size-16</div>
+<div class="size-20 ...">size-20</div>
+```
+
+![Comparação de alturas pré-definidas](../assets/exemplos/tailwindSize_example.png)
+
+## Classes de Texto e Fontes
+
+Tailwind possui várias classes que permitem alterar tamanho, cor, alinhamento, decoração e vários outros de texto, fonte e até da linha do texto. Algumas classe úteis são:
+
+- [*Font Size*](https://tailwindcss.com/docs/font-size);
+- [*Text Align*](https://tailwindcss.com/docs/text-align);
+- [*Text Color*](https://tailwindcss.com/docs/text-color);
+- [*Text Overflow*](https://tailwindcss.com/docs/text-overflow);
+
+## Background
+
+Tailwind também possui vários utilitários para controlar como se comporta o background de um elemento, como
+
+- [*Background Color*](https://tailwindcss.com/docs/background-color);
+- [*Background Position*](https://tailwindcss.com/docs/background-position);
+- [*Background Size*](https://tailwindcss.com/docs/background-size);
+- [*Background Image*](https://tailwindcss.com/docs/background-image);
 
 ## Media Query
 
