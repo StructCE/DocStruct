@@ -14,6 +14,27 @@ category: Instalação
 
 Quando você cria um projeto Next utilizando o comando `npx create-next-app@latest`, aparecerá a opção `Would you like to use Tailwind CSS?`. Nesse caso, ao optar por `Yes`, Tailwind já será adicionado ao projeto.
 
+Da mesma forma, ao criar um repositório com a stack que a Struct utiliza, [a T3](https://create.t3.gg), por meio do comando `npm create t3-app@latest`, a CLI mostrará algumas opções que você pode escolher, incluindo Tailwind. Se optar por utilizá-lo no projeto, T3 configurará tudo automaticamente.
+
+```bash
+npm create t3-app@latest
+? What will your project be called? (my-t3-app)
+$ my-t3-app
+? Will you be using JavaScript or TypeScript?
+$ TypeScript
+> Good choice! Using TypeScript!
+? Which packages would you like to enable?
+$ nextAuth, prisma, tailwind, trpc
+? Initialize a new git repository? (Y/n)
+$ No
+> Sounds good! You can come back and run git init later.
+? Would you like us to run npm install? (Y/n)
+$ Yes
+> Alright. We'll install the dependencies for you!
+```
+
+Em ambos os casos, as configurações são feitas utilizando [app router](https://nextjs.org/docs/app), ao invés de *pages router*.
+
 Caso você precise adicionar Tailwind manualmente, existem algumas formas, mas a mais simples é utilizar a CLI (Command Line Interface) do Tailwind.
 
 Para [instalar Tailwind](https://tailwindcss.com/docs/guides/nextjs) usando sua CLI, use o seguinte comando no terminal:
@@ -22,7 +43,7 @@ Para [instalar Tailwind](https://tailwindcss.com/docs/guides/nextjs) usando sua 
 npm install -D tailwindcss
 ```
 
-Depois, crie um arquivo chamado `tailwind.config.js` (ou `.ts`) por meio do comando `npx tailwindcss init` e adicione o seguinte código:
+Depois, caso tenha escolhido utilizar a pasta `src` no projeto, crie um arquivo chamado `tailwind.config.js` (ou `.ts`) por meio do comando `npx tailwindcss init` e adicione o seguinte código:
 
 ```typescript tailwind.config.ts
 import type { Config } from "tailwindcss";
@@ -65,7 +86,7 @@ O `global.css` é um arquivo que aplica estilos de maneira global à sua aplica�
 
 ### Tailwind IntelliSense para VSCode
 
-Como um adicional de instalação, se você estiver usando VSCode como sua IDE, é extremamente útil instalar a extensão [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss). Ela possui algumas features como auto-complete para os componentes Tailwind que você adiciona em seus componentes (aperte `ctrl + [esapaço]` para abrir a lista de opções que você pode usar).
+Como um adicional de instalação, se você estiver usando VSCode como sua IDE, é extremamente útil instalar a extensão [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss). Ela possui algumas features como auto-complete para os componentes Tailwind que você adiciona em seus componentes (aperte `ctrl + [espaço]` para abrir a lista de opções que você pode usar).
 
 ## Adicionando CSS Modules ao Projeto
 
