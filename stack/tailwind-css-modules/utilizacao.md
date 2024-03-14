@@ -37,17 +37,12 @@ Tailwind possui classes que permitem definir o comportamento de elementos HTML c
 
 [*Flex*](https://tailwindcss.com/docs/flex) possui propriedades que permitem alterar como um elemento muda de tamanho. Suas classes e definições em CSS são
 
-`flex-1`
-:   `flex: 1 1 0%;`
-
-`flex-auto`
-:   `flex: 1 1 auto;`
-
-`flex-initial`
-:   `flex: 0 1 auto;`
-
-`flex-none`
-:   `flex: none;`
+Nome da Classe   | Definição em CSS
+---              | ---
+`flex-1`         | `flex: 1 1 0%;`
+`flex-auto`      | `flex: 1 1 auto;`
+`flex-initial`   | `flex: 0 1 auto;`
+`flex-none`      | `flex: none;`
 
 [A documentação](https://tailwindcss.com/docs/flex) possui exemplos interativos de como essa propriedade age em um elemento.
 
