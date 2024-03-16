@@ -52,11 +52,7 @@ Agora queremos criar um Zod Type que representa um objeto de vários Member's em
 import { z } from 'zod'
 
 const memberSchema = z.object({
-  id: z.string().min(3).max(12),
-  name: z.string(), 
-  lastname: z.string(),
-  role: z.enum(["Membro", "Diretor"]),
-  projects: z.array(z.string()).optional()
+  ...
 })
 
 const members = z.record(z.string(), memberSchema)
@@ -66,17 +62,13 @@ Esses são só alguns exemplos essenciais de como montar um Zod Schema. Ok, agor
 
 ## Inferir tipos
 
-Para podermos deixar nosso projeto type safe a partir de um schema zod, teremos que inferir o tipo. Com essa finalidade, podemos inferir o tipo do schema da seguinte maneira:
+Para podermos deixar nosso projeto type safe a partir de um zod schema, teremos que inferir o tipo. Com essa finalidade, podemos inferir o tipo do schema da seguinte maneira:
 
 ```ts
 import { z } from 'zod'
 
 const memberSchema = z.object({
-  id: z.string().min(3).max(12),
-  name: z.string(), 
-  lastname: z.string(),
-  role: z.enum(["Membro", "Diretor"]),
-  projects: z.array(z.string()).optional()
+  ...
 })
 
 type Member = z.infer<typeof memberSchema>
@@ -87,9 +79,7 @@ Com o `z.infer<>` podemos inferir um tipo a partir de um Zod Schema e então tor
 
 ## Validação dos dados
 
-Agora, imagine que você tem uma função que irá mostar as informações do Member e já está tipada com a etapa anterior, você precisa garantir que o que esta função vai receber como parâmetro irá ser do tipo Member.
-
-Para isso, precisaremos de uma função parse, que irá fazer essa validação e nos retornará o dado em caso de sucesso ou um erro/mensagem dependendo da função que usarmos:
+Agora, imagine que você tem uma função que irá mostar as informações do Member e já está tipada de acordo com a etapa anterior, você precisa garantir que o que esta função vai receber como parâmetro irá ser do tipo Member. Para isso, precisaremos de uma função parse, que irá fazer essa validação e nos retornará o dado em caso de sucesso ou um erro/mensagem dependendo da função que usarmos:
 
 ### Parse
 
@@ -148,7 +138,7 @@ Ambas as funções de parse possuem versões assíncronas ([parseAsync](https://
 
 ## Mensagens personalizadas
 
-Quando faz-se a validação dos dados e é levantado/retornado algum erro, o Zod notifica com uma mensagem padrão. Mas podemos customizar essas mensagens pelos erros, como required_error ou invalid_type_error, ou configurando uma mensagem:
+Quando faz-se a validação dos dados e é levantado/retornado algum erro, o Zod alerta com uma mensagem padrão. Mas podemos customizar essas mensagens pelos erros, como required_error ou invalid_type_error, ou configurando uma mensagem:
 
 ```ts
 import { z } from 'zod'
