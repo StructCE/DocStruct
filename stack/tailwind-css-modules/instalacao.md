@@ -43,7 +43,7 @@ Para [instalar Tailwind](https://tailwindcss.com/docs/guides/nextjs) usando sua 
 npm install -D tailwindcss
 ```
 
-Depois, caso tenha escolhido utilizar a pasta `src` no projeto, crie um arquivo chamado `tailwind.config.js` (ou `.ts`) por meio do comando `npx tailwindcss init` e adicione o seguinte código:
+Depois crie um arquivo chamado `tailwind.config.js` (ou `.ts`) por meio do comando `npx tailwindcss init` e adicione o seguinte código:
 
 ```typescript tailwind.config.ts
 import type { Config } from "tailwindcss";
@@ -53,6 +53,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // Aqui os caminhos dependerão se foi ou não escolhido o uso da pasta src no seu projeto
   ],
   theme: {
     extend: {

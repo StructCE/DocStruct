@@ -46,7 +46,7 @@ O propósito de Tailwind é baseado na ideia de *Atomic CSS*, que, de maneira si
 </html>
 ```
 
-Tailwind tem essa idea como foco de seu funcionamento. De acordo com [sua própria documentação](https://tailwindcss.com/docs/utility-first),
+Tailwind tem essa ideia como foco de seu funcionamento. De acordo com [sua própria documentação](https://tailwindcss.com/docs/utility-first),
 
 > "With Tailwind, you style elements by applying pre-existing classes directly in your HTML.
 > ...
