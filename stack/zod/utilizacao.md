@@ -46,7 +46,7 @@ const memberSchema = z.object({
 })
 ```
 
-Agora queremos criar um Zod Type que representa um objeto de vários Member's em que a chave de cada Member será seu respectivo nome (uma string):
+Agora queremos criar um Zod Type que representa um objeto de vários `Member`'s em que a chave de cada `Member` será seu respectivo nome (uma string):
 
 ```ts
 import { z } from 'zod'
