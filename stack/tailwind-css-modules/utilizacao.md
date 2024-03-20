@@ -3,7 +3,7 @@ order: 1
 icon: rocket
 label: "Utilização"
 author:
-    name: Eduardo P.P. Ferreira
+  name: Eduardo P.P. Ferreira
 date: 2024-03-07
 category: Utilização
 ---
@@ -15,7 +15,7 @@ Todos os exemplos podem ser encontrados [na documentação oficial](https://tail
 
 ## Cores Pré-Definidas
 
-[Tailwind conta com cores já definidas](https://tailwindcss.com/docs/customizing-colors) para utilizarmos em componentes. Como mencionado na seção de Instalação - [!ref Instalando Tailwind e CSS no Next](./instalacao.md), podemos obter um *auto-complete* por meio da extensão [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) para VSCode, o que facilita verificar quais cores estão disponíveis para uso.
+[Tailwind conta com cores já definidas](https://tailwindcss.com/docs/customizing-colors) para utilizarmos em componentes. Como mencionado na seção de Instalação - [!ref Instalando Tailwind e CSS no Next](./instalacao.md), podemos obter um _auto-complete_ por meio da extensão [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) para VSCode, o que facilita verificar quais cores estão disponíveis para uso.
 
 Por padrão, Tailwind utiliza uma convenção para nomenclatura de suas cores: o nome da cor em si (red, green, etc.) seguido por uma escala numérica, onde 50 indica que a cor é clara e 900 que é escura.
 
@@ -24,94 +24,10 @@ A utilização dessas cores aparecem em várias classes diferentes do Tailwind, 
 Como exemplo:
 
 ```html
-<button class="bg-indigo-500 ...">
-  Save changes
-</button>
+<button class="bg-indigo-500 ...">Save changes</button>
 ```
 
 ![Cor de Background de um Botão](../assets/exemplos/tailwindBgColor_example.png)
-
-## Valores Arbitrários
-
-É possível utilizar um valor que não esteja disponível por padrão no Tailwind.
-
-Vários componentes do Tailwind seguem a definição de sintaxe explicada acima. Assim como para cores, valores pré-definidos são usados para definir posição de elementos, como `top-0`, largura (`w-80`), altura (`h-80`), etc.
-
-Mas caso você precise utilizar um [valor customizado apenas uma vez dentro de uma classe](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values), Tailwind permite utilizar a sintaxe `classe-[valor]`, onde o valor que você quer utilizar aparece dentro dos colchetes. Por exemplo,
-
-```html
-<div class="top-[117px]">
-  <!-- ... -->
-</div>
-```
-
-Aqui, `top-[117px]` define o alinhamento no topo da página desse elemento, utilizando um valor não definido pelo Tailwind.
-
-## Customização com `tailwind.config.ts`
-
-Também é possível definir valores customizados que ficam disponível e perduram por toda a sua aplicação.
-
-O arquivo `tailwind.config.ts` é onde podemos definir customizações de todos os tipos para utilizar no Tailwind. Por exemplo, podemos [substituir as paleta de cores padrão](https://tailwindcss.com/docs/customizing-colors#using-custom-colors):
-
-```ts tailwind.config.ts
-import type { Config } from "tailwindcss";
-
-module.exports = {
-  theme: {
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'white': '#ffffff',
-      'purple': '#3f3cbb',
-      'midnight': '#121063',
-      'metal': '#565584',
-      'tahiti': '#3ab7bf',
-      'silver': '#ecebff',
-      'bubble-gum': '#ff77e9',
-      'bermuda': '#78dcca',
-    },
-  },
-};
-export default config;
-```
-
-E, depois, utilizá-las em qualquer lugar que use cores:
-
-```html
-<div class="bg-midnight text-tahiti">
-  <!-- ... -->
-</div>
-```
-
-É possível, também, adicionar uma cor à paleta do Tailwind:
-
-```ts tailwind.config.ts
-import type { Config } from "tailwindcss";
-
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        brown: {
-          50: '#fdf8f6',
-          100: '#f2e8e5',
-          200: '#eaddd7',
-          300: '#e0cec7',
-          400: '#d2bab0',
-          500: '#bfa094',
-          600: '#a18072',
-          700: '#977669',
-          800: '#846358',
-          900: '#43302b',
-        },
-      }
-    },
-  },
-};
-export default config;
-```
-
-O arquivo `tailwind.config.ts` permite definir várias customizações além das mostradas aqui. Em várias partes da documentação é possível achar exemplos de como fazer isso.
 
 ## Display
 
@@ -119,22 +35,22 @@ As [classes de display](https://tailwindcss.com/docs/display) do Tailwind permit
 
 ### Flexbox
 
-Tailwind possui classes que permitem definir o comportamento de elementos HTML com a propriedade *flex* (*flexible*), ou seja, definir posicionamento, tamanho, etc.
+Tailwind possui classes que permitem definir o comportamento de elementos HTML com a propriedade _flex_ (_flexible_), ou seja, definir posicionamento, tamanho, etc.
 
-[*Flex*](https://tailwindcss.com/docs/flex) possui propriedades que permitem alterar como um elemento muda de tamanho. Suas classes e definições em CSS são
+[_Flex_](https://tailwindcss.com/docs/flex) possui propriedades que permitem alterar como um elemento muda de tamanho. Suas classes e definições em CSS são
 
-Nome da Classe   | Definição em CSS
----              | ---
-`flex-1`         | `flex: 1 1 0%;`
-`flex-auto`      | `flex: 1 1 auto;`
-`flex-initial`   | `flex: 0 1 auto;`
-`flex-none`      | `flex: none;`
+| Nome da Classe | Definição em CSS  |
+| -------------- | ----------------- |
+| `flex-1`       | `flex: 1 1 0%;`   |
+| `flex-auto`    | `flex: 1 1 auto;` |
+| `flex-initial` | `flex: 0 1 auto;` |
+| `flex-none`    | `flex: none;`     |
 
 [A documentação](https://tailwindcss.com/docs/flex) possui exemplos interativos de como essa propriedade age em um elemento.
 
 ### Grid
 
-As propriedades [*Grid*](https://tailwindcss.com/docs/grid-template-columns) permitem especificar o comportamento e organização de elementos em um layout estilos *grid*. Como exemplo da documentação, os utilitários *Grid Template Columns*:
+As propriedades [_Grid_](https://tailwindcss.com/docs/grid-template-columns) permitem especificar o comportamento e organização de elementos em um layout estilos _grid_. Como exemplo da documentação, os utilitários _Grid Template Columns_:
 
 ```html
 <div class="grid grid-cols-4 gap-4">
@@ -146,7 +62,7 @@ As propriedades [*Grid*](https://tailwindcss.com/docs/grid-template-columns) per
 
 ![Organização das colunas em um *grid*](../assets/exemplos/tailwindGrid_example.png)
 
-Relacionada tanto a elementos flex quanto grid, [a propriedade *gap*](https://tailwindcss.com/docs/gap) permite definir o espaçamento entre os elementos. É possível controlar espaços verticais e horizontais separadamente ou ambos de uma vez.
+Relacionada tanto a elementos flex quanto grid, [a propriedade _gap_](https://tailwindcss.com/docs/gap) permite definir o espaçamento entre os elementos. É possível controlar espaços verticais e horizontais separadamente ou ambos de uma vez.
 
 ```html Espaçamento Geral
 <div class="grid gap-4 grid-cols-2">
@@ -170,7 +86,7 @@ Relacionada tanto a elementos flex quanto grid, [a propriedade *gap*](https://ta
 
 ### Justify
 
-Tailwind possui alguns utilitários para controlar como os itens *flex* e *grid* são posicionados *horizontalmente* em relação a um contêiner.
+Tailwind possui alguns utilitários para controlar como os itens _flex_ e _grid_ são posicionados _horizontalmente_ em relação a um contêiner.
 
 Alguns exemplos das classes [`Justify Content`](https://tailwindcss.com/docs/justify-content) e [`Justify Items`](https://tailwindcss.com/docs/justify-items):
 
@@ -207,7 +123,7 @@ Alguns exemplos das classes [`Justify Content`](https://tailwindcss.com/docs/jus
 
 ### Align
 
-De maneira similar a justify, Tailwind possui [classes de alinhamento](https://tailwindcss.com/docs/align-items) *vertical* de items, como `items-center`:
+De maneira similar a justify, Tailwind possui [classes de alinhamento](https://tailwindcss.com/docs/align-items) _vertical_ de items, como `items-center`:
 
 ```html
 <div class="flex items-center ...">
@@ -254,69 +170,150 @@ A classe [**size**](https://tailwindcss.com/docs/size) permite mudar a largura e
 
 Tailwind possui várias classes que permitem alterar tamanho, cor, alinhamento, decoração e vários outros de texto, fonte e até da linha do texto. Algumas classe úteis são:
 
-- [*Font Size*](https://tailwindcss.com/docs/font-size);
-    ==- Text Font Size
+- [_Font Size_](https://tailwindcss.com/docs/font-size);
+  ==- Text Font Size
 
-    ```html
-    <p class="text-base ...">The quick brown fox ...</p>
-    <p class="text-lg ...">The quick brown fox ...</p>
-    ```
+  ```html
+  <p class="text-base ...">The quick brown fox ...</p>
+  <p class="text-lg ...">The quick brown fox ...</p>
+  ```
 
-    ![Comparação de tamanho de fonte de texto](../assets/exemplos/tailwindFontSize_example.png)
-    ==
+  ![Comparação de tamanho de fonte de texto](../assets/exemplos/tailwindFontSize_example.png)
+  ==
 
-- [*Text Align*](https://tailwindcss.com/docs/text-align);
-    ==- Text Align
+- [_Text Align_](https://tailwindcss.com/docs/text-align);
+  ==- Text Align
 
-    ```html
-    <p class="text-left ...">So I started to walk into the water...</p>
-    <p class="text-right ...">So I started to walk into the water...</p>
-    ```
+  ```html
+  <p class="text-left ...">So I started to walk into the water...</p>
+  <p class="text-right ...">So I started to walk into the water...</p>
+  ```
 
-    ![Comparação de alinhamento de texto](../assets/exemplos/tailwindAlignText_example.png)
-    ==
+  ![Comparação de alinhamento de texto](../assets/exemplos/tailwindAlignText_example.png)
+  ==
 
-- [*Text Color*](https://tailwindcss.com/docs/text-color);
-    ==- Text Color
+- [_Text Color_](https://tailwindcss.com/docs/text-color);
+  ==- Text Color
 
-    ```html
-    <p class="text-sky-400">The quick brown fox...</p>
-    ```
+  ```html
+  <p class="text-sky-400">The quick brown fox...</p>
+  ```
 
-    ![Exemplo de cor do texto](../assets/exemplos/tailwindTextColor_example.png)
+  ![Exemplo de cor do texto](../assets/exemplos/tailwindTextColor_example.png)
 
-
-- [*Text Overflow*](https://tailwindcss.com/docs/text-overflow);
-    ==- Text Overflow
-    +++ `text-clip`
-    ```html
-    <p class="text-clip overflow-hidden ...">...</p>
-    ```
-    ![Overflow-Clip](../assets/exemplos/tailwindTextClip_example.png)
-    +++ `text-ellipsis`
-    ```html
-    <p class="text-ellipsis overflow-hidden ...">...</p>
-    ```
-    ![Overflow-Ellipsis](../assets/exemplos/tailwindTextEllipsis_example.png)
-    +++ `truncate`
-    ```html
-    <p class="truncate ...">...</p>
-    ```
-    ![Text-Truncate](../assets/exemplos/tailwindTextTruncate_example.png)
-    +++
+- [_Text Overflow_](https://tailwindcss.com/docs/text-overflow);
+  ==- Text Overflow
+  +++ `text-clip`
+  ```html
+  <p class="text-clip overflow-hidden ...">...</p>
+  ```
+  ![Overflow-Clip](../assets/exemplos/tailwindTextClip_example.png)
+  +++ `text-ellipsis`
+  ```html
+  <p class="text-ellipsis overflow-hidden ...">...</p>
+  ```
+  ![Overflow-Ellipsis](../assets/exemplos/tailwindTextEllipsis_example.png)
+  +++ `truncate`
+  ```html
+  <p class="truncate ...">...</p>
+  ```
+  ![Text-Truncate](../assets/exemplos/tailwindTextTruncate_example.png)
+  +++
 
 ## Background
 
 Tailwind também possui vários utilitários para controlar como se comporta o background de um elemento, como
 
-- [*Background Color*](https://tailwindcss.com/docs/background-color);
-- [*Background Position*](https://tailwindcss.com/docs/background-position);
-- [*Background Size*](https://tailwindcss.com/docs/background-size);
-- [*Background Image*](https://tailwindcss.com/docs/background-image);
+- [_Background Color_](https://tailwindcss.com/docs/background-color);
+- [_Background Position_](https://tailwindcss.com/docs/background-position);
+- [_Background Size_](https://tailwindcss.com/docs/background-size);
+- [_Background Image_](https://tailwindcss.com/docs/background-image);
+
+## Valores Arbitrários
+
+É possível utilizar um valor que não esteja disponível por padrão no Tailwind.
+
+Vários componentes do Tailwind seguem a definição de sintaxe explicada acima. Assim como para cores, valores pré-definidos são usados para definir posição de elementos, como `top-0`, largura (`w-80`), altura (`h-80`), etc.
+
+Mas caso você precise utilizar um [valor customizado apenas uma vez dentro de uma classe](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values), Tailwind permite utilizar a sintaxe `classe-[valor]`, onde o valor que você quer utilizar aparece dentro dos colchetes. Por exemplo,
+
+```html
+<div class="top-[117px]">
+  <!-- ... -->
+</div>
+```
+
+Aqui, `top-[117px]` define o alinhamento no topo da página desse elemento, utilizando um valor não definido pelo Tailwind.
+
+## Customização com `tailwind.config.ts`
+
+Também é possível definir valores customizados que ficam disponível e perduram por toda a sua aplicação.
+
+O arquivo `tailwind.config.ts` é onde podemos definir customizações de todos os tipos para utilizar no Tailwind. Por exemplo, podemos [substituir as paleta de cores padrão](https://tailwindcss.com/docs/customizing-colors#using-custom-colors):
+
+```ts tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+module.exports = {
+  theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      purple: "#3f3cbb",
+      midnight: "#121063",
+      metal: "#565584",
+      tahiti: "#3ab7bf",
+      silver: "#ecebff",
+      "bubble-gum": "#ff77e9",
+      bermuda: "#78dcca",
+    },
+  },
+};
+export default config;
+```
+
+E, depois, utilizá-las em qualquer lugar que use cores:
+
+```html
+<div class="bg-midnight text-tahiti">
+  <!-- ... -->
+</div>
+```
+
+É possível, também, adicionar uma cor à paleta do Tailwind:
+
+```ts tailwind.config.ts
+import type { Config } from "tailwindcss";
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brown: {
+          50: "#fdf8f6",
+          100: "#f2e8e5",
+          200: "#eaddd7",
+          300: "#e0cec7",
+          400: "#d2bab0",
+          500: "#bfa094",
+          600: "#a18072",
+          700: "#977669",
+          800: "#846358",
+          900: "#43302b",
+        },
+      },
+    },
+  },
+};
+export default config;
+```
+
+O arquivo `tailwind.config.ts` permite definir várias customizações além das mostradas aqui. Em várias partes da documentação é possível achar exemplos de como fazer isso.
 
 ## Media Query
 
-*Media Queries* "são um recurso do CSS 3 que permite que a renderização do conteúdo se adapte a diferentes condições, como a resolução da tela." [Tailwind possui modificadores para design responsivo](https://tailwindcss.com/docs/hover-focus-and-other-states#media-and-feature-queries) em cada uma de suas classes. Como no exemplo da documentação, "isso renderizará uma grid de 3 colunas em dispositivos móveis, uma de 4 colunas em telas de largura média (`md`) e uma grid de 6 colunas em telas de largura grande(`lg`):"
+_Media Queries_ "são um recurso do CSS 3 que permite que a renderização do conteúdo se adapte a diferentes condições, como a resolução da tela." [Tailwind possui modificadores para design responsivo](https://tailwindcss.com/docs/hover-focus-and-other-states#media-and-feature-queries) em cada uma de suas classes. Como no exemplo da documentação, "isso renderizará uma grid de 3 colunas em dispositivos móveis, uma de 4 colunas em telas de largura média (`md`) e uma grid de 6 colunas em telas de largura grande(`lg`):"
 
 ```html
 <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
@@ -324,8 +321,7 @@ Tailwind também possui vários utilitários para controlar como se comporta o b
 </div>
 ```
 
-Como outro exemplo, a [adição de imagens ao background](https://tailwindcss.com/docs/background-image#breakpoints-and-media-queries) - "Você também pode usar modificadores de variantes para direcionar media queries, como pontos de interrupção responsivos, modo escuro, preferência por movimento reduzido e muito mais.  Por exemplo, use `md:bg-gradient-to-r` para aplicar o utilitário `bg-gradient-to-r` apenas em tamanhos de tela médios e superiores."
-
+Como outro exemplo, a [adição de imagens ao background](https://tailwindcss.com/docs/background-image#breakpoints-and-media-queries) - "Você também pode usar modificadores de variantes para direcionar media queries, como pontos de interrupção responsivos, modo escuro, preferência por movimento reduzido e muito mais. Por exemplo, use `md:bg-gradient-to-r` para aplicar o utilitário `bg-gradient-to-r` apenas em tamanhos de tela médios e superiores."
 
 ```html
 <div class="bg-gradient-to-l md:bg-gradient-to-r">

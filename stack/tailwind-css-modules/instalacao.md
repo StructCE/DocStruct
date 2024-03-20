@@ -3,7 +3,7 @@ order: 2
 icon: command-palette
 label: "Instalando Tailwind e CSS no Next"
 author:
-    name: Eduardo P.P. Ferreira
+  name: Eduardo P.P. Ferreira
 date: 2024-02-28
 category: Instalação
 ---
@@ -33,7 +33,7 @@ $ Yes
 > Alright. We'll install the dependencies for you!
 ```
 
-Em ambos os casos, as configurações são feitas utilizando [app router](https://nextjs.org/docs/app), ao invés de *pages router*.
+Em ambos os casos, as configurações são feitas utilizando [app router](https://nextjs.org/docs/app), ao invés de _pages router_.
 
 Caso você precise adicionar Tailwind manualmente, existem algumas formas, mas a mais simples é utilizar a CLI (Command Line Interface) do Tailwind.
 
@@ -73,7 +73,7 @@ export default config;
 O arquivo `tailwind.config.js` pode ter tanto essa extensão quanto `.ts`, dependendo se você quiser utilizar JavaScript ou TypeScript. Se você iniciou sua aplicação Next optando por usar TypeScript e Tailwind, o arquivo terá a extensão `.ts`. Se você criou o arquivo com o comando acima mas está utilizando TypeScript em seu projeto, talvez seja uma boa ideia mudar a extensão.
 !!!
 
-Por fim, adicione as *diretivas do Tailwind* ao seu arquivo de CSS global (`src/app/globals.css`):
+Por fim, adicione as _diretivas do Tailwind_ ao seu arquivo de CSS global (`src/app/globals.css`):
 
 ```css src/app/global.css
 @tailwind base;
@@ -94,22 +94,21 @@ Como um adicional de instalação, se você estiver usando VSCode como sua IDE, 
 Para utilizar CSS Modules em sua aplicação next, basta criar arquivos com a extensão `.module.css`. Isso pode ser feito em qualquer pasta dentro de `/app`, e os arquivos CSS Modules criados podem ser importados em qualquer outro arquivo dentro dessa pasta, como a [própria documentação](https://nextjs.org/docs/app/building-your-application/styling/css-modules) exemplifica:
 
 ```typescript app/dashboard/layout.ts
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
-export default function DashboardLayout ({
+export default function DashboardLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return <section className={styles.dashboard}> {children} </section>
+  return <section className={styles.dashboard}> {children} </section>;
 }
 ```
 
-```css spp/dashboard/styles.modules.css
+```css app/dashboard/styles.modules.css
 .dashboard {
-  padding: 24px,
-  ...
+  padding: 24px, ...;
 }
 ```
 
-Lembrando que CSS Modules *são opcionais* e atuam em escopo local, o que significa que podem evitar conflitos de nomeclatura de classes em arquivos de estilo diferentes.
+Lembrando que CSS Modules _são opcionais_ e atuam em escopo local, o que significa que podem evitar conflitos de nomeclatura de classes em arquivos de estilo diferentes.
