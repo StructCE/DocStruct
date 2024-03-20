@@ -2,16 +2,14 @@
 
 Este é um repositório de documentação com o objetivo de concentrar todo o conhecimento possível da Struct em um só lugar.
 
-## Conteúdo
-
-Por favor, contribua toda vez que verificar que algo está faltando. Caso tenha dúvidas de como trabalhar aqui, acesse a documentação do [Retype](https://retype.com).
+Por favor, contribua toda vez que verificar que algo está faltando.
 
 ## Como trabalhar no projeto
 
 ### 1 - Clone o Projeto
 
 ```bash
-git clone REPO_DOCSTRUCT
+git clone https://github.com/StructCE/DocStruct.git
 ```
 
 ### 2 - Instale o retypeapp
@@ -38,15 +36,15 @@ dotnet tool install retypeapp --global
 
 Nossa documentação está dividida em 3 seções:
 
-- Ferramentas-de-Ambiente
-- Organizacao-Interna
-- Stack
+- ferramentas-de-ambiente
+- organizacao-interna
+- stack
 
 Cada seção destas é uma pasta na raíz do repositório e também é um projeto do retype.
 Portanto, entre na pasta que vc deseja realizar sua documentação e rode o projeto.
 
 ```bash
-cd Organizacao-Interna
+cd organizacao-interna
 retype start
 ```
 
@@ -60,12 +58,12 @@ Para dúvidas sobre como escrever a documentação, acesse a [documentação do 
 Para adição de conteúdo à documentação, você pode especificar que sua branch foca no desenvolvimento de uma feature.
 Por exemplo, para a adição de documentação sobre o deploy realizado pela diretoria de projetos, você pode nomear sua branch de:
 
-> feat:deploy-projetos
+> feat/deploy-projetos
 
 Para correção de algo na documentação, você pode agora especificar que sua branch foca em uma fix.
 Por exemplo, para correção da documentação de typescript, você pode nomear sua branch de:
 
-> fix:typescript
+> fix/typescript
 
 ### Crie uma PR com o nome da sua branch e elabore uma descrição explicativa
 

@@ -9,9 +9,7 @@
   </head>
   <body>
     <nav>
-      <button
-        class="icon-button menu __toggle-sidebar __no-focus-while-overlay"
-      >
+      <button class="icon-button menu __toggle-sidebar">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="menu-icon"
@@ -34,29 +32,19 @@
       <div class="options-div">
         <ul>
           <li>
-            <a href="/organizacao-interna" class="__no-focus-while-overlay"
-              >Organização Interna</a
-            >
+            <a href="/organizacao-interna">Organização Interna</a>
           </li>
           <li>
-            <a href="/ferramentas-de-ambiente" class="__no-focus-while-overlay"
-              >Ferramentas de Ambiente</a
-            >
+            <a href="/ferramentas-de-ambiente">Ferramentas de Ambiente</a>
           </li>
           <li>
-            <a href="/stack" class="__no-focus-while-overlay"
-              >Stack Principal</a
-            >
+            <a href="/stack">Stack Principal</a>
           </li>
           <li>
-            <a
-              href="https://struct.gitbook.io/struct/"
-              class="__no-focus-while-overlay"
-              >Legado</a
-            >
+            <a href="https://struct.gitbook.io/struct/">Legado</a>
           </li>
         </ul>
-        <button class="icon-button __toggle-theme __no-focus-while-overlay">
+        <button class="icon-button __toggle-theme">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="to-dark-theme-icon"
@@ -100,7 +88,7 @@
       <div class="overlay __toggle-sidebar"></div>
       <div class="mobile-sidebar">
         <div>
-          <button class="icon-button __toggle-sidebar">
+          <button class="icon-button __toggle-sidebar __button-sidebar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -119,16 +107,22 @@
         </div>
         <ul>
           <li>
-            <a href="/organizacao-interna">Organização Interna</a>
+            <a class="__button-sidebar" href="/organizacao-interna"
+              >Organização Interna</a
+            >
           </li>
           <li>
-            <a href="/ferramentas-de-ambiente">Ferramentas de Ambiente</a>
+            <a class="__button-sidebar" href="/ferramentas-de-ambiente"
+              >Ferramentas de Ambiente</a
+            >
           </li>
           <li>
-            <a href="/stack">Stack Principal</a>
+            <a class="__button-sidebar" href="/stack">Stack Principal</a>
           </li>
           <li>
-            <a href="https://struct.gitbook.io/struct/">Legado</a>
+            <a class="__button-sidebar" href="https://struct.gitbook.io/struct/"
+              >Legado</a
+            >
           </li>
         </ul>
       </div>
@@ -141,9 +135,7 @@
     <footer>
       <p>
         © Copyright 2024.
-        <a href="https://structej.com" class="__no-focus-while-overlay"
-          >StructCE</a
-        >
+        <a href="https://structej.com">StructCE</a>
         Todos os direitos reservados.
       </p>
     </footer>
