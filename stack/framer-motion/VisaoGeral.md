@@ -1,6 +1,6 @@
 ---
 icon: beaker
-label: "Geral sobre animações"
+label: "Geral sobre as animações"
 order: 4
 author:
     name: Pedro Amorim de Gregori
