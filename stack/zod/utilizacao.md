@@ -129,7 +129,7 @@ function main() {
 }
 ```
 
-Os dados são validados e, então, é retornado um true/false para o valor do sucess. Verifica-se se houve sucesso e, logo após, a função `showMember` é executada com os dados retornados, caso haja falha, damos um console.log() no erro retornado.
+Os dados são validados e, então, é retornado um true/false para o valor do sucess. Verifica-se se houve sucesso e, logo após, a função `showMember` é executada com os dados retornados. Caso haja falha, damos um `console.log()` no erro retornado.
 
 
 !!! Assíncronas
