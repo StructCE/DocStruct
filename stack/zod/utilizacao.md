@@ -32,7 +32,7 @@ type Member = {
 }
 ```
 
-Estamos tentando montar um tipo Member que possuirá um id (string com 3 a 12 caracteres), um nome (string), um lastname (string), um role (enumerável), e projects (array de strings ou indefinido). Usando Zod, nosso schema será do seguinte jeito:
+Estamos tentando montar um tipo `Member` que possuirá um `id` (string com 3 a 12 caracteres), um nome (string), um `lastname` (string), um `role` (enumerável), e `projects` (array de strings ou indefinido). Usando Zod, nosso schema será do seguinte jeito:
 
 ```ts
 import { z } from 'zod'
