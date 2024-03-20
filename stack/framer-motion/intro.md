@@ -37,3 +37,7 @@ Componentes criados utilizando o Framer Motion deverão ser `Client Components`,
 !!!
 É recomendado a visualização dos exemplos para o entendimento da biblioteca.
 !!!
+
+!!!
+Para mais informações sobre a biblioteca acesse [Framer Motion](https://www.framer.com/motion/introduction/).
+!!!
