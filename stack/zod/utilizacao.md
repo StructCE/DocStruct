@@ -79,7 +79,7 @@ Com o `z.infer<>` podemos inferir um tipo a partir de um Zod Schema e então tor
 
 ## Validação dos dados
 
-Agora, imagine que você tem uma função que irá mostar as informações do Member e já está tipada de acordo com a etapa anterior, você precisa garantir que o que esta função vai receber como parâmetro irá ser do tipo Member. Para isso, precisaremos de uma função parse, que irá fazer essa validação e nos retornará o dado em caso de sucesso ou um erro/mensagem dependendo da função que usarmos:
+Agora, imagine que você tem uma função que irá mostar as informações do `Member` e já está tipada de acordo com a etapa anterior, você precisa garantir que o que esta função vai receber como parâmetro irá ser do tipo `Member`. Para isso, precisaremos de uma função `parse`, que irá fazer essa validação e nos retornará o dado em caso de sucesso ou um erro/mensagem dependendo da função que usarmos:
 
 ### Parse
 
