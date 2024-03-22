@@ -17,7 +17,8 @@ Requisitos:
 
 -   É necessário possuir uma versão igual ou superio a 16.14 do Node.js.
 -   São suportados macOS, Windows (incluindo WSL) e Linux.
-    !!!
+
+!!!
 
 ## Configuração Automática
 
