@@ -1,7 +1,7 @@
 ---
 icon: tools
 label: "Iniciando projeto"
-order: 2
+order: 6
 author:
     name: Matheus das Neves
 date: 2023-10-26
@@ -14,8 +14,10 @@ Next não é instalado de fato em sua máquina, é um conjunto de pacotes que s�
 
 !!!
 Requisitos:
-- É necessário possuir uma versão igual ou superio a 16.14 do Node.js.
-- São suportados macOS, Windows (incluindo WSL) e Linux.
+
+-   É necessário possuir uma versão igual ou superio a 16.14 do Node.js.
+-   São suportados macOS, Windows (incluindo WSL) e Linux.
+
 !!!
 
 ## Configuração Automática
@@ -38,11 +40,13 @@ Would you like to use App Router? (recommended) No / Yes
 Would you like to customize the default import alias (@/*)? No / Yes
 What import alias would you like configured? @/*
 ```
+
 Para a pergunta nº:
-1. Nome do projeto que irá ser feito. 
+
+1. Nome do projeto que irá ser feito.
 2. Uso ou não de TypeScript no projeto.
-3. Uso do ESLint, um analisador estático de código, que encontra problemas no código e alerta no editor de texto. 
-4. Uso do Tailwind CSS, a principal ferramenta de estilização usada em Next.js. 
+3. Uso do ESLint, um analisador estático de código, que encontra problemas no código e alerta no editor de texto.
+4. Uso do Tailwind CSS, a principal ferramenta de estilização usada em Next.js.
 5. Opção do diretório `src/` na pasta raiz do projeto, mais uma opção de organização para separar a pasta do projeto dos arquivos de configuração.
 6. Opção de tipo de roteamento usado Pages Router e App Router (mais recente), nessa documentação iremos usar o Pages Router. Caso queira saber mais sobre a diferença entre os dois
 7. A sétima e última estão relacionadas, respectivamente, a customização e configuração de importações, para facilitar a importação de alguma utilidade entre os diretórios, são como se fossem atalhos para imports. Caso queira saber mais a fundo, clique [aqui](https://nextjs.org/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases).
@@ -59,21 +63,21 @@ Em seguida adicione o trecho de código ao arquivo `package.json`:
 
 ```json
 {
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  }
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	}
 }
 ```
 
 Nesse script definimos um objeto com as chaves:
 
-- `dev` e seu valor `next dev`para declararmos que o projeto está em modo de desenvolvimento.
-- `build` e valor `next build` para construir a aplicação para uso em produção.
-- `start` com `next start`para começar um servidor Next.js em produção.
-- `lint` com `next lint` para definir a configuração de ESLint embutida no Next.js. 
+-   `dev` e seu valor `next dev`para declararmos que o projeto está em modo de desenvolvimento.
+-   `build` e valor `next build` para construir a aplicação para uso em produção.
+-   `start` com `next start`para começar um servidor Next.js em produção.
+-   `lint` com `next lint` para definir a configuração de ESLint embutida no Next.js.
 
 ### Criando diretórios
 
