@@ -43,8 +43,11 @@ export default function Bloco() {
 ```
 
 !!!
+
 A animação acima ocorrerá quando o componente for montado.
+
 !!!
+
 ===
 
 ### Transition
@@ -329,8 +332,11 @@ export default function Var() {
 ```
 
 !!!
+
 Nesse exemplo, é possível presenciar a sincronização do nome do animate entre o `ul` e os `li`.
+
 !!!
+
 ===
 
 ### Dynamic variants
@@ -529,3 +535,37 @@ export default function InView() {
 !!!
 Para mais informações sobre `scroll`, acesse [scroll](https://www.framer.com/motion/scroll-animations/).
 !!!
+
+## Resposividade
+
+Resposividade é esperada de toda UI moderna e não é diferente com as animações utilizadas com o Framer Motion. Essa característica pode ser garantida utilizando `variáveis CSS` e `media query`. Projetos com `Tailwind` disponível tornam o processo de `media query` mais fácil, contudo é importante lembrar que o `Tailwind` é focado em `mobile first`, por isso, o valor "padrão" das variáveis deverão ser para telas pequenas e a `media query` deverá ajustá-las. Se `Tailwind` não estiver disponível, o processo de criação e `media query` poderá ser feito no próprio CSS e a utilização no `.tsx` será feito por meio do "var(--nome-da-variavel)".
+
+Com Tailwind, a criação de variáveis CSS será feita no `className` do componente seguindo o seguinte formato:
+
+```tsx
+    <div classname="[--nome-da-variavel:valor da variável] md:[--nome-da-variavel:valor da variável] lg:[--nome-da-variavel:valor da variável]">
+    // md e lg são media queries disponíveis no tailwind
+```
+
+==- Exemplo com Tailwind
+
+```tsx src/components/BlocoResponsivo.tsx
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function BlocoResponsivo() {
+	return (
+		<div>
+			<motion.div
+				initial={{ x: "var(--from-x)", opacity: 0 }}
+				animate={{ x: "var(--to-x)", opacity: 1 }}
+				transition={{ duration: 2, type: "spring" }}
+				className="bg-slate-600 w-10 h-10 m-auto [--from-x:-50px] [--to-x:50px] lg:[--from-x:-200px] lg:[--to-x:200px]"
+			></motion.div>
+		</div>
+	);
+}
+```
+
+===
