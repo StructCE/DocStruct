@@ -32,7 +32,7 @@ npx create-t3-app@latest
 
 Este comando irá gerar um novo projeto **T3 Stack** com uma estrutura de diretórios padrão e com os arquivos para funcionamento das dependêncicas devidamente configurados.
 
-### Configuração Inicial
+### Rodando o projeto
 
 Após a criação do projeto, navegue até o diretório do projeto usando:
 
