@@ -1,7 +1,7 @@
 ---
 icon: question
 label: "O que é Next"
-order: 3
+order: 7
 author:
     name: Matheus das Neves
 date: 2023-10-26
