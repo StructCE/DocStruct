@@ -152,9 +152,28 @@ export default async function Page() {
 
 Uma rota estática pode ser forçada a ser dinâmica ou pode receber um tempo entre revalidações recebendo "atributos". Para forçar a página a ser dinâmica, é preciso colocar a linha `export const dynamic = "force-dynamic";` e para revalidar, é necessário adicionar `export const revalidate = 3600; // tempo em segundos`.
 
-### Client cache
+!!!
+Se quiser obrigar um componente ser dinâmico, mas não quer forçar a rota junto poderá ser utilizado o `noStore` no componente específico.
 
-O next cria um `cache` de rotas no navegador do usuário. Se esse `cache` estiver atrapalhando alguma funcionalidade, poderá ser utilizada a função [`router.refresh()` do hook `useRouter`](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter).
+==- Exemplo
+```tsx src/component/ComponenteDinamico.tsx
+import { unstable_noStore as noStore } from "next/cache";
+import prisma from "@/../prisma/index";
+
+export default async function ComponenteDinamico() {
+	noStore();
+	const mensagens = await prisma.mensagem.findMany();
+	return (
+		<>
+			{mensagens.map((mensagem) => {
+				return <p key={mensagem.id}>{mensagem.texto}</p>;
+			})}
+		</>
+	);
+}
+```
+===
+!!!
 
 ## Otimizações
 

@@ -14,7 +14,7 @@ date: 2024-02-20
 
 O `App Router` foi introduzido na versão 13 do next.js e foi construído utilizando o `React Server Components (RSCs)`.
 
-O `App Router` trabalha com o diretório app para a criação de rotas que podem ou não ser de acesso público. Por padrão, componentes deste diretório são `RSCs`. As páginas são criadas nas rotas e irão herdar certas características definidas por arquivos especiais, como `navbar` e `footer`, definidos no arquivo `layout.tsx` da rota.
+O `App Router` trabalha com o diretório app para a criação de rotas que podem ou não ser de acesso público. Por padrão, componentes deste diretório são `RSCs`.
 
 !!!
 Para mais informações, acesse [React Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components).

@@ -8,7 +8,7 @@ category: Explicação
 date: 2024-02-20
 ---
 
-# Guia de desenvolvimento Next utilizando App Router
+# Guia de desenvolvimento Next utilizando App Router!
 
 ## API REST
 
@@ -301,10 +301,6 @@ export default async function Page() {
 		await prisma.mensagem.delete({ where: { id: parseInt(id) } }); // Converte o ID de string para int e depois efetua a operação no BD
 
 		revalidatePath("/");
-	};
-
-	const excluirMensagem = async (id: number) => {
-		"use server";
 	};
 
 	const mensagens = await prisma.mensagem.findMany(); // Lendo as mensagens presentes no banco de dados.
