@@ -1,7 +1,7 @@
 ---
 order: 1
 icon: book
-label: "Guia prático (Pages Router)"
+label: "Pages router"
 author:
     name: "Matheus das Neves"
 category: Explicação
