@@ -5,7 +5,7 @@ label: "Primeiros passos"
 author:
   - name: Willyan Marques
     avatar: ../../assets/membros/gata_do_will.png
-date: 2024-02-28
+date: 2024-04-04
 category: Bibliotecas
 tags:
   - Bibliotecas
@@ -28,7 +28,9 @@ Uma das vantagens desse serviço é a possibilidade de integração com diversas
 
 Nessa documentação abordaremos apenas as funcionalidades principais de upload, fetching e otimização de imagens para o Next App Router. Caso você tenha interesse em outros serviços oferecidos, acesse a [documentação oficial da Cloudinary](https://next.cloudinary.dev/).
 
-## Instalação
+## Setup
+
+### Instalação
 
 Para instalar a biblioteca do Cloudinary no seu projeto next, utilize o comando abaixo na raiz do seu repositório.
 
@@ -52,19 +54,18 @@ yarn add next-cloudinary
 
 +++
 
-## Setup
-
-Para você conseguir utilizar a biblioteca no seu projeto, primeiro você precisará criar uma nuvem para armazenar seus arquivos. No plano gratuito, você tem direito a utilizar até 25GB de espaço na sua nuvem.
+Para você conseguir utilizar a biblioteca no seu projeto, primeiro você precisará criar uma nuvem para armazenar seus arquivos. No plano gratuito, você tem direito a utilizar até **25GB de espaço** na sua nuvem.
 
 ### Criando uma nuvem
 
-Caso você esteja utilizando o Cloudinary pela primeira vez, acesse o site deles [aqui](https://cloudinary.com/) e crie uma conta. Você terá acesso imediato a um ambiente de gerenciamento da sua nuvem, onde você pode ver um guia de instalação para diversas stacks.
+Caso você esteja utilizando o Cloudinary pela primeira vez, [acesse o site deles e crie uma conta](https://cloudinary.com/). Você terá acesso imediato a um ambiente de gerenciamento da sua nuvem, onde você pode ver um guia de instalação para diversas stacks.
 
 Procure pelo seu dashboard de nuvem, onde você poderá ver várias informações sobre a sua nuvem como o nome dela e suas chaves de API.
 
-### Configurações
+### Cloudinary endpoint
 
-Primeiro, você deve acessar o arquivo `.env` do seu projeto e colocar as informações para permissão de acesso a nuvem presentes no seu dashboard no site da Cloudinary.
+Antes de conseguir utilizar os serviços da nuvem, você precisa definir uma rota api pra integrar o seu projeto com a nuvem.
+Primeiro, você deve acessar o arquivo `.env` do seu repositório e colocar as informações da sua nuvem presentes no seu dashboard no site da Cloudinary.
 
 ```javascript .env
 //...
@@ -73,7 +74,7 @@ NEXT_PUBLIC_CLOUDINARY_API_KEY = "<API key>";
 CLOUDINARY_API_SECRET = "<API secret>";
 ```
 
-Para definir endpoint para a API do cloudinary, crie uma pasta nomeada `cloudinary` (qualquer nome serve) dentro de`src/app/api`. Dentro dessa pasta crie um arquivo `route.ts` e adicione a definação do método POST para uploads de arquivos:
+Para configurar o endpoint, crie uma pasta nomeada `cloudinary` (qualquer nome serve) dentro de `src/app/api`, crie um arquivo `route.ts` e adicione a definação do método POST para uploads de arquivos:
 
 ```typescript src/app/api/cloudinary/route.ts
 import { v2 as cloudinary } from "cloudinary";
