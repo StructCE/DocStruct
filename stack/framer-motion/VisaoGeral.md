@@ -16,7 +16,7 @@ Os exemplos abaixo foram criados para o next.js com tailwind. O Framer Motion n�
 
 ## Componente Motion
 
-O componente motion é a forma mais básica de criar uma animação. Para utilizá-lo, será necessário colocar `<motion.elemento>`. As animações podem ocorrem quando o componente é montado e quando ele é "destruído".
+O componente motion é a forma principal de criar uma animação. Para utilizá-lo, será necessário colocar `<motion.elemento>`. As animações podem ocorrem quando o componente é montado e quando ele é "destruído".
 
 ## Propriedades
 
@@ -24,7 +24,7 @@ O componente motion possui certas propriedades que definem a animação do compo
 
 ### Animate
 
-A maior parte das animações poderá ser feita utilizando o component `motion` e a prop `animation`. Agora com a `tag` criada, poderá ser atribuída a prop `animation`. Ela poderá conter propriedades do `CSS` como `x`, `y` e `rotate`que ocasionarão animações se algum desses valores for alterado.
+A maior parte das animações poderá ser feita utilizando o component `motion` e a prop `animate`. Com a `tag` criada, poderá ser atribuída a prop `animate`. Ela poderá conter propriedades do `CSS` como `x`, `y` e `rotate`que  as tornarão animadas a cada alteração em seus valores.
 
 ==- Exemplo
 
@@ -44,7 +44,7 @@ export default function Bloco() {
 
 !!!
 
-A animação acima ocorrerá quando o componente for montado.
+A animação acima ocorrerá quando o componente for montado, se as propriedades explicitadas divergirem com as especificadas na prop `initial`.
 
 !!!
 
@@ -53,6 +53,8 @@ A animação acima ocorrerá quando o componente for montado.
 ### Transition
 
 É possível criar variantes de uma animação utilizando a prop `transition`. Ela torna possível alterações como duração da animação, atraso e o tipo, por exemplo.
+
+A prop `trasition` apresenta valores padrão caso não seja citada. Caso a prop `trasition` exista, poderá ser necessário configurar as outras opções que ja vinham por padrão.
 
 ==- Exemplo
 
@@ -341,7 +343,7 @@ Nesse exemplo, é possível presenciar a sincronização do nome do animate entr
 
 ### Dynamic variants
 
-É possível a utilização de "variáveis" em uma `variant`. Para isso, é necessário a prop `custom` colocando o valor da variável. E para utilizá-la na `variant` deverá ser criada uma `arrow function`.
+É possível a utilização de "variáveis" em uma `variant`. Para isso, é necessário a prop `custom` colocando o valor da variável. E para utilizá-la na `variant` poderá ser criada uma `arrow function`.
 
 ==- Exemplo
 
@@ -415,7 +417,7 @@ export default function Var() {
 
 ## Layout
 
-O FramerMotion possibilita criar animações performáticas utilizando mudanças no CSS e a prop `layout`.
+O FramerMotion possibilita criar animações performáticas utilizando mudanças no [layout CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) e a prop `layout`. Mudanças no layout não ocorrem de forma animada "naturalmente", mas com a prop `layout` o framer motion possibilita gerar uma animação utilizando esse recurso.
 
 !!!
 É possível realizar mudanças dinâmicas no css utilizando o TailWind como no exemplo seguinte.
@@ -538,7 +540,7 @@ Para mais informações sobre `scroll`, acesse [scroll](https://www.framer.com/m
 
 ## Resposividade
 
-Resposividade é esperada de toda UI moderna e não é diferente com as animações utilizadas com o Framer Motion. Essa característica pode ser garantida utilizando `variáveis CSS` e `media query`. Projetos com `Tailwind` disponível tornam o processo de `media query` mais fácil, contudo é importante lembrar que o `Tailwind` é focado em `mobile first`, por isso, o valor "padrão" das variáveis deverão ser para telas pequenas e a `media query` deverá ajustá-las. Se `Tailwind` não estiver disponível, o processo de criação e `media query` poderá ser feito no próprio CSS e a utilização no `.tsx` será feito por meio do "var(--nome-da-variavel)".
+Resposividade é esperada de toda UI moderna e não é diferente com as animações utilizadas com o Framer Motion. Essa característica pode ser garantida utilizando `variáveis CSS` e `media query`. Projetos com `Tailwind` disponível tornam o processo de `media query` mais fácil, contudo é importante lembrar que o `Tailwind` é focado em `mobile first`, por isso, o valor "padrão" das variáveis deverão ser para telas pequenas e a `media query` deverá ajustá-las. Se `Tailwind` não estiver disponível, o processo de criação e `media query` poderá ser feito no próprio CSS e a utilização no componente `motion` será feito por meio do "var(--nome-da-variavel)".
 
 Com Tailwind, a criação de variáveis CSS será feita no `className` do componente seguindo o seguinte formato:
 
