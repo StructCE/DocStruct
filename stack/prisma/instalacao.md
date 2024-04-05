@@ -4,6 +4,7 @@ icon: command-palette
 label: "Como 'instalar' o Prisma?"
 author:
   name: Araújo e Padovesi
+  avatar: ../assets/membros/artur-padovesi.png
 date: 2023-09-24
 category: Instalação
 ---

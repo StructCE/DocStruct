@@ -48,4 +48,8 @@ const ImgUploadButton = () => {
 export default ImgUploadButton;
 ```
 
+!!!
+Podemos utilizar a prop `publicId` no upload de arquivos para conseguirmos acessá-los posteriormente de forma simplificada. Por exemplo, você pode definir um padrão de id público que utiliza o username de um usuário qualquer, assim quando quisermos pegar imagens para esse usuário, podemos criar um id dinâmico para isso.
+!!!
+
 Além das opções do exemplo, você também é capaz de cortar imagens, definir formatos de arquivos, tamanho máximo de upload, compressão, criptografia, etc. Saiba mais sobre cada uma e seus usos na [documentação do cloudinary widget](https://cloudinary.com/documentation/upload_widget_reference#upload_parameters).

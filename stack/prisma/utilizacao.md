@@ -4,6 +4,7 @@ icon: file-code
 label: "Como usar Prisma ORM ?"
 author:
   name: Padovesi
+  avatar: ../assets/membros/artur-padovesi.png
 date: 2023-10-19
 category: Utilização
 tags:

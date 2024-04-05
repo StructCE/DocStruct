@@ -4,6 +4,7 @@ icon: question
 label: "O que é Prisma?"
 author:
   name: Artur Padovesi
+  avatar: ../assets/membros/artur-padovesi.png
 date: 2023-09-24
 category: Explicação
 tags:

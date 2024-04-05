@@ -4,7 +4,7 @@ icon: terminal
 label: "Como utilizar TypeScript com React?"
 author:
   name: Paulo Fernando
-  avatar: ../assets/logo_struct.png
+  avatar: ../assets/membros/paulo-vilarim.png
 category: Explicação
 tags:
   - typescript
