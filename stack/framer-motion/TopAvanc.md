@@ -140,3 +140,16 @@ export default function Menu() {
 ```
 
 ===
+
+## Extras
+
+### Componentes
+
+- (LazyMotion)[https://www.framer.com/motion/lazy-motion/]: Permite diminuir o pacote inicial do Framer Motion e carregar "partes" do pacote quando for utilizar na página.
+- (Reorder)[https://www.framer.com/motion/reorder/]: Componente útil para criar sequências de elementos animadas que podem ser ordenadas pelo usuário.
+  
+### Motion Values
+
+- (useVelocity)[https://www.framer.com/motion/use-velocity/]: Permite utilizar a velocidade ou acelereção de um componente para manipular alguma característica da animação.
+- (useSpring)[https://www.framer.com/motion/use-spring/]: Pode ser utilizado para criar movimentações do tipo mola.
+
