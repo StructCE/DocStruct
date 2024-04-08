@@ -34,11 +34,12 @@ dotnet tool install retypeapp --global
 
 ### 3 - Entre em uma das pastas e rode o projeto
 
-Nossa documentação está dividida em 3 seções:
+Nossa documentação está dividida em 4 seções:
 
 - ferramentas-de-ambiente
 - organizacao-interna
 - stack
+- squads
 
 Cada seção destas é uma pasta na raíz do repositório e também é um projeto do retype.
 Portanto, entre na pasta que vc deseja realizar sua documentação e rode o projeto.
