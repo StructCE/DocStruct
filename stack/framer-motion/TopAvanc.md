@@ -26,11 +26,10 @@ Pode existir um `Motion Value` para a direção `x` e outro para a direção `y`
 
 ### useTransform
 
-O useTransform é um dos meios que utilizam o `MotionValue` para oferecer melhor controle da animação gerada. Ele recebe um valor , range de entrada e range
-de saída e baseado nesses valores ele retorna um valor da range de saída.
+O useTransform é um dos meios que utilizam o `MotionValue` para oferecer melhor controle da animação gerada. Ele recebe um valor , range de entrada e range de saída e baseado nesses valores ele retorna um valor da range de saída.
 
 !!!
-Se a saída mudar de comportamento a partir de certo valor da entrada poderá ser utilizado mais de 2 valores na entrada e na saída para melhor descrever esse comportamento.
+O useTransform pode receber vários valores para definir o range de entrada e o range de saída. De acordo com os valores da entrada e a ordem dos valores de saída, a função estabelecerá uma lógica que definirá o resultado final.
 !!!
 
 ==- Exemplo de useMotionValue e useTransform
@@ -82,6 +81,8 @@ Para mais informações sobre `use-transform` e `useTransform`, acesse [Framer M
 O hook `useAnimate` permite definir um escopo de animação e nele definir o que cada elemento irá fazer em uma sequência definida. Esse hook permite criar animações mais complexas e flexiveis para uso.
 
 O gerenciamento da animação é feito dentro de um escopo e a seleção dos elementos pode ocorrer com o uso das `tags`, `classes` ou `ids`.
+
+O useAnimate é mais complexo de usar que o componente motion, mas ele é uma ferramenta poderosa, pois permite o sequenciamento de animações mais complexas e criar uma animação sem precisar de conhecer todos os elementos de uma componente. 
 
 ==- Exemplo
 ```tsx src/components/menu.tsx
@@ -145,11 +146,11 @@ export default function Menu() {
 
 ### Componentes
 
-- (LazyMotion)[https://www.framer.com/motion/lazy-motion/]: Permite diminuir o pacote inicial do Framer Motion e carregar "partes" do pacote quando for utilizar na página.
-- (Reorder)[https://www.framer.com/motion/reorder/]: Componente útil para criar sequências de elementos animadas que podem ser ordenadas pelo usuário.
+- [LazyMotion](https://www.framer.com/motion/lazy-motion/): Permite diminuir o pacote inicial do Framer Motion e carregar "partes" do pacote quando for utilizar na página.
+- [Reorder](https://www.framer.com/motion/reorder/): Componente útil para criar sequências de elementos animadas que podem ser ordenadas pelo usuário.
   
 ### Motion Values
 
-- (useVelocity)[https://www.framer.com/motion/use-velocity/]: Permite utilizar a velocidade ou acelereção de um componente para manipular alguma característica da animação.
-- (useSpring)[https://www.framer.com/motion/use-spring/]: Pode ser utilizado para criar movimentações do tipo mola.
+- [useVelocity](https://www.framer.com/motion/use-velocity/): Permite utilizar a velocidade ou acelereção de um componente para manipular alguma característica da animação.
+- [useSpring](https://www.framer.com/motion/use-spring/): Pode ser utilizado para criar movimentações do tipo mola.
 
