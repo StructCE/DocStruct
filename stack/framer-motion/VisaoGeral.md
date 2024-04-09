@@ -18,7 +18,7 @@ Os exemplos abaixo foram criados para o next.js com tailwind. O Framer Motion n�
 
 O componente motion é a forma principal de criar uma animação. Para utilizá-lo, será necessário colocar `<motion.elemento>`. As animações podem ocorrem quando o componente é montado e quando ele é "destruído".
 
-## Propriedades
+## Animações
 
 O componente motion possui certas propriedades que definem a animação do componente.
 
@@ -165,65 +165,7 @@ export default function BlocoVivo() {
 
 ===
 
-### Múltiplas animações (KeyFrames)
-
-O Framer Motion permite estruturar uma sequência de estados que o componente estará durante a animação. Uma array de valores em cada atributo nas props `initial`, `animate` e `exit` pode ser utilizado para essa finalidade. A prop `trasition` pode ter a `duration` que define o tempo total de cada prop de animação, mas o tempo de cada segmento da sequência será definido pelo atributo `times`.
-
-!!!
-O primeiro valor da array será o atributo inicial da animação. O valor inicial pode ser `null` para evitar mudanças bruscas, pois o atributo terá o valor inicial igual ao valor anterior a animação.
-
-Os valores do `times` podem variar entre [0, 1]. Esses valores são o percentual que cada estado tem da duração.
-!!!
-
-==- Exemplo
-
-```tsx tsx src/components/useStateBloco.tsx
-"use client";
-
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-
-export default function BlocoAnimado() {
-	const [alive, setAlive] = useState(true);
-
-	return (
-		<>
-			<button
-				className="bg-slate-600 text-slate-200 rounded-xl p-1"
-				onClick={() => {
-					setAlive(!alive);
-				}}
-			>
-				Trocar estado
-			</button>
-			<AnimatePresence>
-				{alive && (
-					<motion.div
-						animate={{ x: [null, 100, 200, 800] }}
-						transition={{ duration: 2, times: [0, 0.25, 0.5, 1] }}
-						exit={{
-							x: 400,
-							y: [null, 100, 200, 400],
-							opacity: [1, 0.75, 0.5, 0],
-						}}
-						className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
-					>
-						Olá, mundo!
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</>
-	);
-}
-```
-
-===
-
-!!!
-Para mais informações sobre o componente motion e suas propriedades acesse [motion](https://www.framer.com/motion/component/)
-!!!
-
-## Gestos
+### Gestos
 
 O componente `motion`, também, permite a implementação de animações relacionadas com as ações do usuário. Elas são
 `hover`, `tap`, `drag` e `inView`. O uso delas é parecido com o da prop `animate`, contudo, a `transition` fica no escopo do gesto.
@@ -256,6 +198,129 @@ export default function Botao() {
 !!!
 O próprio framer resolve o estado do componente pós gesto.
 Para mais informações sobre gestos, acesse [gestures](https://www.framer.com/motion/gestures/)
+!!!
+
+### Layout
+
+O FramerMotion possibilita criar animações performáticas utilizando mudanças no [layout CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) e a prop `layout`. Mudanças no layout não ocorrem de forma animada "naturalmente", mas com a prop `layout` o framer motion possibilita gerar uma animação utilizando esse recurso.
+
+!!!
+É possível realizar mudanças dinâmicas no css utilizando o TailWind como no exemplo seguinte.
+
+Se o projeto não utilizar TailWind é possivel a utilização de [_data attributes_](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) para possibilitar esse recurso.
+!!!
+
+==- Exemplo
+
+```tsx src/components/switch.tsx
+"use client";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+export default function Switch() {
+	const [isOn, setIsOn] = useState(false);
+	const handleClick = () => {
+		setIsOn(!isOn);
+	};
+
+	return (
+		<div
+			className={`p-2 w-24 bg-slate-400 opacity-50 flex ${
+				isOn ? "justify-start" : "justify-end"
+			}`}
+			onClick={handleClick}
+		>
+			<motion.div
+				transition={{ duration: 0.5, type: "spring" }}
+				layout // Recomendado visualizar sem o layout para perceber a diferença
+				className="h-8 w-8 bg-slate-600 rounded-xl"
+			></motion.div>
+		</div>
+	);
+}
+```
+
+===
+
+!!!
+Para mais informações sobre `layout`, acesse [layout](https://www.framer.com/motion/layout-animations/).
+!!!
+
+### Scroll
+
+As animações podem ser afetadas pelo uso do `scroll` tanto por progressão quanto por `viewport`. Para isso, utilizaremos o _motion value_ `useScroll` e o gesto `whileInView`, respectivamente.
+
+==- Exemplo de progressão
+
+```tsx src/components/ProgressionBar.tsx
+"use client";
+import { motion, useScroll } from "framer-motion";
+
+export default function ProgressionBar() {
+	const { scrollYProgress } = useScroll();
+	return (
+		<>
+			<motion.div
+				style={{ scaleY: scrollYProgress }}
+				className="fixed h-full w-4 origin-top bg-slate-700"
+			></motion.div>
+			<div className="bg-slate-100 h-96"></div>
+			<div className="bg-slate-200 h-96"></div>
+			<div className="bg-slate-300 h-96"></div>
+			<div className="bg-slate-400 h-96"></div>
+			<div className="bg-slate-500 h-96"></div>
+			<div className="bg-slate-600 h-96"></div>
+		</>
+		// Essas divs foram utilizadas para possibilitar o scroll
+	);
+}
+```
+
+===
+==- Exemplo de Viewport
+
+```tsx src/components/Expand
+"use client";
+import { motion } from "framer-motion";
+
+export default function InView() {
+	return (
+		<>
+			<div className="bg-slate-100 h-96 flex justify-center items-center">
+				Scrolle para baixo!
+			</div>
+			<div className="bg-slate-200 h-96 flex justify-center items-center">
+				Scrolle para baixo!
+			</div>
+			<div className="bg-slate-300 h-96 flex justify-center items-center">
+				Scrolle para baixo!
+			</div>
+			<motion.div
+				initial={{ scale: 0 }}
+				whileInView={{ scale: 1 }}
+				viewport={{ once: true }} // Para a animação ocorrer apenas uma vez
+				className="bg-slate-400 text-blue-950 h-96 flex justify-center items-center"
+			>
+				<p>Olá, mundo!</p>
+			</motion.div>
+			<div className="bg-slate-500 h-96 flex justify-center items-center">
+				Scrolle para cima!
+			</div>
+			<div className="bg-slate-600 h-96 flex justify-center items-center">
+				Scrolle para cima!
+			</div>
+			<div className="bg-slate-700 h-96 flex justify-center items-center">
+				Scrolle para cima!
+			</div>
+		</>
+	);
+}
+```
+
+===
+
+!!!
+Para mais informações sobre `scroll`, acesse [scroll](https://www.framer.com/motion/scroll-animations/).
 !!!
 
 ## Variants
@@ -415,118 +480,53 @@ export default function Var() {
 
 ===
 
-## Layout
+## Múltiplas animações (KeyFrames)
 
-O FramerMotion possibilita criar animações performáticas utilizando mudanças no [layout CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout) e a prop `layout`. Mudanças no layout não ocorrem de forma animada "naturalmente", mas com a prop `layout` o framer motion possibilita gerar uma animação utilizando esse recurso.
+O Framer Motion permite estruturar uma sequência de estados que o componente estará durante a animação. Uma array de valores em cada atributo nas props `initial`, `animate` e `exit` pode ser utilizado para essa finalidade. A prop `trasition` pode ter a `duration` que define o tempo total de cada prop de animação, mas o tempo de cada segmento da sequência será definido pelo atributo `times`.
 
 !!!
-É possível realizar mudanças dinâmicas no css utilizando o TailWind como no exemplo seguinte.
+O primeiro valor da array será o atributo inicial da animação. O valor inicial pode ser `null` para evitar mudanças bruscas, pois o atributo terá o valor inicial igual ao valor anterior a animação.
 
-Se o projeto não utilizar TailWind é possivel a utilização de [_data attributes_](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) para possibilitar esse recurso.
+Os valores do `times` podem variar entre [0, 1]. Esses valores são o percentual que cada estado tem da duração.
 !!!
 
 ==- Exemplo
 
-```tsx src/components/switch.tsx
+```tsx tsx src/components/useStateBloco.tsx
 "use client";
-import { motion } from "framer-motion";
+
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-export default function Switch() {
-	const [isOn, setIsOn] = useState(false);
-	const handleClick = () => {
-		setIsOn(!isOn);
-	};
+export default function BlocoAnimado() {
+	const [alive, setAlive] = useState(true);
 
-	return (
-		<div
-			className={`p-2 w-24 bg-slate-400 opacity-50 flex ${
-				isOn ? "justify-start" : "justify-end"
-			}`}
-			onClick={handleClick}
-		>
-			<motion.div
-				transition={{ duration: 0.5, type: "spring" }}
-				layout // Recomendado visualizar sem o layout para perceber a diferença
-				className="h-8 w-8 bg-slate-600 rounded-xl"
-			></motion.div>
-		</div>
-	);
-}
-```
-
-===
-
-!!!
-Para mais informações sobre `layout`, acesse [layout](https://www.framer.com/motion/layout-animations/).
-!!!
-
-## Scroll
-
-As animações podem ser afetadas pelo uso do `scroll` tanto por progressão quanto por `viewport`. Para isso, utilizaremos o _motion value_ `useScroll` e o gesto `whileInView`, respectivamente.
-
-==- Exemplo de progressão
-
-```tsx src/components/ProgressionBar.tsx
-"use client";
-import { motion, useScroll } from "framer-motion";
-
-export default function ProgressionBar() {
-	const { scrollYProgress } = useScroll();
 	return (
 		<>
-			<motion.div
-				style={{ scaleY: scrollYProgress }}
-				className="fixed h-full w-4 origin-top bg-slate-700"
-			></motion.div>
-			<div className="bg-slate-100 h-96"></div>
-			<div className="bg-slate-200 h-96"></div>
-			<div className="bg-slate-300 h-96"></div>
-			<div className="bg-slate-400 h-96"></div>
-			<div className="bg-slate-500 h-96"></div>
-			<div className="bg-slate-600 h-96"></div>
-		</>
-		// Essas divs foram utilizadas para possibilitar o scroll
-	);
-}
-```
-
-===
-==- Exemplo de Viewport
-
-```tsx src/components/Expand
-"use client";
-import { motion } from "framer-motion";
-
-export default function InView() {
-	return (
-		<>
-			<div className="bg-slate-100 h-96 flex justify-center items-center">
-				Scrolle para baixo!
-			</div>
-			<div className="bg-slate-200 h-96 flex justify-center items-center">
-				Scrolle para baixo!
-			</div>
-			<div className="bg-slate-300 h-96 flex justify-center items-center">
-				Scrolle para baixo!
-			</div>
-			<motion.div
-				initial={{ scale: 0 }}
-				whileInView={{ scale: 1 }}
-				viewport={{ once: true }} // Para a animação ocorrer apenas uma vez
-				className="bg-slate-400 text-blue-950 h-96 flex justify-center items-center"
+			<button
+				className="bg-slate-600 text-slate-200 rounded-xl p-1"
+				onClick={() => {
+					setAlive(!alive);
+				}}
 			>
-				<p>Olá, mundo!</p>
-			</motion.div>
-			<div className="bg-slate-500 h-96 flex justify-center items-center">
-				Scrolle para cima!
-			</div>
-			<div className="bg-slate-600 h-96 flex justify-center items-center">
-				Scrolle para cima!
-			</div>
-			<div className="bg-slate-700 h-96 flex justify-center items-center">
-				Scrolle para cima!
-			</div>
+				Trocar estado
+			</button>
+			<AnimatePresence>
+				{alive && (
+					<motion.div
+						animate={{ x: [null, 100, 200, 800] }}
+						transition={{ duration: 2, times: [0, 0.25, 0.5, 1] }}
+						exit={{
+							x: 400,
+							y: [null, 100, 200, 400],
+							opacity: [1, 0.75, 0.5, 0],
+						}}
+						className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
+					>
+						Olá, mundo!
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</>
 	);
 }
@@ -535,7 +535,7 @@ export default function InView() {
 ===
 
 !!!
-Para mais informações sobre `scroll`, acesse [scroll](https://www.framer.com/motion/scroll-animations/).
+Para mais informações sobre o componente motion e suas propriedades acesse [motion](https://www.framer.com/motion/component/)
 !!!
 
 ## Resposividade
