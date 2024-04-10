@@ -26,11 +26,7 @@ Pode existir um `Motion Value` para a direção `x` e outro para a direção `y`
 
 ### useTransform
 
-O useTransform é um dos meios que utilizam o `MotionValue` para oferecer melhor controle da animação gerada. Ele recebe um valor , range de entrada e range de saída e baseado nesses valores ele retorna um valor da range de saída.
-
-!!!
-O useTransform pode receber vários valores para definir o range de entrada e o range de saída. De acordo com os valores da entrada e a ordem dos valores de saída, a função estabelecerá uma lógica que definirá o resultado final.
-!!!
+O useTransform é um dos meios que utilizam o `MotionValue` para oferecer melhor controle da animação gerada. Ele recebe uma array com possíveis entradas, definindo o intervalo de valores possíveis para os `MotionValues`, e outras arrays, do mesmo tamanho das possibilidades de entradas, que irão conter as saídas para cada entrada.
 
 ==- Exemplo de useMotionValue e useTransform
 
