@@ -323,6 +323,65 @@ export default function InView() {
 Para mais informações sobre `scroll`, acesse [scroll](https://www.framer.com/motion/scroll-animations/).
 !!!
 
+
+### Múltiplas animações (KeyFrames)
+
+O Framer Motion permite estruturar uma sequência de estados que o componente estará durante a animação. Uma array de valores em cada atributo nas props `initial`, `animate` e `exit` pode ser utilizado para essa finalidade. A prop `trasition` pode ter a `duration` que define o tempo total de cada prop de animação, mas o tempo de cada segmento da sequência será definido pelo atributo `times`.
+
+!!!
+O primeiro valor da array será o atributo inicial da animação. O valor inicial pode ser `null` para evitar mudanças bruscas, pois o atributo terá o valor inicial igual ao valor anterior a animação.
+
+Os valores do `times` podem variar entre [0, 1]. Esses valores são o percentual que cada estado tem da duração.
+!!!
+
+==- Exemplo
+
+```tsx tsx src/components/useStateBloco.tsx
+"use client";
+
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+
+export default function BlocoAnimado() {
+	const [alive, setAlive] = useState(true);
+
+	return (
+		<>
+			<button
+				className="bg-slate-600 text-slate-200 rounded-xl p-1"
+				onClick={() => {
+					setAlive(!alive);
+				}}
+			>
+				Trocar estado
+			</button>
+			<AnimatePresence>
+				{alive && (
+					<motion.div
+						animate={{ x: [null, 100, 200, 800] }}
+						transition={{ duration: 2, times: [0, 0.25, 0.5, 1] }}
+						exit={{
+							x: 400,
+							y: [null, 100, 200, 400],
+							opacity: [1, 0.75, 0.5, 0],
+						}}
+						className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
+					>
+						Olá, mundo!
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</>
+	);
+}
+```
+
+===
+
+!!!
+Para mais informações sobre o componente motion e suas propriedades acesse [motion](https://www.framer.com/motion/component/)
+!!!
+
 ## Variants
 
 As `Variants` são `objects` que representam as configurações do componente. As chaves representam o nome daquela configuração, assim, essa chave pode ser chamada na prop `animate` sem precisar escrever a configuração inteira dentro do componente `motion`.
@@ -479,65 +538,6 @@ export default function Var() {
 ```
 
 ===
-
-## Múltiplas animações (KeyFrames)
-
-O Framer Motion permite estruturar uma sequência de estados que o componente estará durante a animação. Uma array de valores em cada atributo nas props `initial`, `animate` e `exit` pode ser utilizado para essa finalidade. A prop `trasition` pode ter a `duration` que define o tempo total de cada prop de animação, mas o tempo de cada segmento da sequência será definido pelo atributo `times`.
-
-!!!
-O primeiro valor da array será o atributo inicial da animação. O valor inicial pode ser `null` para evitar mudanças bruscas, pois o atributo terá o valor inicial igual ao valor anterior a animação.
-
-Os valores do `times` podem variar entre [0, 1]. Esses valores são o percentual que cada estado tem da duração.
-!!!
-
-==- Exemplo
-
-```tsx tsx src/components/useStateBloco.tsx
-"use client";
-
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-
-export default function BlocoAnimado() {
-	const [alive, setAlive] = useState(true);
-
-	return (
-		<>
-			<button
-				className="bg-slate-600 text-slate-200 rounded-xl p-1"
-				onClick={() => {
-					setAlive(!alive);
-				}}
-			>
-				Trocar estado
-			</button>
-			<AnimatePresence>
-				{alive && (
-					<motion.div
-						animate={{ x: [null, 100, 200, 800] }}
-						transition={{ duration: 2, times: [0, 0.25, 0.5, 1] }}
-						exit={{
-							x: 400,
-							y: [null, 100, 200, 400],
-							opacity: [1, 0.75, 0.5, 0],
-						}}
-						className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
-					>
-						Olá, mundo!
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</>
-	);
-}
-```
-
-===
-
-!!!
-Para mais informações sobre o componente motion e suas propriedades acesse [motion](https://www.framer.com/motion/component/)
-!!!
-
 ## Resposividade
 
 Resposividade é esperada de toda UI moderna e não é diferente com as animações utilizadas com o Framer Motion. Essa característica pode ser garantida utilizando `variáveis CSS` e `media query`. Projetos com `Tailwind` disponível tornam o processo de `media query` mais fácil, contudo é importante lembrar que o `Tailwind` é focado em `mobile first`, por isso, o valor "padrão" das variáveis deverão ser para telas pequenas e a `media query` deverá ajustá-las. Se `Tailwind` não estiver disponível, o processo de criação e `media query` poderá ser feito no próprio CSS e a utilização no componente `motion` será feito por meio do "var(--nome-da-variavel)".
