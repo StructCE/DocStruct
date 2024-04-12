@@ -3,7 +3,7 @@ icon: beaker
 label: "Geral sobre as animações"
 order: 4
 author:
-    name: Pedro Amorim de Gregori
+  name: Pedro Amorim de Gregori
 date: 2024-03-13
 category: Explicação
 ---
@@ -16,7 +16,7 @@ Os exemplos abaixo foram criados para o next.js com tailwind. O Framer Motion n�
 
 ## Componente Motion
 
-O componente motion é a forma principal de criar uma animação. Para utilizá-lo, será necessário colocar `<motion.elemento>`. As animações podem ocorrem quando o componente é montado e quando ele é "destruído".
+O componente motion é a forma principal de criar uma animação. Para utilizá-lo, será necessário colocar `<motion.elemento>`, onde `elemento` é a marcação html que você deseja animar. As animações podem ocorrem quando o componente é montado e quando ele é "destruído".
 
 ## Animações
 
@@ -24,7 +24,7 @@ O componente motion possui certas propriedades que definem a animação do compo
 
 ### Animate
 
-A maior parte das animações poderá ser feita utilizando o component `motion` e a prop `animate`. Com a `tag` criada, poderá ser atribuída a prop `animate`. Ela poderá conter propriedades do `CSS` como `x`, `y` e `rotate`que  as tornarão animadas a cada alteração em seus valores.
+A maior parte das animações poderá ser feita utilizando o component `motion` e a prop `animate`. Com a `tag` criada, poderá ser atribuída a prop `animate`. Ela poderá conter propriedades do `CSS` como `x`, `y` e `rotate`que as tornarão animadas a cada alteração em seus valores.
 
 ==- Exemplo
 
@@ -33,12 +33,12 @@ A maior parte das animações poderá ser feita utilizando o component `motion` 
 import { motion } from "framer-motion";
 
 export default function Bloco() {
-	return (
-		<motion.div
-			animate={{ x: 100, y: 200, rotate: 360 }}
-			className="w-10 h-10 bg-slate-600"
-		></motion.div>
-	);
+  return (
+    <motion.div
+      animate={{ x: 100, y: 200, rotate: 360 }}
+      className="w-10 h-10 bg-slate-600"
+    ></motion.div>
+  );
 }
 ```
 
@@ -63,13 +63,13 @@ A prop `trasition` apresenta valores padrão caso não seja citada. Caso a prop 
 import { motion } from "framer-motion";
 
 export default function Bloco() {
-	return (
-		<motion.div
-			animate={{ x: 100, y: 200, rotate: 45 }}
-			transition={{ duration: 2, type: "spring", delay: 1.5 }}
-			className="w-10 h-10 bg-slate-600"
-		></motion.div>
-	);
+  return (
+    <motion.div
+      animate={{ x: 100, y: 200, rotate: 45 }}
+      transition={{ duration: 2, type: "spring", delay: 1.5 }}
+      className="w-10 h-10 bg-slate-600"
+    ></motion.div>
+  );
 }
 ```
 
@@ -90,13 +90,13 @@ Para definir um estado inicial ao componente poderá ser utilizada a prop `initi
 import { motion } from "framer-motion";
 
 export default function Bloco() {
-	return (
-		<motion.div
-			animate={{ x: 100, y: 200, rotate: 360 }}
-			initial={{ x: 50 }}
-			className="w-10 h-10 bg-slate-600"
-		></motion.div>
-	);
+  return (
+    <motion.div
+      animate={{ x: 100, y: 200, rotate: 360 }}
+      initial={{ x: 50 }}
+      className="w-10 h-10 bg-slate-600"
+    ></motion.div>
+  );
 }
 ```
 
@@ -107,13 +107,13 @@ A prop `initial` poderá ser utilizada para evitar a animação de quando o elem
 import { motion } from "framer-motion";
 
 export default function Bloco() {
-	return (
-		<motion.div
-			animate={{ x: 100, y: 200, rotate: 45 }}
-			initial={false}
-			className="w-10 h-10 bg-slate-600"
-		></motion.div>
-	);
+  return (
+    <motion.div
+      animate={{ x: 100, y: 200, rotate: 45 }}
+      initial={false}
+      className="w-10 h-10 bg-slate-600"
+    ></motion.div>
+  );
 }
 ```
 
@@ -132,34 +132,34 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function BlocoVivo() {
-	const [alive, setAlive] = useState(true);
+  const [alive, setAlive] = useState(true);
 
-	const swap = () => {
-		alive ? setAlive(false) : setAlive(true);
-	};
+  const swap = () => {
+    alive ? setAlive(false) : setAlive(true);
+  };
 
-	return (
-		<>
-			<button
-				className="bg-slate-600 text-slate-200 rounded-xl p-1"
-				onClick={() => swap()}
-			>
-				Trocar estado
-			</button>
-			<AnimatePresence>
-				{alive && (
-					<motion.div
-						animate={{ x: 100 }}
-						transition={{ duration: 2 }}
-						exit={{ x: 400, y: 400, opacity: 0 }}
-						className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
-					>
-						Olá, mundo!
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</>
-	);
+  return (
+    <>
+      <button
+        className="bg-slate-600 text-slate-200 rounded-xl p-1"
+        onClick={() => swap()}
+      >
+        Trocar estado
+      </button>
+      <AnimatePresence>
+        {alive && (
+          <motion.div
+            animate={{ x: 100 }}
+            transition={{ duration: 2 }}
+            exit={{ x: 400, y: 400, opacity: 0 }}
+            className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
+          >
+            Olá, mundo!
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 }
 ```
 
@@ -177,19 +177,19 @@ O componente `motion`, também, permite a implementação de animações relacio
 import { motion } from "framer-motion";
 
 export default function Botao() {
-	return (
-		<motion.button
-			className="bg-slate-600"
-			whileTap={{
-				backgroundColor: "#c52121",
-				color: "white",
-				padding: "1rem",
-				transition: { duration: 1 },
-			}}
-		>
-			Click me!
-		</motion.button>
-	);
+  return (
+    <motion.button
+      className="bg-slate-600"
+      whileTap={{
+        backgroundColor: "#c52121",
+        color: "white",
+        padding: "1rem",
+        transition: { duration: 1 },
+      }}
+    >
+      Click me!
+    </motion.button>
+  );
 }
 ```
 
@@ -218,25 +218,25 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Switch() {
-	const [isOn, setIsOn] = useState(false);
-	const handleClick = () => {
-		setIsOn(!isOn);
-	};
+  const [isOn, setIsOn] = useState(false);
+  const handleClick = () => {
+    setIsOn(!isOn);
+  };
 
-	return (
-		<div
-			className={`p-2 w-24 bg-slate-400 opacity-50 flex ${
-				isOn ? "justify-start" : "justify-end"
-			}`}
-			onClick={handleClick}
-		>
-			<motion.div
-				transition={{ duration: 0.5, type: "spring" }}
-				layout // Recomendado visualizar sem o layout para perceber a diferença
-				className="h-8 w-8 bg-slate-600 rounded-xl"
-			></motion.div>
-		</div>
-	);
+  return (
+    <div
+      className={`p-2 w-24 bg-slate-400 opacity-50 flex ${
+        isOn ? "justify-start" : "justify-end"
+      }`}
+      onClick={handleClick}
+    >
+      <motion.div
+        transition={{ duration: 0.5, type: "spring" }}
+        layout // Recomendado visualizar sem o layout para perceber a diferença
+        className="h-8 w-8 bg-slate-600 rounded-xl"
+      ></motion.div>
+    </div>
+  );
 }
 ```
 
@@ -257,22 +257,22 @@ As animações podem ser afetadas pelo uso do `scroll` tanto por progressão qua
 import { motion, useScroll } from "framer-motion";
 
 export default function ProgressionBar() {
-	const { scrollYProgress } = useScroll();
-	return (
-		<>
-			<motion.div
-				style={{ scaleY: scrollYProgress }}
-				className="fixed h-full w-4 origin-top bg-slate-700"
-			></motion.div>
-			<div className="bg-slate-100 h-96"></div>
-			<div className="bg-slate-200 h-96"></div>
-			<div className="bg-slate-300 h-96"></div>
-			<div className="bg-slate-400 h-96"></div>
-			<div className="bg-slate-500 h-96"></div>
-			<div className="bg-slate-600 h-96"></div>
-		</>
-		// Essas divs foram utilizadas para possibilitar o scroll
-	);
+  const { scrollYProgress } = useScroll();
+  return (
+    <>
+      <motion.div
+        style={{ scaleY: scrollYProgress }}
+        className="fixed h-full w-4 origin-top bg-slate-700"
+      ></motion.div>
+      <div className="bg-slate-100 h-96"></div>
+      <div className="bg-slate-200 h-96"></div>
+      <div className="bg-slate-300 h-96"></div>
+      <div className="bg-slate-400 h-96"></div>
+      <div className="bg-slate-500 h-96"></div>
+      <div className="bg-slate-600 h-96"></div>
+    </>
+    // Essas divs foram utilizadas para possibilitar o scroll
+  );
 }
 ```
 
@@ -284,36 +284,36 @@ export default function ProgressionBar() {
 import { motion } from "framer-motion";
 
 export default function InView() {
-	return (
-		<>
-			<div className="bg-slate-100 h-96 flex justify-center items-center">
-				Scrolle para baixo!
-			</div>
-			<div className="bg-slate-200 h-96 flex justify-center items-center">
-				Scrolle para baixo!
-			</div>
-			<div className="bg-slate-300 h-96 flex justify-center items-center">
-				Scrolle para baixo!
-			</div>
-			<motion.div
-				initial={{ scale: 0 }}
-				whileInView={{ scale: 1 }}
-				viewport={{ once: true }} // Para a animação ocorrer apenas uma vez
-				className="bg-slate-400 text-blue-950 h-96 flex justify-center items-center"
-			>
-				<p>Olá, mundo!</p>
-			</motion.div>
-			<div className="bg-slate-500 h-96 flex justify-center items-center">
-				Scrolle para cima!
-			</div>
-			<div className="bg-slate-600 h-96 flex justify-center items-center">
-				Scrolle para cima!
-			</div>
-			<div className="bg-slate-700 h-96 flex justify-center items-center">
-				Scrolle para cima!
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div className="bg-slate-100 h-96 flex justify-center items-center">
+        Scrolle para baixo!
+      </div>
+      <div className="bg-slate-200 h-96 flex justify-center items-center">
+        Scrolle para baixo!
+      </div>
+      <div className="bg-slate-300 h-96 flex justify-center items-center">
+        Scrolle para baixo!
+      </div>
+      <motion.div
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }} // Para a animação ocorrer apenas uma vez
+        className="bg-slate-400 text-blue-950 h-96 flex justify-center items-center"
+      >
+        <p>Olá, mundo!</p>
+      </motion.div>
+      <div className="bg-slate-500 h-96 flex justify-center items-center">
+        Scrolle para cima!
+      </div>
+      <div className="bg-slate-600 h-96 flex justify-center items-center">
+        Scrolle para cima!
+      </div>
+      <div className="bg-slate-700 h-96 flex justify-center items-center">
+        Scrolle para cima!
+      </div>
+    </>
+  );
 }
 ```
 
@@ -322,7 +322,6 @@ export default function InView() {
 !!!
 Para mais informações sobre `scroll`, acesse [scroll](https://www.framer.com/motion/scroll-animations/).
 !!!
-
 
 ### Múltiplas animações (KeyFrames)
 
@@ -343,36 +342,36 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function BlocoAnimado() {
-	const [alive, setAlive] = useState(true);
+  const [alive, setAlive] = useState(true);
 
-	return (
-		<>
-			<button
-				className="bg-slate-600 text-slate-200 rounded-xl p-1"
-				onClick={() => {
-					setAlive(!alive);
-				}}
-			>
-				Trocar estado
-			</button>
-			<AnimatePresence>
-				{alive && (
-					<motion.div
-						animate={{ x: [null, 100, 200, 800] }}
-						transition={{ duration: 2, times: [0, 0.25, 0.5, 1] }}
-						exit={{
-							x: 400,
-							y: [null, 100, 200, 400],
-							opacity: [1, 0.75, 0.5, 0],
-						}}
-						className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
-					>
-						Olá, mundo!
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</>
-	);
+  return (
+    <>
+      <button
+        className="bg-slate-600 text-slate-200 rounded-xl p-1"
+        onClick={() => {
+          setAlive(!alive);
+        }}
+      >
+        Trocar estado
+      </button>
+      <AnimatePresence>
+        {alive && (
+          <motion.div
+            animate={{ x: [null, 100, 200, 800] }}
+            transition={{ duration: 2, times: [0, 0.25, 0.5, 1] }}
+            exit={{
+              x: 400,
+              y: [null, 100, 200, 400],
+              opacity: [1, 0.75, 0.5, 0],
+            }}
+            className="bg-slate-600 text-slate-200 w-20 h-20 text-center"
+          >
+            Olá, mundo!
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 }
 ```
 
@@ -398,62 +397,62 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Var() {
-	const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-	const bloco = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				delayChildren: 0.5,
-				staggerChildren: 0.4,
-			},
-		},
-	};
+  const bloco = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.4,
+      },
+    },
+  };
 
-	const botao = {
-		hover: { backgroundColor: "#c52121", color: "white" },
-		visible: {
-			opacity: 1,
-			x: 0,
-		},
-		hidden: { opacity: 0, x: -40 },
-	};
+  const botao = {
+    hover: { backgroundColor: "#c52121", color: "white" },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+    hidden: { opacity: 0, x: -40 },
+  };
 
-	const nums = [1, 2, 3, 4];
+  const nums = [1, 2, 3, 4];
 
-	return (
-		<>
-			<motion.button
-				className="bg-slate-600 text-white"
-				whileHover={{ backgroundColor: "#c52121", color: "white" }}
-				onClick={() => {
-					setShow(!show);
-				}}
-			>
-				Click me!
-			</motion.button>
-			<motion.ul
-				className="bg-slate-400 h-40 w-40"
-				initial={false}
-				animate={show ? "visible" : "hidden"}
-				variants={bloco}
-			>
-				<p>Escolha uma opção:</p>
-				{nums.map((num) => {
-					return (
-						<motion.li
-							key={num}
-							className="bg-slate-600 text-white p-1 text-center"
-							variants={botao}
-						>
-							{num}
-						</motion.li>
-					);
-				})}
-			</motion.ul>
-		</>
-	);
+  return (
+    <>
+      <motion.button
+        className="bg-slate-600 text-white"
+        whileHover={{ backgroundColor: "#c52121", color: "white" }}
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        Click me!
+      </motion.button>
+      <motion.ul
+        className="bg-slate-400 h-40 w-40"
+        initial={false}
+        animate={show ? "visible" : "hidden"}
+        variants={bloco}
+      >
+        <p>Escolha uma opção:</p>
+        {nums.map((num) => {
+          return (
+            <motion.li
+              key={num}
+              className="bg-slate-600 text-white p-1 text-center"
+              variants={botao}
+            >
+              {num}
+            </motion.li>
+          );
+        })}
+      </motion.ul>
+    </>
+  );
 }
 ```
 
@@ -477,67 +476,68 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Var() {
-	const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-	const bloco = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: {
-				delayChildren: 0.5,
-				staggerChildren: 0.4,
-			},
-		},
-	};
+  const bloco = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.4,
+      },
+    },
+  };
 
-	const botao = {
-		visible: (i: number) => ({
-			opacity: 1,
-			x: 0,
-			y: i * 20,
-		}),
-		hidden: { opacity: 0, x: -40 },
-	};
+  const botao = {
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      y: i * 20,
+    }),
+    hidden: { opacity: 0, x: -40 },
+  };
 
-	const nums = [1, 2, 3, 4];
+  const nums = [1, 2, 3, 4];
 
-	return (
-		<>
-			<motion.button
-				className="bg-slate-600 text-white"
-				whileHover={{ backgroundColor: "#c52121", color: "white" }}
-				onClick={() => {
-					setShow(!show);
-				}}
-			>
-				Click me!
-			</motion.button>
-			<motion.ul
-				className="bg-slate-400 h-64 w-40"
-				initial={false}
-				animate={show ? "visible" : "hidden"}
-				variants={bloco}
-			>
-				<p>Escolha uma opção:</p>
-				{nums.map((num) => {
-					return (
-						<motion.li
-							key={num}
-							className="bg-slate-600 text-white p-1 text-center"
-							variants={botao}
-							custom={num}
-						>
-							{num}
-						</motion.li>
-					);
-				})}
-			</motion.ul>
-		</>
-	);
+  return (
+    <>
+      <motion.button
+        className="bg-slate-600 text-white"
+        whileHover={{ backgroundColor: "#c52121", color: "white" }}
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        Click me!
+      </motion.button>
+      <motion.ul
+        className="bg-slate-400 h-64 w-40"
+        initial={false}
+        animate={show ? "visible" : "hidden"}
+        variants={bloco}
+      >
+        <p>Escolha uma opção:</p>
+        {nums.map((num) => {
+          return (
+            <motion.li
+              key={num}
+              className="bg-slate-600 text-white p-1 text-center"
+              variants={botao}
+              custom={num}
+            >
+              {num}
+            </motion.li>
+          );
+        })}
+      </motion.ul>
+    </>
+  );
 }
 ```
 
 ===
+
 ## Resposividade
 
 Resposividade é esperada de toda UI moderna e não é diferente com as animações utilizadas com o Framer Motion. Essa característica pode ser garantida utilizando `variáveis CSS` e `media query`. Projetos com `Tailwind` disponível tornam o processo de `media query` mais fácil, contudo é importante lembrar que o `Tailwind` é focado em `mobile first`, por isso, o valor "padrão" das variáveis deverão ser para telas pequenas e a `media query` deverá ajustá-las. Se `Tailwind` não estiver disponível, o processo de criação e `media query` poderá ser feito no próprio CSS e a utilização no componente `motion` será feito por meio do "var(--nome-da-variavel)".
@@ -557,16 +557,16 @@ Com Tailwind, a criação de variáveis CSS será feita no `className` do compon
 import { motion } from "framer-motion";
 
 export default function BlocoResponsivo() {
-	return (
-		<div>
-			<motion.div
-				initial={{ x: "var(--from-x)", opacity: 0 }}
-				animate={{ x: "var(--to-x)", opacity: 1 }}
-				transition={{ duration: 2, type: "spring" }}
-				className="bg-slate-600 w-10 h-10 m-auto [--from-x:-50px] [--to-x:50px] lg:[--from-x:-200px] lg:[--to-x:200px]"
-			></motion.div>
-		</div>
-	);
+  return (
+    <div>
+      <motion.div
+        initial={{ x: "var(--from-x)", opacity: 0 }}
+        animate={{ x: "var(--to-x)", opacity: 1 }}
+        transition={{ duration: 2, type: "spring" }}
+        className="bg-slate-600 w-10 h-10 m-auto [--from-x:-50px] [--to-x:50px] lg:[--from-x:-200px] lg:[--to-x:200px]"
+      ></motion.div>
+    </div>
+  );
 }
 ```
 
