@@ -45,6 +45,9 @@ jobs:
       - name: build stack
         run: retype build ./stack/retype.yml --output ./public/stack
 
+      - name: build squads
+        run: retype build ./squads/retype.yml --output ./public/squads
+
       - name: setup pages
         uses: actions/configure-pages@v4
 
