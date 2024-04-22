@@ -9,7 +9,7 @@ date: 2024-4-22
 category: Explicação
 ---
 
-# Como Struct precifica os seus projetos
+# Como a Struct precifica os seus projetos
 
 Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessários para entregar projetos de alta qualidade e valor agregado aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as necessidades específicas de cada cliente e projeto.
 
