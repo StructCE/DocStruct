@@ -11,7 +11,7 @@ category: Explicação
 
 # Como a Struct precifica os seus projetos
 
-Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessários para entregar projetos de alta qualidade e valor agregado aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as necessidades específicas de cada cliente e projeto.
+Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessários para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as necessidades específicas de cada cliente e projeto.
 
 ## Motivação e Criação da Precificação
 
@@ -25,7 +25,7 @@ Nossa abordagem de precificação foi desenvolvida após um extenso benchmarking
 
 Após análise detalhada, identificamos que essas empresas utilizam como critérios principais para precificação o valor hora trabalhado, quantidade de membros da equipe, quantidade de tempo e a dificuldade do projeto.
 
-Assim, a Diretoria Comercial desenvolveu uma metodologia baseada nesses insights, criando o conceito de valor hora trabalhado, quantidade de membros e introduzindo o conceito de "issue" para englobar o tempo e dificuldade envolvidos em cada tarefa.
+Assim, a Diretoria de Comercial desenvolveu uma metodologia baseada nesses insights, usando valor hora trabalhado, quantidade de membros e introduzindo o conceito de "issue" para englobar o tempo e dificuldade envolvidos em cada tarefa. E sempre com flexibilidade e adaptabilidade às necessidades específicas de cada projeto.
 
 {% hint style="info" %}
 Para saber mais sobre o berchmarking de 2024 leia o resumo clicando [aqui](https://docs.google.com/document/d/1KzVh-49zlx3Ua6qwFAbEwsnxiOCZup05RpCHpQwrnpw/edit?usp=sharing)
@@ -59,4 +59,4 @@ Nos módulos de Entidades e Páginas de Conteúdo e Layout Básico, usamos meia 
 ## Observações
 
 - Se um cliente exigir prazos mais curtos e for viável implementá-los, considere a possibilidade de adicionar mais desenvolvedores ou aplicar um multiplicador de preço para valorizar o esforço dobrado em menos tempo. Uma prática comum do mercado é cobrar entre 30% a 50% (informação empírica, não encontrei uma fonte confiável)
-- É importante ressaltar que cada cliente e projeto são únicos. A planilha serve como uma ferramenta de auxílio na precificação, mas os resultados não são definitivos. Nosso objetivo é proporcionar flexibilidade e adaptabilidade às necessidades específicas de cada projeto.
+- É importante ressaltar que cada cliente e projeto são únicos. A planilha serve como uma ferramenta de auxílio na precificação, mas os resultados podem ser adaptados.
