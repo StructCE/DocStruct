@@ -11,11 +11,11 @@ category: Explicação
 
 # Como a Struct precifica os seus projetos
 
-Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessários para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as necessidades específicas de cada cliente e projeto.
+Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessários para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as **necessidades específicas** de cada cliente e projeto.
 
 ## Motivação e Criação da Precificação
 
-Nossa abordagem de precificação foi desenvolvida após um extenso benchmarking com cinco empresas no setor de soluções web e consultoria:
+A   Struct decidiu mudar sua forma de como faz **orçamentos de projetos** para se alinhar melhor com o **mercado** e tornar mais fácil para **novos membros** entenderem como funciona. Nossa abordagem de precificação foi desenvolvida após um extenso **benchmarking** com cinco empresas no setor de soluções web e consultoria:
 
 - CJR (UnB)
 - EngNet (UnB) 
@@ -23,9 +23,9 @@ Nossa abordagem de precificação foi desenvolvida após um extenso benchmarking
 - Switch Dreams (empresa sênior)
 - TITAN (UFBA)
 
-Após análise detalhada, identificamos que essas empresas utilizam como critérios principais para precificação o valor hora trabalhado, quantidade de membros da equipe, quantidade de tempo e a dificuldade do projeto.
+Após análise detalhada, identificamos que essas empresas utilizam como critérios principais para precificação o **valor hora trabalhado**, **quantidade de membros da equipe**, **quantidade de tempo** e a **dificuldade do projeto**.
 
-Assim, a Diretoria de Comercial desenvolveu uma metodologia baseada nesses insights, usando valor hora trabalhado, quantidade de membros e introduzindo o conceito de "issue" para englobar o tempo e dificuldade envolvidos em cada tarefa. E sempre com flexibilidade e adaptabilidade às necessidades específicas de cada projeto.
+Assim, a **Diretoria de Comercial** desenvolveu uma metodologia baseada nesses insights, usando valor hora trabalhado, quantidade de membros e introduzindo o conceito de **issue** para englobar o tempo e dificuldade envolvidos em cada tarefa. E sempre com flexibilidade e adaptabilidade às necessidades específicas de cada projeto.
 
 {% hint style="info" %}
 Para saber mais sobre o berchmarking de 2024 leia o resumo clicando [aqui](https://docs.google.com/document/d/1KzVh-49zlx3Ua6qwFAbEwsnxiOCZup05RpCHpQwrnpw/edit?usp=sharing)
@@ -45,7 +45,7 @@ Para aplicar a nossa metodologia utilizamos uma [planilha](https://docs.google.c
 ![Cálculo de Orçamento](/organizacao-interna/assets/comercial/Precificacao-CalculoOrcamento.png)
 
 {% hint style="info" %}
-O **prazo mínimo** de duração do projeto é calculado como a metade do número total de issues acrescido de 2, substituindo o nome issue para semanas. Enquanto isso, o **prazo máximo** é determinado simplesmente pela adição de 2 ao número total de issues. Chegamos nesse cálculo de semanas para se parecer com os prazos de nossos projetos antigos.
+O **prazo mínimo** de duração do projeto é calculado como a metade do número total de issues acrescido de 2, substituindo o nome issue para semanas. Enquanto isso, o **prazo máximo** é determinado simplesmente pela adição de 2 ao número total de issues. Chegamos nesse cálculo de semanas porque se parece com os prazos reais de nossos projetos antigos.
 {% endhint %}
 
 A planilha possui diferentes páginas para cada tipo de projeto, como site institucional, sistema web, mobile, automação, entre outros. Em cada página possui projetos antigos e como eles foram precificados, e com essas informações, durante a Análise de Requisitos, a diretoria de Projetos e Comercial vai definir os módulos e a quantidade de issues por módulo. A quantidade de issues por módulo é determinada pela dificuldade e tempo de implementação. 
@@ -53,7 +53,7 @@ A planilha possui diferentes páginas para cada tipo de projeto, como site insti
 ![Página Site Institucional](/organizacao-interna/assets/comercial/Precificacao-PaginaModulos.png)
 
 {% hint style="info" %}
-Nos módulos de Entidades e Páginas de Conteúdo e Layout Básico, usamos meia issue (0,5) para as entidades e páginas fáceis de implementar podendo aumentar ou diminuir o valor unitário da issue dependendo do projeto. Não existe meia issue na prática, porém foi definido assim por convenção devido a grande componentização e reúso de código dessas partes do projeto.
+Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usamos meia issue (0,5) para as entidades e páginas fáceis de implementar podendo aumentar ou diminuir o valor unitário da issue dependendo do projeto. Não existe meia issue na prática, porém foi definido assim por convenção devido a grande componentização e reúso de código dessas partes do projeto.
 {% endhint %}
 
 ## Observações
