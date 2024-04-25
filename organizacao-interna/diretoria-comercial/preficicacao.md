@@ -5,13 +5,13 @@ label: Precificação
 author:
   name: Kaleb
   avatar: ../assets/comercial/floppa.jpeg
-date: 2024-4-22
+date: 2024-4-24
 category: Explicação
 ---
 
 # Como a Struct precifica os seus projetos
 
-Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessários para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as **necessidades específicas** de cada cliente e projeto.
+Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessário para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as **necessidades específicas** de cada cliente e projeto.
 
 ## Motivação e Criação da Precificação
 
@@ -28,7 +28,7 @@ Após análise detalhada, identificamos que essas empresas utilizam como critér
 Assim, a **Diretoria de Comercial** desenvolveu uma metodologia baseada nesses insights, usando valor hora trabalhado, quantidade de membros e introduzindo o conceito de **issue** para englobar o tempo e dificuldade envolvidos em cada tarefa. E sempre com flexibilidade e adaptabilidade às necessidades específicas de cada projeto.
 
 {% hint style="info" %}
-Para saber mais sobre o berchmarking de 2024 leia o resumo clicando [aqui](https://docs.google.com/document/d/1KzVh-49zlx3Ua6qwFAbEwsnxiOCZup05RpCHpQwrnpw/edit?usp=sharing)
+Para saber mais sobre o berchmarking de 2024 leia o resumo clicando [aqui](https://docs.google.com/document/d/1KzVh-49zlx3Ua6qwFAbEwsnxiOCZup05RpCHpQwrnpw/edit?usp=sharing).
 {% endhint %}
 
 ## Dicionário
@@ -36,7 +36,7 @@ Para saber mais sobre o berchmarking de 2024 leia o resumo clicando [aqui](https
 Há algumas informações necessárias que você precisa saber antes de prosseguir:
 - **Issue:** Refere-se a uma tarefa ou problema. Aqui, cada issue representa uma atribuição semanal, com uma duração média de 6 horas.
 - **Módulo:** Uma parte distinta e funcional de um sistema ou programa de software, encapsulando um conjunto de issues.
-- **Sprint:** Um período de tempo definido durante o qual uma equipe de desenvolvimento trabalha para completar um conjunto específico de tarefas ou módulos dentro de um projeto.
+- **Sprint:** Um período de tempo definido durante o qual uma equipe de desenvolvimento trabalha para completar um conjunto específico de módulos dentro de um projeto.
 
 ## Metodologia de Precificação
 
@@ -48,7 +48,7 @@ Para aplicar a nossa metodologia utilizamos uma [planilha](https://docs.google.c
 O **prazo mínimo** de duração do projeto é calculado como a metade do número total de issues acrescido de 2, substituindo o nome issue para semanas. Enquanto isso, o **prazo máximo** é determinado simplesmente pela adição de 2 ao número total de issues. Chegamos nesse cálculo de semanas porque se parece com os prazos reais de nossos projetos antigos.
 {% endhint %}
 
-A planilha possui diferentes páginas para cada tipo de projeto, como site institucional, sistema web, mobile, automação, entre outros. Em cada página possui projetos antigos e como eles foram precificados, e com essas informações, durante a Análise de Requisitos, a diretoria de Projetos e Comercial vai definir os módulos e a quantidade de issues por módulo. A quantidade de issues por módulo é determinada pela dificuldade e tempo de implementação. 
+A planilha possui diferentes páginas para cada tipo de projeto, como site institucional, sistema web, mobile, automação, entre outros. Em cada página possui projetos antigos e como eles foram precificados e tiveram o levantamento de requisitos, e com essas informações, durante a Análise de Requisitos, a diretoria de Projetos e Comercial vai definir os módulos e a quantidade de issues por módulo. A quantidade de issues por módulo é **determinada pela dificuldade e tempo de implementação**. 
 
 ![Página Site Institucional](/organizacao-interna/assets/comercial/Precificacao-PaginaModulos.png)
 
@@ -58,5 +58,5 @@ Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usam
 
 ## Observações
 
-- Se um cliente exigir prazos mais curtos e for viável implementá-los, considere a possibilidade de adicionar mais desenvolvedores ou aplicar um multiplicador de preço para valorizar o esforço dobrado em menos tempo. Uma prática comum do mercado é cobrar entre 30% a 50% (informação empírica, não encontrei uma fonte confiável)
+- Se um cliente exigir prazos mais curtos e for viável implementá-los, considere a possibilidade de adicionar mais desenvolvedores ou aplicar o multiplicador de preço da planilha (0.1 a 0.5) para valorizar o esforço dobrado em menos tempo. Uma prática comum do mercado é cobrar uma taxa de urgência entre 30% a 50% a mais do valor.
 - É importante ressaltar que cada cliente e projeto são únicos. A planilha serve como uma ferramenta de auxílio na precificação, mas os resultados podem ser adaptados.
