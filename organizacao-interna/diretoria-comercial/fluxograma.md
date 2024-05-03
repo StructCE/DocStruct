@@ -3,9 +3,9 @@ order: 7
 icon: workflow
 label: Fluxograma de Comercial
 author:
-  name: Kaleb
+  name: Hércules Natan
   avatar: ../../Imagens DocStruct/Logos/logo_struct.png
-date: 2023-11-12
+date: 2024-05-02
 category: Explicação
 ---
 
