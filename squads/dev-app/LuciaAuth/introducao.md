@@ -3,7 +3,8 @@ order: 5
 icon: chevron-right
 label: "Introdução ao Lucia Auth"
 author:
-    name: "Pedro Amorim de Gregori"
+  - name: Pedro Amorim de Gregori
+    avatar: /assets/logo_struct.png
 category: Explicação
 date: 2024-04-10
 ---

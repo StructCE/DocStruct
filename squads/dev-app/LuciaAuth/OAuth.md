@@ -3,7 +3,8 @@ order: 3
 icon: globe
 label: "Autenticação por terceiros"
 author:
-    name: "Pedro Amorim de Gregori"
+  - name: Pedro Amorim de Gregori
+    avatar: /assets/logo_struct.png
 category: Explicação
 date: 2024-04-25
 ---
@@ -11,27 +12,25 @@ date: 2024-04-25
 # Instalação e configuração para o OAuth
 
 !!!
-Os exemplo abaixo utilizaram o next 14 app router e o github como provider.
+Os exemplo abaixo utilizaram o Next 14 App Router e o GitHub como provider.
+A configuração nesta seção está baseada na realizada no tópico [credentials](./credentials.md).
 !!!
 
-Para utilizar autenticação por terceiros, será necessário instalar a biblioteca `artic` e configurar o `Client ID` e o `Client Secret` do provider no `.env`.
-
-A lista de todos os providers pode ser vista na esquerda do [Artic](https://arctic.js.org/).
+Para utilizar autenticação por terceiros, será necessário instalar a biblioteca `artic` e configurar o `Client ID` e o `Client Secret` do provider no `.env`. A lista de todos os providers pode ser vista na esquerda do [Artic](https://arctic.js.org/).
 
 ```bash
 npm install artic
 ```
+É preciso configurar uma aplicação no site do provedor, o que varia de provedor para provedor. Com o `CLIENT_ID` e o `CLIENT_SECRET`, deve-se colocá-los em um arquivo `.env`.
 
-É preciso configurar a aplicação no site do provedor. Para mais detalhes dessa configuração é possível pesquisar "(Provedor) OAuth" no Google.
-
-´´´.env
+```.env
 GITHUB_CLIENT_ID="Aqui entra o client id"
 GITHUB_CLIENT_SECRET="Aqui entra o client secret"
-´´´
+```
 
 O `schema` precisa ser mudado para suportar operações com o OAuth.
 
-```prisma schema.prisma
+```sql schema.prisma
 model User {
     //...
     username String
@@ -44,6 +43,8 @@ O lucia também precisa de algumas modificações.
 
 ```ts auth/lucia.ts
 import { GitHub } from "arctic";
+
+const adapter = new PrismaAdapter(client.session, client.user);
 
 export const github = new GitHub(
 	process.env.GITHUB_CLIENT_ID!,
@@ -197,4 +198,4 @@ Agora o usuário já estará logado.
 
 # Validar sessão/ Verificar usuário e Desconectar/LogOut
 
-A validação do usuário e logout são iguais aos utilizados com credentials. Ver no tópico de [credentials](https://docs.structej.com/squads/dev-app/luciaauth/credentials/).
+A validação do usuário e logout são iguais aos utilizados com credentials. Ver no tópico de [credentials](./credentials.md/#login).

@@ -3,7 +3,9 @@ order: 4
 icon: key
 label: "Autenticação por credenciais"
 author:
-    name: "Pedro Amorim de Gregori"
+  - name: Pedro Amorim de Gregori
+    avatar: /assets/logo_struct.png
+avatar: /assets/logo_struct.png
 category: Explicação
 date: 2024-04-16
 ---
@@ -16,7 +18,7 @@ Este tópico será uma introdução à autenticação com credenciais. Para mais
 
 Para implementar a autenticação por credenciais será necessário a introdução de 2 novos campos na model `user` e vai ser necessário atualizar o lucia.
 
-```prisma schema.prisma
+```sql schema.prisma
 //...
 model User {
   //...

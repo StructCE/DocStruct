@@ -3,7 +3,8 @@ order: 2
 icon: organization
 label: "Autenticação por diversos métodos"
 author:
-    name: "Pedro Amorim de Gregori"
+  - name: Pedro Amorim de Gregori
+    avatar: /assets/logo_struct.png
 category: Explicação
 date: 2024-04-25
 ---
@@ -15,7 +16,7 @@ Para utilizar vários métodos de autenticação, será necessário realizar alg
 ==- Exemplo de configuração
 Exemplo baseado na junção dos credentials e OAuth apresentados na documentação.
 
-```prisma schema.prisma
+```sql schema.prisma
 model User {
   id              String    @id @default(cuid())
   sessions        Session[]
@@ -37,8 +38,8 @@ export const lucia = new Lucia(adapter, {
 	getUserAttributes: (attributes) => {
 		return {
 			username: attributes.username,
-			email: attributes.email,
-			githubId: attributes.github_id,
+			email: attributes?.email,
+			githubId: attributes?.github_id,
 		};
 	},
 });
@@ -55,4 +56,4 @@ interface DatabaseUserAttributes {
 
 # Mudanças?
 
-Os métodos de login, cadastro, signout, etc. não necessitam de nenhuma mudança para funcionar com múltiplos métodos.
+Os métodos de SignUp, LogIn, LogOut etc, não necessitam de nenhuma mudança para funcionar com múltiplos métodos.
