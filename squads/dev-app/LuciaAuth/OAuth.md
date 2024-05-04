@@ -13,7 +13,7 @@ date: 2024-04-25
 
 !!!
 Os exemplo abaixo utilizaram o Next 14 App Router e o GitHub como provider.
-A configuração nesta seção está baseada na realizada no tópico [credentials](./credentials.md).
+A configuração nesta seção está baseada na realizada no tópico [introdução](./introducao.md).
 !!!
 
 Para utilizar autenticação por terceiros, será necessário instalar a biblioteca `artic` e configurar o `Client ID` e o `Client Secret` do provider no `.env`. A lista de todos os providers pode ser vista na esquerda do [Artic](https://arctic.js.org/).

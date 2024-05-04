@@ -13,7 +13,7 @@ date: 2024-04-16
 # Configuração para credenciais
 
 !!!
-Este tópico será uma introdução à autenticação com credenciais. Para mais informações sobre autorização de dois-fatores e verificação de email entre em [Lucia Auth](https://lucia-auth.com/guides/email-and-password/).
+Este tópico será uma introdução à autenticação com credenciais. A configuração nesta seção está baseada na realizada no tópico [introdução](./introducao.md). Para mais informações sobre autorização de dois-fatores e verificação de email entre em [Lucia Auth](https://lucia-auth.com/guides/email-and-password/). 
 !!!
 
 Para implementar a autenticação por credenciais será necessário a introdução de 2 novos campos na model `user` e vai ser necessário atualizar o lucia.

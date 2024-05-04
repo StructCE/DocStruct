@@ -32,7 +32,7 @@ npm install @lucia-auth/adapter-prisma
 
 Para utilizarmos o adaptador do prisma será necessário realizar o setup do prisma. É Recomendado a leitura da documentação do prisma. O lucia requer as models `user` e `session` com alguns campos predefinidos no `schema.prisma`.
 
-```prisma schema.prisma
+```sql schema.prisma
 //...
 model User {
   id       String    @id @default(cuid()) // O id pode ser numerico sequencial ou usar uuid se quiser
@@ -51,10 +51,10 @@ Após configuração da ORM, pode-se realizar a configuração do lucia. Para is
 
 ```ts auth/lucia.ts
 import { Lucia } from "lucia";
-import prismaClient from "../prisma/index";
+import { PrismaClient } from "@prisma/client";
 import { PrismaAdapter } from "@lucia-auth/adapter-prisma";
 
-const client = prismaClient;
+const client = new PrismaClient();
 const adapter = new PrismaAdapter(client.session, client.user);
 
 export const lucia = new Lucia(adapter, {
