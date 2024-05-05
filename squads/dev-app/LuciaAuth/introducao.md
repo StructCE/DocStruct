@@ -15,11 +15,11 @@ O `Lucia Auth` é uma biblioteca de autorização que fornece abstrações do ma
 
 # Instalação
 
-A instalação do `Lucia` pode ser feito utilizando o gerenciador de pacotes do projeto. O hash das senhas será feito utilizando a biblioteca `bcrypt`.
+A instalação do `Lucia` pode ser feito utilizando o gerenciador de pacotes do projeto. O hash das senhas será feito utilizando a biblioteca `bcrypt` que é uma biblioteca de criptografia. O `bcrypt` só é necessário para autenticação por credenciais.
 
 ```shell
-npm install lucia bcrypt
-npm install --save @types/bcrypt
+pnpm install lucia bcrypt
+pnpm install --save @types/bcrypt
 ```
 
 # Inicialização
@@ -57,6 +57,9 @@ import { PrismaAdapter } from "@lucia-auth/adapter-prisma";
 const client = new PrismaClient();
 const adapter = new PrismaAdapter(client.session, client.user);
 
+// Lucia é uma classe que implementa funções úteis para autenticação como criar sessões ou validá-las.
+// Instância global do lucia para evitar repetições.
+
 export const lucia = new Lucia(adapter, {
 	sessionCookie: {
 		attributes: {
@@ -72,3 +75,6 @@ declare module "lucia" {
 }
 
 ```
+!!!
+Para mais informações da Classe `lucia`. Acesse [Lucia](https://lucia-auth.com/reference/main/Lucia/)
+!!!

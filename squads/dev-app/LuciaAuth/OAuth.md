@@ -9,6 +9,9 @@ category: Explicação
 date: 2024-04-25
 ---
 
+# Introdução
+Autenticação por terceiros é um método que utiliza APIs disponibilizadas por empresas. Para utilizá-la, é necessário a criação de um client de OAuth no site da outra empresa seja ela github, google, etc. Essa API é ligada com a aplicação por um `CallBack` e ela pode retornar dados variados dependendo do client.
+
 # Instalação e configuração para o OAuth
 
 !!!
@@ -84,6 +87,8 @@ interface DatabaseUserAttributes {
 
 O OAuth é praticamente configurar rotas para interagir com a Api do terceiro. Para isso, será necessário criar uma rota para iniciar o processo de Login com o provider.
 
+Quando utilizado irá aparecer outra janela para realizar login com o github que enviará os dados obtidos pelo callback definido na criação do `OAuth client`.
+
 ==- Rota para iniciar o processo de Login
 ```ts api/signin/github/route.ts
 import { generateState } from "arctic";
@@ -140,7 +145,7 @@ export async function GET(request: Request): Promise<Response> {
 		const existingUser = await prisma.user.findUnique({
 			where: { github_id: githubUser.id },
 		});
-
+		// Se o usuário já existir, somente a sessão será criada.
 		if (existingUser) {
 			const session = await lucia.createSession(existingUser.id, {});
 			const sessionCookie = lucia.createSessionCookie(session.id);
@@ -156,7 +161,7 @@ export async function GET(request: Request): Promise<Response> {
 				},
 			});
 		}
-
+		// Caso ainda não exista um usuário é criado um
 		const user = await prisma.user.create({
 			data: { github_id: githubUser.id, username: githubUser.login },
 		});
@@ -198,4 +203,4 @@ Agora o usuário já estará logado.
 
 # Validar sessão/ Verificar usuário e Desconectar/LogOut
 
-A validação do usuário e logout são iguais aos utilizados com credentials. Ver no tópico de [credentials](./credentials.md/#login).
+A validação do usuário e logout são iguais aos utilizados com credentials. Ver no tópico de [credentials](./credentials/#validar-sessão-verificar-usuário).

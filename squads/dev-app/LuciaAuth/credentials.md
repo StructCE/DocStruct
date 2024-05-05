@@ -10,6 +10,10 @@ category: Explicação
 date: 2024-04-16
 ---
 
+# Introdução
+
+Autenticação por credenciais é um método que utiliza dados do usuário para realizar o processo. Esses dados podem variar dependendo do sistema, mas os mais utilizados são email e senha. Nesse método, será necessário a criação de um banco de dados próprio.
+
 # Configuração para credenciais
 
 !!!
@@ -41,6 +45,7 @@ export const lucia = new Lucia(adapter, {
 			secure: process.env.NODE_ENV === "production",
 		},
 	},
+	// O getUserAttributes é definido aqui para determinar quais atributos do usuário serão retornados do banco de dados e cria um objeto do tipo User com eles
 	getUserAttributes: (attributes) => { // Acrescente esse bloco
 		return {
 			username: attributes.username,
@@ -168,9 +173,13 @@ export async function POST(req: Request) {
 
 // Tenta criar um usuário
 	try {
+		// Salt é um valor pseudo aleatório utilizado em criptografia para que entradas iguais criem hashes diferentes.
 		const salt = bcrypt.genSaltSync(10);
+
+		// hashSync é o método que utiliza o algoritmo bcrypt para criar uma palavra criptografada utilizando a senha e o salt.
 		const hashedPassword = bcrypt.hashSync(password, salt);
 
+		// Agora um novo usuário será criado, assim como uma nova sessão para ele não precisar logar.
 		const user = await prisma.user.create({
 			data: {
 				email: email,
@@ -180,8 +189,12 @@ export async function POST(req: Request) {
 		});
 
 		const session = await lucia.createSession(user.id, {});
+
+		// Cria o cookie para identificar a sessão
 		const sessionCookie = lucia.createSessionCookie(session.id);
-		return Response.json(null, {
+
+		// Retorna o cookie criado para o navegador do usuário
+		return Response.json(session, {
 			status: 200,
 			headers: {
 				Location: "/profile",
@@ -286,7 +299,8 @@ export async function POST(req: Request) {
 
 	if (!user) {
 		const salt = bcrypt.genSaltSync(10);
-		bcrypt.hashSync(password, salt); // Mascarar o tempo de resposta para possíveis atacantes. Não necessário!
+		bcrypt.hashSync(password, salt); // Para evitar ataques que buscam descobrir possíveis contas é bom demorar um tempo para enviar uma resposta negativa. Porque se retornar direto o tempo irá informar que a possível conta na verdade não existe.
+		// Algoritmos de hash consomem muito tempo de processamento e pode ser alvo de ataque, pois pode causar overload no servidor. Então, esse método pode ser considerado uma faca de 2 gumes, não existe solução perfeita.
 		return Response.json("Email ou senha não válidos", { status: 400 });
 	}
 
@@ -321,7 +335,7 @@ export async function POST(req: Request) {
 Para fazer validações, o backend precisa verificar se a request de validação ocorreu por meio de um [CSRF.](https://www.treinaweb.com.br/blog/cross-site-request-forgery-csrf-e-abordagens-para-mitiga-lo)
 
 ==- Exemplo Next
-Para o next esse ataque pode ser evitado utilizando o middleware.ts
+Para o next esse ataque pode ser evitado utilizando o [middleware.ts.](https://nextjs.org/docs/app/building-your-application/routing/middleware)
 
 ```ts middleware.ts
 import { verifyRequestOrigin } from "lucia";
@@ -360,10 +374,10 @@ import { cache } from "react";
 import type { Session, User } from "lucia";
 import { lucia } from "../../auth/lucia";
 
-export const validateRequest = cache(
+export const getUser = cache( // Essa função
 	async (): Promise<
 		{ user: User; session: Session } | { user: null; session: null }
-	> => {
+	> => { // Recolhe os dados de sessão nos cookies
 		const sessionId = cookies().get(lucia.sessionCookieName)?.value ?? null;
 		if (!sessionId) {
 			return {
@@ -371,9 +385,10 @@ export const validateRequest = cache(
 				session: null,
 			};
 		}
-
+		// Chama a instancia lucia para realizar a verificação da integridade dessa sessão
 		const result = await lucia.validateSession(sessionId);
 		try {
+			// Verifica a existencia da sessão e em seguida se a sessão não expirou
 			if (result.session && result.session.fresh) {
 				const sessionCookie = lucia.createSessionCookie(
 					result.session.id
@@ -384,6 +399,7 @@ export const validateRequest = cache(
 					sessionCookie.attributes
 				);
 			}
+		// Se a sessão expirou, limpa os cookies
 			if (!result.session) {
 				const sessionCookie = lucia.createBlankSessionCookie();
 				cookies().set(
@@ -434,11 +450,11 @@ export default function LogoutButton() {
 
 ==- Exemplo Backend
 ```ts api/singout/route.ts
-import { validateRequest } from "@/utils/getUser";
+import { getUser } from "@/utils/getUser";
 import { lucia } from "@/../auth/lucia";
 
 export async function POST(req: Request) {
-	const session = (await validateRequest()).session;
+	const session = (await getUser()).session;
 	if (!session) {
 		return Response.json(null, { status: 401 });
 	}
