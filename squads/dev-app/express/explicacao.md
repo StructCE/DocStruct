@@ -1,6 +1,6 @@
 ---
 order: 2
-icon: question
+icon: home
 label: "Introdução sobre Express"
 ---
 
@@ -39,9 +39,9 @@ Devemos usar um middleware, que terá acesso à resposta e à requisição, para
 Vamos supor que para a url `localhost:3000/helloWorld`, quando usarmos um método GET, queremos retornar um "Hello World" em JSON:
 
 ```ts server.ts
-.
-.
-.
+
+...
+
 app.get("/helloWorld", (req, res) => {
     res.json({
         data: "Hello World"
@@ -58,9 +58,9 @@ Desta mesma maneira, podemos definir ações para qualquer método HTTP e qualqu
 Vamos manipular agora a propriedade `req` com um método POST no PATH `/message`.
 
 ```ts server.ts
-.
-.
-.
+
+...
+
 app.use(express.json());
     
 app.post("/message", (req, res) => {
@@ -79,9 +79,9 @@ A principal funcionalidade dele é setar algumas propriedades no `res` ou `req` 
 O que o `app.use(express.json())` do exemplo anterior fez foi basicamente:
 
 ```ts server.ts
-.
-.
-.
+
+...
+
 app.use("/", (req, res, next) => {
     const body = pegar dados e transformar como objeto;
     // Não sei exatamente como isso é feito, mas essa é a ideia haha
