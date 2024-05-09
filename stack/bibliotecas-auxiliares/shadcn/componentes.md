@@ -1,7 +1,7 @@
 ---
 order: 2
 icon: copy
-label: 'Adicionando Componentes'
+label: "Adicionando Componentes"
 author:
   name: Eduardo P.P. Ferreira
 date: 2024-04-15
@@ -52,13 +52,13 @@ Com shadcn configurado, podemos adicionar nossos componentes utilizando o comand
 npm shadcn-ui@latest add <component>
 ```
 
-Considerando que o projeto utiliza a pasta `/src/app`, o comando acima cria a pasta `src/components`, onde shadcn colocará os componentes adicionados. Lembrando que o que é adicionado é um arquivo `.tsx`, do qual temos total controle para modificar como quisermos.
+Considerando que o projeto utiliza a pasta `/src/app`, o comando acima cria a pasta `src/components/ui`, onde shadcn colocará os componentes adicionados. Lembrando que o que é adicionado é um arquivo `.tsx`, do qual temos total controle para modificar como quisermos.
 
 Então, como exemplo, se rodarmos `npx shadcn-ui@latest add button`, shadcn criará, nesse caso, a pasta `/src/components/ui` e adicionará o arquivo `button.tsx` com o código necessário para esse componente.
 Com isso, basta importá-lo em alguma página para utilizá-lo:
 
 ```typescript src/app/page.tsx
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (

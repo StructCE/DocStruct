@@ -1,7 +1,7 @@
 ---
 order: 3
 icon: question
-label: 'O que é shadcn?'
+label: "O que é shadcn?"
 author:
   name: Eduardo P.P. Ferreira
 date: 2024-04-15
@@ -26,4 +26,4 @@ Como [a própria documentação](https://ui.shadcn.com/docs) explica, shadcn nã
 
 Na verdade, a shadcn é uma coleção de componentes que podemos utilizar em projetos, utilizamos esses componentes para basicamente construir a nossa própria biblioteca de componentes.
 
-É possível usar shadcn em qualquer framework que suporte React. Dessa forma, é calro que podemos adicioná-lo a uma aplicação NextJS.
+É possível usar shadcn em qualquer framework que suporte React. Dessa forma, é claro que podemos adicioná-lo a uma aplicação NextJS.

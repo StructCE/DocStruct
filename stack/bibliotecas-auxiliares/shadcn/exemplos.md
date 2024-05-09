@@ -1,9 +1,10 @@
 ---
 order: 1
 icon: command-palette
-label: 'Exemplos'
+label: "Exemplos"
 author:
-  name: Eduardo P.P. Ferreira
+  - name: Eduardo P.P. Ferreira
+  - name: Leonardo Pereira Côrtes
 date: 2024-04-15
 category: Exemplos
 tags:
@@ -33,7 +34,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export function AccordionDemo() {
   return (
@@ -77,14 +78,14 @@ npx shadcn-ui@latest add card
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from "@/components/ui/carousel";
 
 export function CarouselDemo() {
   return (
@@ -124,11 +125,11 @@ npx shadcn-ui@latest add form
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -137,12 +138,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   username: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
+    message: "Username must be at least 2 characters.",
   }),
 });
 
@@ -188,7 +189,7 @@ npx shadcn-ui@latest add input
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { Input } from '@/components/ui/input';
+import { Input } from "@/components/ui/input";
 
 export function InputDemo() {
   return <Input type="email" placeholder="Email" />;
@@ -216,7 +217,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from "@/components/ui/select";
 
 export function SelectDemo() {
   return (
@@ -252,8 +253,8 @@ npx shadcn-ui@latest add slider
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { cn } from '@/lib/utils';
-import { Slider } from '@/components/ui/slider';
+import { cn } from "@/lib/utils";
+import { Slider } from "@/components/ui/slider";
 
 type SliderProps = React.ComponentProps<typeof Slider>;
 
@@ -263,7 +264,7 @@ export function SliderDemo({ className, ...props }: SliderProps) {
       defaultValue={[50]}
       max={100}
       step={1}
-      className={cn('w-[60%]', className)}
+      className={cn("w-[60%]", className)}
       {...props}
     />
   );
@@ -283,7 +284,7 @@ npx shadcn-ui@latest add textarea
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { Textarea } from '@/components/ui/textarea';
+import { Textarea } from "@/components/ui/textarea";
 
 export function TextareaDemo() {
   return <Textarea placeholder="Type your message here." />;
@@ -303,8 +304,8 @@ npx shadcn-ui@latest add toast
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/components/ui/use-toast';
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 
 export function ToastSimple() {
   const { toast } = useToast();
@@ -314,7 +315,7 @@ export function ToastSimple() {
       variant="outline"
       onClick={() => {
         toast({
-          description: 'Your message has been sent.',
+          description: "Your message has been sent.",
         });
       }}
     >
@@ -337,7 +338,7 @@ npx shadcn-ui@latest add tabs
 Adicione o componente em alguma página sua:
 
 ```typescript
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
@@ -365,8 +366,8 @@ npx shadcn-ui@latest add radio-group
 ```
 
 ```typescript
-import { Label } from '@/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 export default function Page() {
   return (
