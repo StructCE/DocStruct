@@ -11,11 +11,12 @@ Nós usaremos Express como nosso framework de back-end que será acompanhado de 
 
 ## Instalação
 
-O gerenciador de pacotes usado na Struct tem sido principalmente o PNPM, então instalaremos o Express usando este gerenciador:
+O gerenciador de pacotes usado na Struct tem sido principalmente o PNPM, então instalaremos o Express usando este gerenciador, além de alguns outros pacotes uteis para o Express e para rodar o projeto:
 
 ```bash
-pnpm init
-pnpm install express
+pnpm init # iniciar o pnpm primeiramente
+pnpm install express @types/express tsx # adicionar os pacotes necessários
+```
 
 ## Essencial de Express
 
@@ -30,7 +31,8 @@ const app = express();
 // Criar aplicação Express
 
 app.listen(3000) 
-// Aqui estamos falando pro servidor escutar a porta 3000
+// Aqui estamos falando pro servidor escutar a porta 3000, 
+// mas pode ser qualquer porta que quiser
 ```
 
 ### Middleware's
@@ -92,8 +94,35 @@ app.use("/", (req, res, next) => {
     // passou para um possível próximo callback ou para o middleware em si
 })
 ```
-
+    
 No caso do exemplo anterior, não foi passado nenhum PATH porque o PATH default é a raiz (ou `/`), o que é intencional já que queremos que o callback do `express.json()` envolva toda nossas rotas.
+    
+## Como rodar o servidor
+
+Tendo como exemplo o seguinte arquivo `server.ts`:
+
+```ts server.ts
+import express from "express"
+
+const app = express();
+
+app.listen(3000) 
+```
+
+Nós iremos adicionar ao nosso `package.json`, que está no mesmo diretório que o `server.ts`, o comando:
+
+```json package.json
+{
+...
+"scripts": {
+    "dev": "tsx watch server.ts"
+},
+...
+}
+```
+
+O `tsx` é o que será usado para rodar o arquivo typescript com a flag `watch` para captar qualquer mudança que houver no arquivo enquanto o servidor estiver rodando.
+E, dando um `pnpm dev` no mesmo diretório em que está o `package.json`, o servidor estará de pé no `localhost:3000`, porta escolhida no nosso app Express.
 
 ::: sample
 Para mais informações sobre Express, consulte [aqui](https://expressjs.com)  
