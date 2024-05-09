@@ -14,8 +14,8 @@ Nós usaremos Express como nosso framework de back-end que será acompanhado de 
 O gerenciador de pacotes usado na Struct tem sido principalmente o PNPM, então instalaremos o Express usando este gerenciador:
 
 ```bash
+pnpm init
 pnpm install express
-```
 
 ## Essencial de Express
 
