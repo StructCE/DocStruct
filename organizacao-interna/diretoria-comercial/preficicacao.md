@@ -11,7 +11,9 @@ category: Explicação
 
 # Como a Struct precifica os seus projetos
 
-Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessário para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da [Análise de Requisitos](/organizacao-interna/diretoria-comercial/), onde buscamos compreender as **necessidades específicas** de cada cliente e projeto.
+Na **Struct**, a precificação de nossos produtos, como sites, sistemas web, mobile e automação, é uma etapa crucial que reflete a complexidade e o esforço necessário para entregar projetos de alta qualidade aos nossos clientes. Esta fase faz parte da Elaboração de Proposta.
+
+---
 
 ## Motivação e Criação da Precificação
 
@@ -58,10 +60,9 @@ Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usam
 
 ## Hospedagem
 
-R$ 400,00/ano para **fazer o deploy** do site (colocar ele no ar), **1 ano de hospedagem e manutenção da Struct** durante esse período para cuidar do servidor.
-É um uma assinatura porque temos que hospedar com terceiros primeiramente e também porque um membro de projetos sempre vai ficar atento se o site ficou fora do ar e prestar suporte quando necessário.
+A Struct cobra R$ 400,00 para **hospedar por 1 ano** e cuidar do servidor durante esse período, um membro de projetos sempre vai ficar atento se o site ficou fora do ar e prestar suporte quando necessário.
 
-Separadamente o domínio do site (registro.br) custa **R$ 40,00/ano**, hospedagem **R$ 50,00/mês** e o banco de dados **U$ 5,00/mês (~R$25,00/mês)**. Sai mais caro se o cliente for fazer por conta.
+Separadamente o domínio do site (registro.br) custa **R$ 40,00/ano**, hospedagem **R$ 50,00/mês** e o banco de dados **U$ 5,00/mês (~R$ 25,00/mês)**. Sai mais caro se o cliente for fazer por conta.
 
 ## Observações
 
