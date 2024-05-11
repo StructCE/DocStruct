@@ -40,7 +40,7 @@ Há algumas informações necessárias que você precisa saber antes de prossegu
 
 ## Metodologia de Precificação
 
-Para aplicar a nossa metodologia utilizamos uma [planilha](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing) que contém uma página de Cálculo de Orçamento, onde multiplicamos o valor/hora (atualmente R$ 13,00), a quantidade de membros e a quantidade de issues para obter o orçamento total. 
+Para aplicar a nossa metodologia utilizamos uma [planilha](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing) que contém uma página de Cálculo de Orçamento, onde multiplicamos o valor/hora **(atualmente R$ 13,00)**, a quantidade de membros e a quantidade de issues para obter o orçamento total. Incluímos **1 ano de hospedagem com a Struct** para projetos de sites por **R$ 400,00**. Nos anos seguintes, o valor será o mesmo, mas se haver ajustes de preço comunicamos ao cliente previamente. Além disso, é importante falar para o cliente que ele pode hospedar seus sites com outros provedores, se preferir.
 
 ![Cálculo de Orçamento](/organizacao-interna/assets/comercial/Precificacao-CalculoOrcamento.png)
 
@@ -55,6 +55,13 @@ A planilha possui diferentes páginas para cada tipo de projeto, como site insti
 {% hint style="info" %}
 Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usamos meia issue (0,5) para as entidades e páginas fáceis de implementar podendo aumentar ou diminuir o valor unitário da issue dependendo do projeto. Não existe meia issue na prática, porém foi definido assim por convenção devido a grande componentização e reúso de código dessas partes do projeto.
 {% endhint %}
+
+## Hospedagem
+
+R$ 400,00/ano para **fazer o deploy** do site (colocar ele no ar), **1 ano de hospedagem e manutenção da Struct** durante esse período para cuidar do servidor.
+É um uma assinatura porque temos que hospedar com terceiros primeiramente e também porque um membro de projetos sempre vai ficar atento se o site ficou fora do ar e prestar suporte quando necessário.
+
+Separadamente o domínio do site (registro.br) custa **R$ 40,00/ano**, hospedagem **R$ 50,00/mês** e o banco de dados **U$ 5,00/mês (~R$25,00/mês)**. Sai mais caro se o cliente for fazer por conta.
 
 ## Observações
 
