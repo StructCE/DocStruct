@@ -299,18 +299,11 @@ export async function POST(req: Request) {
 
 	if (!user) {
 		const salt = bcrypt.genSaltSync(10);
-		bcrypt.hashSync(password, salt); // Para evitar ataques que buscam descobrir possíveis contas é bom demorar um tempo para enviar uma resposta negativa. Porque se retornar direto o tempo irá informar que a possível conta na verdade não existe.
-		// Algoritmos de hash consomem muito tempo de processamento e pode ser alvo de ataque, pois pode causar overload no servidor. Então, esse método pode ser considerado uma faca de 2 gumes, não existe solução perfeita.
+		bcrypt.hashSync(password, salt); // Criptografamos a senha de um usuário mesmo que inválido para deixar um tempo de resposta parecido com as outras operações de autenticação e, assim, não deixar brechas para ataques que buscam padrões de resposta do servidor
 		return Response.json("Email ou senha não válidos", { status: 400 });
 	}
 
-	const hashed_password = user.hashed_password;
-
-	if (!hashed_password) {
-		return Response.json("Unauthorized", { status: 401 });
-	}
 	const validPassword = bcrypt.compareSync(password, hashed_password);
-
 	if (!validPassword) {
 		return Response.json("Email ou senha não válidos", { status: 400 });
 	}

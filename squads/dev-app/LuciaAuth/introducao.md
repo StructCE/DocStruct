@@ -27,7 +27,7 @@ pnpm install --save @types/bcrypt
 Será necessário a escolha de um adaptador para abstrair o contato do Lucia com o banco de dados ou ORM. Como na empresa utilizamos a ORM `prisma` para lidar com o banco de dados, aqui também será utilizado.
 
 ```shell
-npm install @lucia-auth/adapter-prisma
+pnpm install @lucia-auth/adapter-prisma
 ```
 
 Para utilizarmos o adaptador do prisma será necessário realizar o setup do prisma. É Recomendado a leitura da documentação do prisma. O lucia requer as models `user` e `session` com alguns campos predefinidos no `schema.prisma`.
