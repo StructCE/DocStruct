@@ -1,0 +1,7 @@
+icon: /assets/dev-app/lucia-auth.svg
+label: "Lucia Auth"
+author:
+  - name: Pedro Amorim de Gregori
+    avatar: /assets/logo_struct.png
+date: 2024-04-10
+order: a
