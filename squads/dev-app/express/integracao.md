@@ -229,7 +229,7 @@ authRouter.use("/auth", async (req, res, next) => {
 	if (session && session.fresh) {
 		res.appendHeader("Set-Cookie", lucia.createSessionCookie(session.id).serialize());
 	}
-	if (!session) {
+	if (!session || !session.fresh) {
 		res.appendHeader("Set-Cookie", lucia.createBlankSessionCookie().serialize());
 	}
 	res.locals.session = session;
