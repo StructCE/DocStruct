@@ -1,5 +1,5 @@
 ---
-label: "Bem-vindo à Presidência"
+label: "Boas-vindas à Presidência"
 icon: rocket
 author:
   name: Jéssica
@@ -9,7 +9,7 @@ date: 2023-04-29
 
 # Presidência
 
-É a diretoria responsável por assegurar que toda a empresa trabalhe em harmonia e em sintonia de modo a ser a representação em pessoa do que a instituição representa. Para tal, o/a presidente deve cumprir uma série de responsabilidades a fim de manter a transparência entre os/as integrantes e de assegurar o desenvolvimento de toda a empresa. Diante desse panorama, pode-se categorizar as atribuições da Presidência nos seguintes tópicos:
+É a diretoria responsável por assegurar que toda a empresa trabalhe em harmonia e em sintonia de modo a ser a representação em pessoa do que a instituição significa. Para tal, o/a presidente deve cumprir uma série de responsabilidades a fim de manter a transparência entre os/as integrantes e de assegurar o desenvolvimento de toda a empresa. Diante desse panorama, pode-se categorizar as atribuições da Presidência nos seguintes tópicos:
 
 - [Conselheiro Concentro](#conselheiro-concentro);
 - [Planejamento e Metas](planejamento-e-metas.md);
