@@ -1,7 +1,7 @@
 ---
 icon: rocket
 label: Sobre nós
-order: 5
+order: 6
 date: 2024-04-07
 category: Introdução
 ---

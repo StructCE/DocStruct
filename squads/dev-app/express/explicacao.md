@@ -2,6 +2,10 @@
 order: 2
 icon: home
 label: "Introdução sobre Express"
+author:
+  - name: Matheus das Neves
+date: 2024-05-07
+category: Explicação
 ---
 
 # O que é Express e para quê usamos
