@@ -2,6 +2,10 @@
 order: 1
 icon: gear
 label: "Integração com nossas tecnologias"
+author:
+  - name: Matheus das Neves
+date: 2024-05-07
+category: Explicação
 ---
 
 # Integração com nossas tecnologias
@@ -140,6 +144,8 @@ Como exemplo, faremos uma autenticação por terceiros usando o GitHub e, então
 ```bash
 pnpm install lucia @lucia-auth/adapter-prisma arctic oslo
 ```
+
+Todas definições em relação à autenticação em si estão melhores explicadas e esclarecidas na nossa documentação de [Lucia-Auth](../../luciaauth/introducao), a ideia aqui é principalmente como é usado com o Express.
 
 ### Configurando o Lucia Auth
 
@@ -354,8 +360,6 @@ interface GitHubUser {
 
 Esses middleware's são usados para primeiramente na rota `/auth/login/github` criar um `state` e levar o usuário para a rota de logIn do GitHub com esse estado e, posteriormente, ser trazido de volta para a rota `/auth/login/github/callback` com possíveis dados de um usuário GitHub nos cookies onde foi guardado o estado. Se o usuário GitHub ainda não estiver no banco de dados, será criado um usuário com os dados deste usuário, e, finalmente, será passada a sessão por cookies.
 
-Todas essas definições em relação à autenticação em si estão melhores explicadas e esclarecidas na nossa documentação de [Lucia-Auth](../../luciaauth/introducao), a ideia aqui é principalmente como é usado com o Express.
-
 ### LogOut
 
 Dentro da pasta `routes` e no arquivo `logout.ts`, cria-se o logoutRouter que possui o middleware para fazer o logout.
@@ -397,7 +401,7 @@ authRouter.use(loginRouter, logoutRouter);
 Isto porque estamos usando o `authRouter` como nosso roteador central para rotas de autenticação e callback's necessários, deste modo importamos para o app Express somente o roteador central, não todos que usamos.
 
 ::: sample
-Para informações mais aprofundadas sobre cada tecnologia, consulte nossas documentações de [tRPC](../../../../stack/trpc/pratica), [Prisma](../../../../stack/prisma/utilizacao) e [Lucia-Auth](../../luciaauth) 
+Para informações mais aprofundadas sobre cada tecnologia, consulte nossas documentações de [tRPC](../../../../stack/trpc/pratica), [Prisma](../../../../stack/prisma/utilizacao) e [Lucia-Auth](../../luciaauth/introducao) 
 :::
 
 <style>
