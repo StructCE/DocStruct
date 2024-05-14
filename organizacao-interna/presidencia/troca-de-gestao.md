@@ -7,11 +7,11 @@ author:
 date: 2023-04-29
 ---
 
-Todo ano, geralmente nos meses de Outubro e Novembro, são realizadas as eleições para cada cargo de diretoria, inclusive da Diretoria Presencial. Nesse sentido, essa seção serve para guiar como deve ser o andamento dos processos durante o período de troca de gestão.
+Todo ano, geralmente nos meses de Outubro e Novembro, são realizadas as eleições para cada cargo de diretoria, inclusive da Diretoria Presencial. Nesse sentido, essa secção serve para guiar como deve ser o andamento dos processos durante o período de troca de gestão.
 
 ## Passo a passo
 
-1. Convocar uma AGE (Assembléia Geral Extraordinária) de eleição com um edital
+1. Convocar, com pelo menos 10 dias de antecedência, uma AGE (Assembléia Geral Extraordinária) de eleição com um edital 
 2. Realizar a eleição
 3. Eleger todos os diretores previstos no Estatuto
 4. Confeccionar ata de eleição e carta de convocação
