@@ -1,10 +1,10 @@
 ---
 order: a
 icon: question
-label: "O que é o tRPC?"
+label: "O que é tRPC?"
 ---
 
-# O que é o tRPC?
+# O que é tRPC?
 
 tRPC é uma **biblioteca para desenvolvedores TypeScript** de aplicações web, que permite a **criação de APIs** totalmente **tipadas** de ponta a ponta.
 
