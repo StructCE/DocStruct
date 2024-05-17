@@ -1,13 +1,36 @@
 ---
-order: 3
+order: a
 icon: question
 label: "O que é tRPC?"
 ---
 
-# O que é tRPC
+# O que é tRPC?
 
-A denominação tRPC é uma abreviação de "TypeScript Remote Procedure Call", uma biblioteca do TypeScript que se insipira no RPC (Remote Procedure Call), um protocolo específico de comunicação que permite a comunicação entre um cliente e servidor em diferentes dipostivos.
+tRPC é uma **biblioteca para desenvolvedores TypeScript** de aplicações web, que permite a **criação de APIs** totalmente **tipadas** de ponta a ponta.
 
-Essa biblioteca trabalha com uma estrutura que facilita a visualização dos endpoints (pontos de comunicação) e a compreensão do que se passa por eles. Deste modo, temos acesso aos tipos de dados, que estão sendo comunicados, pelo lado cliente e, assim, temos um melhor monitoramento do funcionamento e de possíveis erros.
+Utilizando o poder do TypeScript para garantir segurança de tipos em todo o fluxo de dados, ela torna também fácil a maneira de escrever endpoints no backend, para serem usados de maneira segura no frontend, a partir dos contratos de API pré-estabelecidos no design do projeto
 
-Em resumo, tRPC ajuda a tornar a comunicação entre cliente e servidor mais clara, segura e eficiente, uma vez que possibilita uma maior transparência dos dados percorridos no sistema.
+## Conceitos Básicos de RPC e tRPC
+
+### O que é RPC?
+
+RPC, ou _Remote Procedure Call_, é um protocolo que permite chamar **procedimentos** (ou rotinas) em um computador (servidor), a partir de outro computador na rede (cliente), sem que o programador precise codificar explicitamente os detalhes que permitem essa interação remota. O RPC **abstrai a complexidade da comunicação de rede**, permitindo que o desenvolvedor se concentre na lógica do procedimento.
+
+Em _APIs HTTP/REST tradicionais_, você realiza uma requisição, por meio de um `URL`, e obtém uma resposta. Em uma _API RPC_, você chama uma `função` e obtém uma resposta.
+
+==- Rest x RPC
+
+```tsx
+// HTTP/REST
+const res = await fetch("/api/users/1");
+const user = await res.json();
+
+// RPC
+const user = await api.users.getById({ id: 1 });
+```
+
+===
+
+### Como o tRPC se Relaciona com RPC?
+
+tRPC é uma biblioteca que implementa o RPC e é projetada para _monorepos_ com TypeScript full-stack.
