@@ -28,8 +28,6 @@ Após o acesso ter sido liberado \(isso demora alguns dias úteis\), você preci
 
 Com todos esses passos feitos, você poderá acessar a conta bancária da Struct utilizando sua senha alfanumérica e sua senha numérica de 8 dígitos. Mais detalhes sobre a conta bancária serão fornecidos na seção de [Obrigações financeiras](#obrigações-financeiras).
 
-Para ter acesso ao banco Cora
-
 ### Listagem de cargo oficial
 
 Uma obrigação menor, mas de certa forma importante, após a sua posse é atualizar suas contas nos serviços utilizados pela Struct para que elas listem apropriadamente o seu novo cargo de _diretor\(a\) administrativo-financeiro_. A lista de contas a serem atualizadas inclui:
@@ -47,11 +45,11 @@ Caso o\(a\) presidente da empresa júnior seja alterado na troca de gestão, ser
 
 Após os documentos terem sido entregues ao contador e uma pequena taxa ter sido paga ao contador \(mais detalhes sobre a realização de pagamentos podem ser encontrados na seção de [Obrigações financeiras](#obrigações-financeiras)\), o representante da empresa júnior será alterado.
 
-### Modificações em documentos
+<!-- ### Modificações em documentos
 
 Como diretor\(a\) administrativo-financeiro da Struct, seu nome deve constar em alguns documentos oficiais da Struct. Ao assumir o cargo, será necessário modificar esses documentos para que suas informações estejam neles. No momento, os seguintes documentos devem ser modificados:
 
-- Modelo de contrato de prestação de serviços \(Endereço no Google Drive: "_Presidência -> Galeria de modelos -> MODELO_contrato_prestacao_servicos_"\).
+- Modelo de contrato de prestação de serviços \(Endereço no Google Drive: "_Presidência -> Galeria de modelos -> MODELO_contrato_prestacao_servicos_"\). -->
 
 ## Obrigações financeiras
 
