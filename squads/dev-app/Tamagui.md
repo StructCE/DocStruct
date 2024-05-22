@@ -39,12 +39,12 @@ Com o projeto criado, navegue até apps/expo e rode o projeto de acordo com a su
 
 Se você está familiarizado com CSS e Tailwind, a estilização será simples, por exemplo abaixo está listado a diferença da estilização do Tamagui e estilização padrão do CSS.
 
-| Tamagui               | CSS {.compact}         |
-| --------------------- | ---------------------- |
-| backgroundColor="red" | background-color: red; |
-| padding="$10"         | padding: 10px          |
-| color="#ffffff"       | color: #ffffff;        |
-| display="flex"        | display: flex;         |
+| Tamagui         | CSS {.compact}         |
+| --------------- | ---------------------- |
+| bg="red"        | background-color: red; |
+| p="$10"         | padding: 10px          |
+| color="#ffffff" | color: #ffffff;        |
+| display="flex"  | display: flex;         |
 
 Lembrando que você tem total liberdade para abreviar as propriedades, por exemplo em vez de definir display="flex", você pode dsp="flex".
 
@@ -63,9 +63,88 @@ Existem diversos componetes UI prontos do Tamagui. Na no link abaixo você poder
 
 [!ref Componentes](https://tamagui.dev/ui/intro)
 
-Exemplo de um componente Button
+Exemplo de componentes que serão mais utilizados
+
+### XStack e YStack
+
+XStack e YStack são componetes de propriedades flexíveis, ou seja, XStack seria como uma View com display flex e YStack uma View com display flex porém com propriedade flex direction column.
+
+```tsx
+<XStack>
+  <View p="$4" bg="blue"></View>
+  <View p="$4" bg="red"></View>
+</XStack>
+
+<YStack>
+  <View p="$4" bg="white"></View>
+  <View p="$4" bg="green"></View>
+</YStack>
+```
+
+### Botão
+
+![](/dev-app/images/Buttons.png)
+
+```tsx
+import { Activity, Airplay } from "@tamagui/lucide-icons";
+import { Button, XGroup, XStack, YStack } from "tamagui";
+
+export function ButtonDemo(props) {
+  return (
+    <YStack padding="$3" space="$3" {...props}>
+      <Button>Simples</Button>
+      <Button alignSelf="center" icon={Airplay} size="$6">
+        Grande
+      </Button>
+      <XStack space="$2" justifyContent="center">
+        <Button size="$3" theme="active">
+          Ativo
+        </Button>
+        <Button size="$3" variant="outlined">
+          Delineado
+        </Button>
+      </XStack>
+      <XStack space="$2">
+        <Button themeInverse size="$3">
+          Inverso
+        </Button>
+        <Button iconAfter={Activity} size="$3">
+          íconeDepois
+        </Button>
+      </XStack>
+      <XGroup>
+        <XGroup.Item>
+          <Button width="50%" size="$2" disabled opacity={0.5}>
+            desabilitado
+          </Button>
+        </XGroup.Item>
+
+        <XGroup.Item>
+          <Button width="50%" size="$2" chromeless>
+            sem cromo
+          </Button>
+        </XGroup.Item>
+      </XGroup>
+    </YStack>
+  );
+}
+```
 
 ```js
 import { Button } from "tamagui";
 export default () => <Button size="$6">Lorem ipsum</Button>;
 ```
+
+### Switch
+
+### AlertDialog
+
+### Dialog
+
+### Toast
+
+### vatar
+
+### Card
+
+### Image
