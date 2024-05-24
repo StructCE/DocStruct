@@ -60,7 +60,7 @@ Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usam
 
 ## Hospedagem
 
-A Struct cobra R$ 400,00 para **hospedar por 1 ano** e fazer manuntenção durante esse período que é a possibilidade de alteração de conteúdo sem mudança de estrutura do site (como alteração de cores, links, imagens, textos).
+A Struct cobra R$ 400,00 para **hospedar por 1 ano** e fazer manutenção durante esse período que é a possibilidade de alteração de conteúdo sem mudança de estrutura do site (como alteração de cores, links, imagens, textos).
 
 Os preços da compra de domínio são variados, lembre-se de comentar sobre isso com o cliente, pois geralmente, quem compra o domínio é quem será o proprietário legal do mesmo.
 
