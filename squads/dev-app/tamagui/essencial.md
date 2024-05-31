@@ -193,7 +193,6 @@ Como usar:
 
 ```tsx
 import { X } from "@tamagui/lucide-icons";
-
 import {
   Adapt,
   Button,
@@ -207,7 +206,7 @@ import {
   Unspaced,
   XStack,
 } from "tamagui";
-import { SelectDemoItem } from "./SelectDemo";
+
 export function DialogDemo() {
   return <DialogInstance />;
 }
@@ -279,7 +278,6 @@ function DialogInstance() {
               </TooltipSimple>
             </Label>
 
-            <SelectDemoItem />
           </Fieldset>
           <XStack alignSelf="flex-end" gap="$4">
             <DialogInstance />
@@ -455,4 +453,4 @@ export default () => {
 };
 ```
 
-O código acima diz que: Quando a tela estiver numa resolução menor ou igual que 860px o elemento XStack aplicará a propriedade backgroundColor green e se a tela estiver menor ou igual que 980px aplicará o backgroundColor blue.
+O código acima diz que: Quando a tela estiver numa resolução maior que 860px o elemento XStack aplicará a propriedade backgroundColor green e se a tela estiver maior que 980px aplicará o backgroundColor blue e para as telas restantes, no caso menor que Sm (860px), será red.

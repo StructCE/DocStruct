@@ -11,7 +11,7 @@ author:
 
 Tamagui acelera o processo de desenvolvimento contendo componentes prontos para Android e iOS. Ele se concentra na saída nativa da plataforma, com um compilador de otimização opcional que melhora significativamente o desempenho do seu aplicativo ou site e possui sua propria forma de estilização.
 
-Para mais detalhes leia a documentação em: [tamagui.dev/docs/intro/introduction](https://tamagui.dev/docs/intro/introduction)
+Para mais detalhes leia a documentação do [Tamagui](https://tamagui.dev/docs/intro/introduction).
 
 ## Configuração e Instalação
 
