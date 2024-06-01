@@ -16,8 +16,8 @@ tags:
   - usuário
 ---
 
-!!!warning 
-**Atenção!! A documentação a seguir assume que você está utilizando o _App Router_ do Next.js**
+!!!warning
+**Atenção!! A documentação a seguir assume que você está utilizando T3 Stack**
 !!!
 
 # Provedores de autenticação
@@ -60,7 +60,7 @@ export const authOptions: NextAuthOptions = {
 export default NextAuth(authOptions);
 ```
 
-#### Como conseguir as credenciais para a autenticação externa Next auth (Google)
+#### Como conseguir as credenciais para a autenticação externa (Google)
 
 Utilizarei o exemplo do Google como autenticador externo, pela grande gama de [documentação](https://developers.google.com/identity/protocols/oauth2?hl=pt-br) disponível.
 
@@ -70,12 +70,12 @@ Para configurar a autenticação com o Next Auth usando o Google como provedor, 
 
 2. Com o projeto criado e/ou adicionado na plataforma, na barra de opções lateral clique no item `Credenciais` e em seguida, no botão `Criar credenciais`, escolha `ID do cliente OAuth` como tipo de credencial, e configure as informações do OAuth de acordo com as necessidades do projeto e seguindo as intruções.
 
-3. Preencha o campo `Tipo de aplicativo` com a opção `Aplicativo da Web`, nas seções `Origens JavaScript autorizadas` e `URLs de redirecionamento autorizados`, adicione URLs de acordo com a natureza do aplicativo, por exemplo, vale colocar `http://localhost:3000` e `http://localhost:3000/api/auth/callback/google` respectivamente, para uma aplicação que está rodando localmente. E , por fim ,clique em `Criar`.
+3. Preencha o campo `Tipo de aplicativo` com a opção `Aplicativo da Web`, nas seções `Origens JavaScript autorizadas` e `URLs de redirecionamento autorizados`, adicione URLs de acordo com a natureza do aplicativo, por exemplo, vale colocará `http://localhost:3000` e `http://localhost:3000/api/auth/callback/google` respectivamente, para uma aplicação que está rodando localmente. E, por fim ,clique em `Criar`.
    OBS:A segunda URL depende de como foram implementadas as rotas no projeto!!
 
 4. Após a criação do cliente OAuth, serão exibidos O `ID do cliente` e a `Chave secreta do cliente`.
 
-5. Por fim, crie um arquivo `.env` para guardar essas informações.Como no exemplo:
+5. Por fim, crie um arquivo `.env` para guardar essas informações. Como, no exemplo:
 
 ```bash
 # Next Auth
