@@ -17,13 +17,15 @@ Atualmente _(2024/1)_, a reunião de diagnóstico não é necessariamente descri
 
 Como descrito na seção de [fluxograma](/organizacao-interna/diretoria-comercial/fluxograma.md) o processo de análise de requisitos é realizado **após** a reunião de diagnóstico com o cliente e **antes** de formular a proposta, e também é descrito o enviamento do documento de perguntas para o pessoal de projetos. Ambas dessas ações descrevem um método mais remoto de análise, mas também é interessante realizar a análise de forma presencial, principalmente em projetos mais abstratos e complexos.
 
-## Método
+---
+
+## Metodologia
 
 1. Para realizar uma Análise de requisitos é necessário já ter feito a reunião de diagnóstico com o cliente e preenchido o [documento de perguntas](https://docs.google.com/document/d/10Ue1wc7tpNOn8HKvkqfSst77uanTc86dMnFYXFW2dI8/edit?usp=sharing), para então, notificar projetos.
 2. Ao notificar projetos, marque uma reunião ou espere o retorno do [documento de Análise de Requisito](https://docs.google.com/document/d/1ig9QhNwcJ1z-vNr2m4LLCnl4DRAeHqxWSJbsdazhtTQ/edit?usp=sharing) com os pontos de esclarecimento, módulos, etc.
-3. Formular proposta.
+3. Formular proposta, tanto a [apresentação](https://docs.google.com/presentation/d/1PxR4J9Y9HZlPmiHjc0Ix7YmKsNatAZd6BV7c8-CnuQE/edit?usp=drive_link) quanto a [formal](https://docs.google.com/document/d/1Tw6Og31aA3OihUYRDutb123idpA9EnkGQrCJOTjS4GM/edit?usp=drive_link).
 
-## Tópicos da análise
+## Tópicos da análise de requisitos
 
 #### 1. Dúvidas do cliente:
 
@@ -39,7 +41,7 @@ A parte mais interessante, sendo um tópico que descreverá a experiencia espera
 
 #### 4. Design System:
 
-Aqui será colocado os detalhes de design pré existentes (que o cliente já difiniu).
+Aqui será colocado os detalhes de design pré existentes (que o cliente já definiu).
 
 #### 5. Eventuais dificuldades:
 
