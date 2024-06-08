@@ -5,7 +5,7 @@ label: Análise de Requisitos
 author:
   name: Adriano Lopes
   avatar: ../../Imagens DocStruct/Logos/logo_struct.png
-date: 2023-05-02
+date: 2024-06-07
 category: Explicação
 ---
 
