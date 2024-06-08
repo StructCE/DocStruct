@@ -20,7 +20,38 @@ Como descrito na seção de [fluxograma](/organizacao-interna/diretoria-comercia
 ## Método
 
 1. Para realizar uma Análise de requisitos é necessário já ter feito a reunião de diagnóstico com o cliente e preenchido o [documento de perguntas](https://docs.google.com/document/d/10Ue1wc7tpNOn8HKvkqfSst77uanTc86dMnFYXFW2dI8/edit?usp=sharing), para então, notificar projetos.
-2. Ao notificar projetos, marque uma reunião ou espere o retorno do [documento de Análise de Requisito](https://docs.google.com/document/d/10Ue1wc7tpNOn8HKvkqfSst77uanTc86dMnFYXFW2dI8/edit?usp=drive_link) com os pontos de esclarecimento, módulos, etc.
+2. Ao notificar projetos, marque uma reunião ou espere o retorno do [documento de Análise de Requisito](https://docs.google.com/document/d/1ig9QhNwcJ1z-vNr2m4LLCnl4DRAeHqxWSJbsdazhtTQ/edit?usp=sharing) com os pontos de esclarecimento, módulos, etc.
 3. Formular proposta.
 
 ## Tópicos da análise
+
+#### 1. Dúvidas do cliente:
+
+São perguntas geradas pelo membro de projetos designado que deve ser esclarecido com o cliente.
+
+#### 2. Ficha técnica:
+
+Atualmente dividida em três tópicos, que descreve de forma resumida alguns aspectos de desenvolvimento.
+
+#### 3. Historietas de Usuário:
+
+A parte mais interessante, sendo um tópico que descreverá a experiencia esperado de um usuários diversos. Geralmente divido em ações, espectativas, necessidades, etc...
+
+#### 4. Design System:
+
+Aqui será colocado os detalhes de design pré existentes (que o cliente já difiniu).
+
+#### 5. Eventuais dificuldades:
+
+São desafios que precisará ser discutidos no futuro, caso o projeto seja continuado.
+
+#### 6. Módulos:
+
+É uma tabela que descreverá os módulos selecionados pelo membro de projetos designado (que pode ser achado [aqui](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing)) junto com sua quantidade de issues.
+
+#### 7. Organização de execução:
+
+O último tópico que definirá o aspecto prático do projeto, sendo dividido em:
+1. Equipe: quantos devs serão alocados;
+2. Cronograma: dividido em Sprints;
+3. Prazo: o prazo 😕
