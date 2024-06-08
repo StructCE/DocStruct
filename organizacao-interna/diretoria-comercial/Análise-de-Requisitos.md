@@ -1,6 +1,6 @@
 ---
 order: 6
-icon: checklist-16
+icon: codescan
 label: Análise de Requisitos
 author:
   name: Adriano Lopes
