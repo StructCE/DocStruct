@@ -21,9 +21,9 @@ Como descrito na seção de [fluxograma](/organizacao-interna/diretoria-comercia
 
 ## Metodologia
 
-1. Para realizar uma Análise de requisitos é necessário já ter feito a reunião de diagnóstico com o cliente e preenchido o [documento de perguntas](https://docs.google.com/document/d/10Ue1wc7tpNOn8HKvkqfSst77uanTc86dMnFYXFW2dI8/edit?usp=sharing), para então, notificar projetos.
-2. Ao notificar projetos, marque uma reunião ou espere o retorno do [documento de Análise de Requisito](https://docs.google.com/document/d/1ig9QhNwcJ1z-vNr2m4LLCnl4DRAeHqxWSJbsdazhtTQ/edit?usp=sharing) com os pontos de esclarecimento, módulos, etc.
-3. Formular proposta, tanto a [apresentação](https://docs.google.com/presentation/d/1PxR4J9Y9HZlPmiHjc0Ix7YmKsNatAZd6BV7c8-CnuQE/edit?usp=drive_link) quanto a [formal](https://docs.google.com/document/d/1Tw6Og31aA3OihUYRDutb123idpA9EnkGQrCJOTjS4GM/edit?usp=drive_link).
+1. Para realizar uma Análise de requisitos é necessário já ter feito a reunião de diagnóstico com o cliente e preenchido o [documento de perguntas :icon-link-external:](https://docs.google.com/document/d/10Ue1wc7tpNOn8HKvkqfSst77uanTc86dMnFYXFW2dI8/edit?usp=sharing), para então, notificar projetos.
+2. Ao notificar projetos, marque uma reunião ou espere o retorno do [documento de Análise de Requisito :icon-link-external:](https://docs.google.com/document/d/1ig9QhNwcJ1z-vNr2m4LLCnl4DRAeHqxWSJbsdazhtTQ/edit?usp=sharing) com os pontos de esclarecimento, módulos, etc.
+3. Formular proposta, tanto a [apresentação :icon-link-external:](https://docs.google.com/presentation/d/1PxR4J9Y9HZlPmiHjc0Ix7YmKsNatAZd6BV7c8-CnuQE/edit?usp=drive_link) quanto a [formal :icon-link-external:](https://docs.google.com/document/d/1Tw6Og31aA3OihUYRDutb123idpA9EnkGQrCJOTjS4GM/edit?usp=drive_link).
 
 ## Tópicos da análise de requisitos
 
@@ -49,7 +49,7 @@ São desafios que precisará ser discutidos no futuro, caso o projeto seja conti
 
 #### 6. Módulos:
 
-É uma tabela que descreverá os módulos selecionados pelo membro de projetos designado (que pode ser achado [aqui](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing)) junto com sua quantidade de issues.
+É uma tabela que descreverá os módulos selecionados pelo membro de projetos designado (que pode ser achado [aqui :icon-link-external:](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing)) junto com sua quantidade de issues.
 
 #### 7. Organização de execução:
 
