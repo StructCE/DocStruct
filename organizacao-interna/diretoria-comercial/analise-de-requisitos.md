@@ -15,7 +15,7 @@ Atualmente _(2024/1)_, a reunião de diagnóstico não é necessariamente descri
 
 ## Introdução
 
-Como descrito na seção de [fluxograma](/organizacao-interna/diretoria-comercial/fluxograma.md) o processo de análise de requisitos é realizado **após** a reunião de diagnóstico com o cliente e **antes** de formular a proposta, e também é descrito o enviamento do documento de perguntas para o pessoal de projetos. Ambas dessas ações descrevem um método mais remoto de análise, mas também é interessante realizar a análise de forma presencial, principalmente em projetos mais abstratos e complexos.
+Como descrito na seção de [fluxograma](/organizacao-interna/diretoria-comercial/fluxograma) o processo de análise de requisitos é realizado **após** a reunião de diagnóstico com o cliente e **antes** de formular a proposta, e também é descrito o enviamento do documento de perguntas para o pessoal de projetos. Ambas dessas ações descrevem um método mais remoto de análise, mas também é interessante realizar a análise de forma presencial, principalmente em projetos mais abstratos e complexos.
 
 ---
 
