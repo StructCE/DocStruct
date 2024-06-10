@@ -11,7 +11,7 @@ category: Explicação
 
 Quando conseguimos o primeiro contato com o cliente através da prospecção, entramos em processo de vendas que segue os passos do seguinte fluxograma:
 
-![](/organizacao-interna/assets/comercial/_Fluxograma-comercial (2).png)
+![Fluxograma da Diretoria Comercial](/organizacao-interna/assets/comercial/FluxogramaComercial.png)
 
 1. Marcar uma **Reunião de Diagnóstico** para coletar informações importantes sobre a lead (potencial cliente) e o projeto, o ideal é já saber informações como o tipo de perfil da lead, nome da empresa se houver, uma pequena ideia do projeto que será solicitado  e durante a Reunião Diagnóstico, adotar uma abordagem personalizada para cada lead, mostrando interesse genuíno em entender suas necessidades específicas e oferecer soluções sob medida. Oferecer opções de horários flexíveis para a reunião de diagnóstico pode facilitar a participação da lead e demonstrar consideração por sua agenda.
 
