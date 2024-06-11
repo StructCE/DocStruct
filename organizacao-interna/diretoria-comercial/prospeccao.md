@@ -4,8 +4,8 @@ icon: person-add
 label: Prospecção e o Primeiro Contato
 author:
   name: Kaleb
-  avatar: ../../Imagens DocStruct/Logos/logo_struct.png
-date: 2023-11-12
+  avatar: ../assets/comercial/floppa.jpeg
+date: 2024-05-11
 category: Explicação
 ---
 
@@ -19,7 +19,7 @@ A prospecção passiva refere-se à criação de uma presença online e offline 
 
 ## Prospecção Ativa
 
-Por outro lado, a prospecção ativa é uma abordagem mais direta, onde a Diretoria de Comercial ou a Equipe de Prospecção toma a iniciativa de buscar proativamente clientes potenciais. Isso pode incluir o uso de chamadas telefônicas, e-mails, eventos de networking e outras táticas direcionadas para identificar e qualificar leads.
+Por outro lado, a prospecção ativa é uma abordagem mais direta, onde a Diretoria de Comercial toma a iniciativa de buscar proativamente potenciais clientes. Isso pode incluir o uso de chamadas telefônicas, e-mails, eventos de networking e outras táticas direcionadas para identificar e qualificar leads.
 
 Neste modelo deve-se pesquisar leads que podem usar novas tecnologias que implementamos ou que podem se beneficiar do que fazemos (app/site). Pesquisar principalmente em EJs por maior facilidade de abertura para negócios. No Portal BJ tem todos os contatos para cada EJ e para suas redes sociais.
 
@@ -29,6 +29,6 @@ Deve-se dar preferência pelo contato via Instagram ou WhatsApp disponibilizado 
 
 O primeiro contato com um lead é um momento crucial no processo de vendas, pois estabelece a impressão inicial é a base para o relacionamento futuro. A abordagem desse momento pode variar dependendo do contexto da prospecção (passiva ou ativa). Como na passiva a lead vem até à Struct, antes mesmo de responder a lead deve-se pesquisar a presença online e a cultura da empresa se possível. Demonstrar que conhece a lead mostra interesse. A prospecção ativa segue os mesmos passos de pesquisar com antecedência para saber qual produto vender para determinada empresa. Quando possuir informação suficiente tente entrar em contato com a lead. Segue o exemplo:
 
-**Exemplo**: Bom dia, eu sou o **Fulano** e participo da área comercial da Struct. A nossa empresa trabalha com o desenvolvimento de sites, aplicativos e sistemas web utilizando linguagens modernas e competitivas para o mercado por preços amigáveis, visto que somos uma Empresa Júnior. Após uma análise de mercado, percebemos que a nossa empresa possui uma solução que beneficiará seu negócio. Quando podemos marcar uma reunião breve para que possamos discutir?
+**Exemplo**: Bom dia, eu sou o **Fulano** e represento a Struct. A nossa empresa trabalha com o desenvolvimento de sites, aplicativos e sistemas web utilizando linguagens modernas e competitivas para o mercado por preços amigáveis, visto que somos uma Empresa Júnior. Após uma análise de mercado, percebemos que a nossa empresa possui uma solução que beneficiará seu negócio. Quando podemos marcar uma reunião breve para que possamos discutir?
 
-Quando tiver o interesse da lead (na passiva você tem desde o início), busque marcar uma Reunião de Diagnóstico e siga o [Fluxograma de Comercial](/Diretorias/Diretoria-Comercial/fluxograma).
+Quando tiver o interesse da lead (na passiva você tem desde o início), busque marcar uma Reunião de Diagnóstico e siga o [Fluxograma de Comercial](/diretoria-comercial/fluxograma.md).
