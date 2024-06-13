@@ -1,5 +1,5 @@
 ---
-label: "Cargo - Gerencia de Publicidade Anuncio Seo"
+label: "Cargo - Gerência de Publicidade, Anuncio e SEO"
 icon: graph
 order: 1
 author:

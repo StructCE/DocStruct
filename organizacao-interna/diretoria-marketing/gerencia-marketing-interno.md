@@ -1,5 +1,5 @@
 ---
-label: "Cargo - Gerencia De Marketing Interno"
+label: "Cargo - Gerência De Marketing Interno"
 icon: file-directory-open-fill
 order: 3
 author:

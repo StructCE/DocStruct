@@ -1,6 +1,7 @@
 ---
 label: "Bem-vindo a Diretoria de Marketing"
 icon: rocket
+order: 5
 author:
   name: Demétrius Mendes
   avatar: ../assets/logo_struct.png
