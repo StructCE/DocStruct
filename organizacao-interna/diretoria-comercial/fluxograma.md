@@ -1,5 +1,5 @@
 ---
-order: 7
+order: B
 icon: workflow
 label: Fluxograma de Comercial
 author:

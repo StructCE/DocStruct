@@ -1,11 +1,11 @@
 ---
-order: 9
+order: E
 icon: discussion-closed
 label: Precificação
 author:
   name: Kaleb
   avatar: ../assets/comercial/floppa.jpeg
-date: 2024-5-18
+date: 2024-6-16
 category: Explicação
 ---
 
@@ -58,6 +58,8 @@ A planilha possui diferentes páginas para cada tipo de projeto, como site insti
 Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usamos meia issue (0,5) para as entidades e páginas fáceis de implementar podendo aumentar ou diminuir o valor unitário da issue dependendo do projeto. Não existe meia issue na prática, porém foi definido assim por convenção devido a grande componentização e reúso de código dessas partes do projeto.
 {% endhint %}
 
+A **quantidade de parcelas depende da duração do projeto**, seguimos a regra de **qtd de meses de duração do projeto** + **1** para evitar clientes inadimplentes, pois se entregarmos o projeto antes dele pagar todas as parcelas, a percepção de valor dele sobre o serviço pode diminuir e não querer mais pagar, e não temos estrutura para sair processando as pessoas 😕. Pelo mesmo motivo não assinamos contratos para fazer o projeto depois porque provavelmente ele nunca vai começar nem vamos receber o dinheiro, os mais velhos recomendam.
+
 ## Hospedagem
 
 A Struct cobra R$ 400,00 para **hospedar por 1 ano** e fazer manutenção durante esse período que é a possibilidade de alteração de conteúdo sem mudança de estrutura do site (como alteração de cores, links, imagens, textos).
@@ -79,4 +81,5 @@ São feitos **dois contratos** com prazos diferentes, um para o desenvolvimento 
 ## Observações
 
 - Se um cliente exigir prazos mais curtos e for viável implementá-los, considere a possibilidade de adicionar mais desenvolvedores ou aplicar o multiplicador de preço da planilha (0.1 a 0.5) para valorizar o esforço dobrado em menos tempo. Uma prática comum do mercado é cobrar uma taxa de urgência entre 30% a 50% a mais do valor.
+- A quantidade de parcelas depende da duração do projeto, seguimos a regra de **qtd de meses** + **1**. 
 - É importante ressaltar que cada cliente e projeto são únicos. A planilha serve como uma ferramenta de auxílio na precificação, mas os resultados podem ser adaptados.
