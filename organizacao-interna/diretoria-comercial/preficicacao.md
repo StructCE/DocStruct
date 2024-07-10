@@ -42,7 +42,7 @@ Há algumas informações necessárias que você precisa saber antes de prossegu
 
 ## Metodologia de Precificação
 
-Para aplicar a nossa metodologia utilizamos uma [planilha :icon-link-external:](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing) que contém uma página de Cálculo de Orçamento, onde multiplicamos o valor/hora **(atualmente R$ 13,00)**, a quantidade de membros e a quantidade de issues para obter o orçamento total. Incluímos **1 ano de hospedagem com a Struct** para projetos de sites por **R$ 400,00** (não inclui o valor da anuidade do domínio do site). Nos anos seguintes, o valor será o mesmo, mas se haver ajustes de preço comunicamos ao cliente previamente. Além disso, é importante falar para o cliente que ele pode hospedar seus sites com outros provedores, se preferir.
+Para aplicar a nossa metodologia utilizamos uma [planilha :icon-link-external:](https://docs.google.com/spreadsheets/d/1D9zf_UfbokxbzPC7ISCn73gs7Sdq0HRHIehmjYmfDvU/edit?usp=sharing) que contém uma página de Cálculo de Orçamento, onde multiplicamos o valor/hora **(atualmente R$ 13,00)**, a quantidade de membros e a quantidade de issues para obter o orçamento total. Incluímos **1 ano de hospedagem com a Struct** para projetos de sites por **R$ 300,00** (não inclui o valor da anuidade do domínio do site). Nos anos seguintes, o valor será o mesmo, mas se haver ajustes de preço comunicamos ao cliente previamente. Além disso, é importante falar para o cliente que ele pode hospedar seus sites com outros provedores, se preferir.
 
 ![Cálculo de Orçamento](/organizacao-interna/assets/comercial/precificacao-calculoOrcamento.png)
 
@@ -55,14 +55,14 @@ A planilha possui diferentes páginas para cada tipo de projeto, como site insti
 ![Página Site Institucional](/organizacao-interna/assets/comercial/precificacao-paginaModulos.png)
 
 {% hint style="info" %}
-Nos módulos de **Entidades** e **Páginas de Conteúdo e Layout Básico**, usamos meia issue (0,5) para as entidades e páginas fáceis de implementar podendo aumentar ou diminuir o valor unitário da issue dependendo do projeto. Não existe meia issue na prática, porém foi definido assim por convenção devido a grande componentização e reúso de código dessas partes do projeto.
+Nos módulos de **Banco de Dados e Procedures** e **Páginas de Conteúdo e Layout Básico**, usamos meia issue (0,5) para as entidades e páginas fáceis de implementar podendo aumentar ou diminuir o valor unitário da issue dependendo do projeto. Não existe meia issue na prática, porém foi definido assim por convenção devido a grande componentização e reúso de código dessas partes do projeto.
 {% endhint %}
 
-A **quantidade de parcelas depende da duração do projeto**, seguimos a regra de **qtd de meses de duração do projeto** + **1** para evitar clientes inadimplentes, pois se entregarmos o projeto antes dele pagar todas as parcelas, a percepção de valor dele sobre o serviço pode diminuir e não querer mais pagar, e não temos estrutura para sair processando as pessoas 😕. Pelo mesmo motivo não assinamos contratos para fazer o projeto depois porque provavelmente ele nunca vai começar nem vamos receber o dinheiro, os mais velhos recomendam.
+A **quantidade de parcelas depende da duração do projeto**, seguimos a regra de **qtd de meses de duração do projeto** + **1** para evitar clientes inadimplentes, pois se entregarmos o projeto antes dele pagar todas as parcelas, a percepção de valor dele sobre o serviço pode diminuir e não querer mais pagar, e não temos estrutura para sair processando as pessoas 😕. Pelo mesmo motivo não assinamos contratos para fazer o projeto depois porque provavelmente ele nunca vai começar nem vamos receber o dinheiro.
 
 ## Hospedagem
 
-A Struct cobra R$ 400,00 para **hospedar por 1 ano** e fazer manutenção durante esse período que é a possibilidade de alteração de conteúdo sem mudança de estrutura do site (como alteração de cores, links, imagens, textos).
+A Struct cobra R$ 300,00 para **hospedar por 1 ano**.
 
 Os preços da compra de domínio são variados, lembre-se de comentar sobre isso com o cliente, pois geralmente, quem compra o domínio é quem será o proprietário legal do mesmo.
 
