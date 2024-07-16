@@ -31,6 +31,12 @@ Cada evento ocorre em um período específico do ano e tem uma particularidade s
 
 Os dois principais eventos organizados pela Brasil Júnior é o Encontro de Lideranças do MEJ (EDL) e o Encontro Nacional de Empresas Juniores (ENEJ). A vantagem desses eventos é que **qualquer EJ do Brasil pode participar**, assim, ao participar, a Struct pode fazer networking com empresários do outro lado do país!! No entanto, as próprias empresas juniores são responsáveis por custear a viagem. Nesse contexto, os custos são referentes ao transporte até o local, acomodação e ingresso do evento.
 
+<figure style="text-align:center">
+  <img src="/organizacao-interna/assets/presidencia/Magna_ENEJ_2023.jpg"
+       width=600 height=100>
+  <figcaption>Palco principal do ENEJ 2023 no Rio.</figcaption>
+</figure>
+
 ### EDL
 
 O EDL ocorre no início do ano, geralmente em Janeiro ou Fevereiro, no estado de São Paulo e é organizado apenas para pessoas que ocupam cargos de liderança dentro das EJs. Nele, a alimentação já é inclusa no preço do ingresso e a acomodação é no próprio local em que o evento acontece, podendo a EJ pagar por um apartamento, um alojamento ou um chalé. Portanto, o EDL tem um caráter imersivo e os(as) empresários(as) juniores dormem, comem e trabalham tudo no mesmo lugar!!
@@ -39,9 +45,27 @@ O EDL ocorre no início do ano, geralmente em Janeiro ou Fevereiro, no estado de
 
 Em contrapartida, o ENEJ ocorre no meio do ano, geralmente Agosto ou Setembro, e a cada ano se localiza em algum estado diferente do Brasil. Esse evento dura 4 dias sendo que qualquer pessoa da empresa pode participar de modo que a empresa fica mais livre em relação a fazer seu próprio itinerário e precisará se organizar em relação a hospedagem e à alimentação. Um toque especial do ENEJ é o contato com empresas e pessoas de grande influência, os quais estarão lá para nos ensinar algo, expor seus produtos nos stands ou até ofertar uma vaga de trabalho/estágio.
 
+<figure style="text-align:center">
+  <img src="/organizacao-interna/assets/presidencia/Stand_ENEJ_2023.jpg"
+       width=300 height=100>
+  <figcaption>Stand da Raízen no ENEJ 2023 no Rio.</figcaption>
+</figure>
+
 !!!
 Ao final de cada dia do ENEJ, recomendamos que a Struct se reúna e troque ideias sobre o que aprenderam e se é possível implementar alguma ação dentro do nosso contexto.
 !!!
+
+<figure>
+  <img src="/organizacao-interna/assets/presidencia/StructReunida_ENEJ_2023.jpg"
+       width=300 height=100>
+  <figcaption>Stand da Raízen no ENEJ 2023 no Rio.</figcaption>
+</figure>
+
+<figure>
+  <img src="/organizacao-interna/assets/presidencia/ConcentroReunida_ENEJ_2023.jpg"
+       width=300 height=100>
+  <figcaption>Concentração da Concentro no ENEJ 2023 no Rio.</figcaption>
+</figure>
 
 ## Eventos organizados pela Concentro
 
@@ -51,9 +75,27 @@ Como EJ federada pela Concentro, pagamos uma taxa de semestralidade, a qual perm
 
 O LDN ocorre no primeiro semestre do ano e tem como objetivo direcionar as lideranças das EJs para que essas possam conduzir suas empresas. Nesse evento, passamos dois dias inteiros em uma chácara imersos em atividades como palestras, benches e rodas de conversa. No entanto, o momento mais proveitoso para nós é quando nos juntamos como Struct e discutimos as atuais dores da EJ e como podemos superá-las e quem serão os agentes que farão isso acontecer.
 
+<figure style="text-align:center">
+  <img src="/organizacao-interna/assets/presidencia/Struct_LDN_2024.jpeg"
+       width=300 height=100>
+  <figcaption>Barracas da Struct no LDN 2024</figcaption>
+</figure>
+
 ### Sábado Júnior
 
 Já o Sábado Júnior é feito no meio do ano e é uma ótima oportunidade para levarmos o maior número de Structers possível para começarem a viver o mundo MEJ. No mais, é um evento muito similar ao LDN, porém, ocorre em um só dia de manhã até à noite e é recheado de palestras, benches e rodas de conversa. Contudo, assim como no LDN, o momento mais proveitoso é quando juntamos todo mundo da Struct e discutimos nossas dores, sendo que é uma oportunidade ideal para escutar o que os/as membros que não ocupam cargos de liderança acham dos nossos problemas e quais são as ideias deles/as para melhorarmos.
+
+<figure>
+  <img src="/organizacao-interna/assets/presidencia/Struct_SB_2024.jpeg"
+       width=500 height=300>
+  <figcaption>Struct no Sábado Júnior 2024.</figcaption>
+</figure>
+
+<figure>
+  <img src="/organizacao-interna/assets/presidencia/StructPalco_SB_2024.jpeg"
+       width=300 height=100>
+  <figcaption>Struct no palco do Sábado Júnior 2024.</figcaption>
+</figure>
 
 ### Concentra
 
