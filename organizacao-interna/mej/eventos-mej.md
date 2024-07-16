@@ -18,9 +18,14 @@ Os eventos do MEJ possuem o objetivo de capacitar novas lideranças, ajudar as E
 
 Cada evento ocorre em um período específico do ano e tem uma particularidade singular no que concerne nossa atuação como EJ.
 
-!!!
-Na maioria desses eventos, o dia é recheado de palestras, benches guiados e/ou rodas de conversas, que são ótimas oportunidades para aprender e sair com contatos a partir de pontos em comum com as dores de outras EJs/empresas
-!!!
+## Dicas principais sobre como aproveitar os eventos
+
+- A melhor forma de abordar uma pessoa de outra EJ para uma bench é conversar sobre um ponto em comum abordado em palestras ou em rodas de conversas. Exemplo: "A Struct precisa melhorar sua cultura de feedback consequentemente algum integrante participa de uma palestra com esse tema e percebe que uma pessoa de outra EJ falou sobre como feedbacks são abordados dentro de sua EJ: PROCURE ESSA PESSOA E PERGUNTE MAIS SOBRE, DEMONSTRE INTERESSE E COMECE A SE ENGAJAR!!";
+
+- Organize-se previamente com os/as integrantes da Struct e decida quem irá para qual palestra, pois geralmente há várias palestras que acontecem simultaneamente e, então, é interessante aproveitarmos e levarmos a Struct a todas;
+
+- Leve um caderninho e uma caneta para as atividades que você participar com a finalidade de anotar ideias e/ou soluções aplicáveis dentro da empresa.
+
 
 ## Eventos organizados pela Brasil Júnior
 
@@ -40,12 +45,18 @@ Ao final de cada dia do ENEJ, recomendamos que a Struct se reúna e troque ideia
 
 ## Eventos organizados pela Concentro
 
-Como EJ federada pela Concentro, pagamos uma taxa de semestralidade, a qual permite que a federação organize eventos os quais podemos usufruir. Diante disso, os eventos feitos pela Concentro são Líderes da Nação(LDN), Sábado Júnior, Concentra e Prêmio Concentro. Assim, algumas semanas antes do início de cada evento, é liberada uma porcentagem de ingresso por EJ para que seus membros possam adquirir.
+Como EJ federada pela Concentro, pagamos uma taxa de semestralidade, a qual permite que a federação organize eventos dos quais podemos usufruir. Diante disso, os principais eventos feitos pela Concentro são o Líderes da Nação(LDN), o Sábado Júnior, o Concentra e o Prêmio Concentro. Assim, algumas semanas antes do início de cada evento, é liberada uma porcentagem de ingresso por EJ para que seus membros possam adquirir.
 
 ### LDN
 
+O LDN ocorre no primeiro semestre do ano e tem como objetivo direcionar as lideranças das EJs para que essas possam conduzir suas empresas. Nesse evento, passamos dois dias inteiros em uma chácara imersos em atividades como palestras, benches e rodas de conversa. No entanto, o momento mais proveitoso para nós é quando nos juntamos como Struct e discutimos as atuais dores da EJ e como podemos superá-las e quem serão os agentes que farão isso acontecer.
+
 ### Sábado Júnior
+
+Já o Sábado Júnior é feito no meio do ano e é uma ótima oportunidade para levarmos o maior número de Structers possível para começarem a viver o mundo MEJ. No mais, é um evento muito similar ao LDN, porém, ocorre em um só dia de manhã até à noite e é recheado de palestras, benches e rodas de conversa. Contudo, assim como no LDN, o momento mais proveitoso é quando juntamos todo mundo da Struct e discutimos nossas dores, sendo que é uma oportunidade ideal para escutar o que os/as membros que não ocupam cargos de liderança acham dos nossos problemas e quais são as ideias deles/as para melhorarmos.
 
 ### Concentra
 
 ### Prêmio Concentro
+
+O Prêmio Concentro é o evento mais distinto dos outros por seu caráter mais formal e pelo seu foco em reconhecimento, por isso, ocorre no final do ano e é aberto para toda a EJ. Nesse panorama, durante essa cerimônia, as EJs são reconhecidas e premiadas por terem atingido suas metas e pelo seu desempenho e desenvolvimento excelente ao longo do ano. Portanto, é a oportunidade da Struct subir no palco, ganhar certificados e se orgulhar de todo seu esforço.
