@@ -33,7 +33,7 @@ Os dois principais eventos organizados pela Brasil Júnior é o Encontro de Lide
 
 <figure style="text-align:center">
   <img src="/organizacao-interna/assets/presidencia/Magna_ENEJ_2023.jpg"
-       width=600 height=100>
+       width=600>
   <figcaption>Palco principal do ENEJ 2023 no Rio.</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ Em contrapartida, o ENEJ ocorre no meio do ano, geralmente Agosto ou Setembro, e
 
 <figure style="text-align:center">
   <img src="/organizacao-interna/assets/presidencia/Stand_ENEJ_2023.jpg"
-       width=300 height=100>
+       width=300>
   <figcaption>Stand da Raízen no ENEJ 2023 no Rio.</figcaption>
 </figure>
 
@@ -55,16 +55,17 @@ Em contrapartida, o ENEJ ocorre no meio do ano, geralmente Agosto ou Setembro, e
 Ao final de cada dia do ENEJ, recomendamos que a Struct se reúna e troque ideias sobre o que aprenderam e se é possível implementar alguma ação dentro do nosso contexto.
 !!!
 
-<figure>
-  <img src="/organizacao-interna/assets/presidencia/StructReunida_ENEJ_2023.jpg"
-       width=300 height=100>
-  <figcaption>Stand da Raízen no ENEJ 2023 no Rio.</figcaption>
-</figure>
-
-<figure>
-  <img src="/organizacao-interna/assets/presidencia/ConcentroReunida_ENEJ_2023.jpg"
-       width=300 height=100>
-  <figcaption>Concentração da Concentro no ENEJ 2023 no Rio.</figcaption>
+<figure style="display: flex; justify-content:space-evenly;">
+  <div style="display: flex-column; text-align:center;">
+    <img src="/organizacao-interna/assets/presidencia/StructReunida_ENEJ_2023.jpg"
+         width=300>
+    <figcaption>Struct reunida ao final do dia do ENEJ 2023 no Rio.</figcaption>
+  </div>
+  <div style="display: flex-column; text-align:center;">
+    <img src="/organizacao-interna/assets/presidencia/ConcentroReunida_ENEJ_2023.jpg"
+         width=530>
+    <figcaption>Concentração da Concentro no ENEJ 2023 no Rio.</figcaption>
+  </div>
 </figure>
 
 ## Eventos organizados pela Concentro
@@ -77,7 +78,7 @@ O LDN ocorre no primeiro semestre do ano e tem como objetivo direcionar as lider
 
 <figure style="text-align:center">
   <img src="/organizacao-interna/assets/presidencia/Struct_LDN_2024.jpeg"
-       width=300 height=100>
+       width=400>
   <figcaption>Barracas da Struct no LDN 2024</figcaption>
 </figure>
 
@@ -85,16 +86,17 @@ O LDN ocorre no primeiro semestre do ano e tem como objetivo direcionar as lider
 
 Já o Sábado Júnior é feito no meio do ano e é uma ótima oportunidade para levarmos o maior número de Structers possível para começarem a viver o mundo MEJ. No mais, é um evento muito similar ao LDN, porém, ocorre em um só dia de manhã até à noite e é recheado de palestras, benches e rodas de conversa. Contudo, assim como no LDN, o momento mais proveitoso é quando juntamos todo mundo da Struct e discutimos nossas dores, sendo que é uma oportunidade ideal para escutar o que os/as membros que não ocupam cargos de liderança acham dos nossos problemas e quais são as ideias deles/as para melhorarmos.
 
-<figure>
-  <img src="/organizacao-interna/assets/presidencia/Struct_SB_2024.jpeg"
-       width=500 height=300>
-  <figcaption>Struct no Sábado Júnior 2024.</figcaption>
-</figure>
-
-<figure>
-  <img src="/organizacao-interna/assets/presidencia/StructPalco_SB_2024.jpeg"
-       width=300 height=100>
-  <figcaption>Struct no palco do Sábado Júnior 2024.</figcaption>
+<figure style="display: flex; justify-content:space-evenly;">
+  <div style="display: flex-column; text-align:center;">
+    <img src="/organizacao-interna/assets/presidencia/Struct_SB_2024.jpeg"
+       width=620>
+    <figcaption>Struct no Sábado Júnior 2024.</figcaption>
+  </div>
+  <div style="display: flex-column; text-align:center;">
+    <img src="/organizacao-interna/assets/presidencia/StructPalco_SB_2024.jpeg"
+       width=200>
+    <figcaption>Struct no palco do Sábado Júnior 2024.</figcaption>
+  </div>
 </figure>
 
 ### Concentra

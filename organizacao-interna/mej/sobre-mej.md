@@ -1,5 +1,5 @@
 ---
-label: "MEJ"
+label: "História do MEJ"
 icon: rocket
 author:
   name: Jéssica
