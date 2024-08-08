@@ -1,13 +1,13 @@
 ---
-label: "Bem-vindo a Diretoria de Projetos"
-icon: rocket
+label: "Diretoria de Projetos"
+icon: organization
 author:
   name: Matheus das Neves
   avatar: ../assets/logo_struct.png
 date: 07-08-2024
 ---
 
-# Diretoria de Projetos: Responsabilidades e Estrutura
+# Bem-vindo a Diretoria de Projetos
 
 Bem-vindo à seção da melhor diretoria da { Struct }. Aqui você irá encontrar algumas documentações relacionadas às nossas responsabilidades/ferramentas e qualquer outra coisa da nossa diretoria.
 
