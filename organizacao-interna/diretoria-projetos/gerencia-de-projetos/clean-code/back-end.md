@@ -1,6 +1,6 @@
 ---
 label: "Clean Code no Back-End"
-icon: rocket
+icon: gear
 author:
   name: Matheus das Neves
   avatar: ../assets/logo_struct.png
@@ -31,15 +31,15 @@ Tendo esse design pattern em mente, iremos fazer a seguinte divisão nos nossos 
 
 Já **interfaces** será onde colocaremos todas as tipagens de saída e de entrada tanto dos nossos repositories quanto das nossas routes.
 
-Vamos supor que em nosso projeto temos uma model Product que precisamos listar todos os produtos com somnete seu nome e quantidade em um determinado estoque, em outra página precisamos listar um determinado produto com todas as suas informações, em outra precisamos criar/atualizar/deletar produtos:
+Vamos supor que em nosso projeto temos uma model Product que precisamos listar todos os produtos com somente seu nome e quantidade em um determinado estoque, em outra página precisamos listar um determinado produto com todas as suas informações, em outra precisamos criar/atualizar/deletar produtos:
 
 ### Repositories
 
 Em repositories nós colocamos somente a lógica de chamada ao banco de dados. De acordo com a descrição dada do nosso projeto, precisaremos então ter uma função que irá pegar todos os produtos do banco de dados, uma para pegar um determinado produto, uma para criar produto, uma para atualizar e, finalmente, uma para deletar:
 
 ```ts src/server/repositories
-import db from "algum lugar no seu repo"
-import { productRepositoryInterface } from "../interfaces/product" // Desenvolvemos essa interface em interfaces/product para tipar os props das funções do repository
+import db from "@/server/db.ts"
+import { productRepositoryInterface } from "../interfaces/product/product.repository.interface.ts" // Desenvolvemos essa interface em interfaces/product para tipar os props das funções do repository
 
 async function getAll() => {
   return await db.product.findMany() // Nós não precisamos de nenhum input de dados neste caso
@@ -74,7 +74,7 @@ export const productRepository = {
 
 Aqui você pode fazer tanto um arquivo para ambos repository e route dos produtos quanto fazer separado, irei fazer de maneira separada. Como só fizemos o repository por enquanto, iremos criar as interfaces usadas no repository. Essas tipagens também serão usadas para validar as entradas de dados nas procedures, que é feita em zod no tRPC, então iremos fazer direto em zod e, então, inferimos o tipo para uso no repository.
 
-```ts src/server/interfaces/product.repository,interfaces.ts
+```ts src/server/interfaces/product/product.repository.interfaces.ts
 import z from "zod";
 
 const getOneByIdProps = z.object({
@@ -127,4 +127,172 @@ export const productRepositorySchema = {
 
 ### Routes
 
+Agora, as routes, que em um repositório T3 seria a pasta routers da api, farão a lógica de tratamento de dados para poder retorná-los ao cliente:
+
+```ts src/server/api/routers/product.ts
+import { createTRPCRouter, publicProcedure, protectedProcedure } from "@/server/api/trpc";
+import { productRepository } from "@/server/repositories/product.ts";
+import {
+  productRepositorySchema  // Nós usamos o schema para o input, pois trpc usa zod para fazer a validação da entrada de dados
+} from "@/server/interfaces/product/product.repository.interface.ts";
+import { type ProductRouteInterface } from "@/server/interfaces/product.product.route.repository.ts";
+// Nós iremos desenvolver essa ProductRouteInterface que será a tipagem dos dados de saída da nossa route
+
+export const productRouter = createTRPCRouter({
+  getProductsWithNameAndAmount: publicProcedure.query( async (): ProductRouteInterface["ProductsWithNameAndAmount"] => {
+    const products = await productRepository.getAll()
+    const productsWithNameAndAmount = products.map((product) => {
+      name: product.name,
+      currentAmount: product.currentAmount
+      })
+    return productsWithNameAndAmount
+  }),
+
+  getOneById: publicProcedure.input(productRepositorySchema.getOneByIdProps).query( async ({input}): ProductRouteInterface["Product"] => {
+    return await productRepository.getOneById(input)
+  }),
+
+  createProduct: protectedProcedure.input(productRepositorySchema.createProps).mutation( async ({input}): ProductRouteInterface["Product"] => {
+    return await productRepository.create(input)
+  }),
+
+  updateProduct: protectedProcedure.input(productRepositorySchema.updateProps).mutation( async ({input}): ProductRouteInterface["Product"] => {
+    return await productRepository.update(input)
+  }),
+
+  deleteProduct: protectedProcedure.input(productRepositorySchema.deleteProps).mutation( async ({input}): ProductRouteInterface["Product"]^=> [
+    return await productRepository.remove(input)
+  ])
+});
+```
+
+Agora, vamos fazer desenvolver as tipagens usadas para as saídas da nossa route de produtos:
+
+```ts src/server/interfaces/product/product.route.interface.ts
+type ProductsWithNameAndAmount = {
+  name: string;
+  currentAmount: number;
+}[];
+
+type Product = {
+  name: string;
+  currentAmount: number;
+  // outras propriedades do seu banco de dados
+};
+
+export type ProductRouteInterface = {
+  ProductsWithNameAndAmount: ProductsWithNameAndAmount;
+  Product: Product;
+};
+```
+
+E, finalmente, caso tenha havido alguma dúvida em relação à organização das pastas:
+
+![organização das pastas](/assets/projetos/organizacao-pastas.png)
+
 ## Tratamento de erros
+
+O desenvolvimento de uma api requer lidar e tratar com situações de erros. Em typescript, usando-se tRPC e Prisma, podemos lidar com erros do seguinte jeito direto na nossa route:
+
+```ts src/server/api/routers/product.ts
+.
+.
+.
+import { Prisma } from "@prisma/client"
+
+export const productRouter = createTRPCRouter({
+  getOneById: publicProcedure.input(productRepositorySchema.getOneByIdProps).query( async ({input}): ProductRouteInterface["Product"] | TRPCError => {
+    try {
+      // executar a chamada pro banco de dados pelo repository e tratar resposta
+    } catch (error) {
+
+      if (error instanceof Prisma.PrismaClientKnownRequestError) {
+        if (error.code === "P2025") {
+          throw new TRPCError({
+            // Lançar erro TRPC
+            code: "NOT_FOUND",
+            message: "Instância não encontrada",
+            cause: error
+          })
+        }
+        // aqui você pode tratar mais erros de código do prisma
+      }
+
+      if (error instanceof Prisma.PrismaClientValidationError) {
+        throw ner TRPCError({
+          code: "BAD_REQUEST",
+          message: "Dados enviados da instância são inválidos",
+          cause: error
+        })
+      }
+
+      throw new TRPCError({
+        code: "INTERNAL_SERVER_ERROR",
+        message: "Erro interno do servidor",
+        cause: error
+      })
+    }
+  })
+})
+
+.
+.
+.
+```
+
+### Middleware
+
+Ou podemos centralizar o tratamento de erros em uma só função e então usar um middleware nas nossas procedures. O lado positivo é que centralizamos o tratamento de erros e diminuímos trabalho repetitivo, mas como o middleware irá ser executado para toda procedure, poderá deixar algumas procedures que não requerem determinados tratamentos de erros um pouco mais lenta.
+
+```ts src/server/api/trpc.ts
+.
+.
+.
+
+const errorHandlingMiddleware = async (props: ErrorHandlingMiddlewareProps) => {
+  const { path, next } = props;
+  try {
+    return await next();
+  } catch (error) {
+    console.error(`Error in ${path} procedure`, error);
+
+    if (error instanceof Prisma.PrismaClientKnownRequestError) {
+      if (error.code === "P2025") {
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: "Instância não encontrada",
+          cause: error,
+        });
+      }
+      if (error.code === "P2002") {
+        throw new TRPCError({
+          code: "CONFLICT",
+          message: "Instância com campo de valor único que já existe",
+          cause: error,
+        });
+      }
+    }
+    if (error instanceof Prisma.PrismaClientValidationError) {
+      throw new TRPCError({
+        code: "BAD_REQUEST",
+        message: "Dados enviados da instância são inválidos",
+        cause: error,
+      });
+    }
+    throw new TRPCError({
+      code: "INTERNAL_SERVER_ERROR",
+      message: "Erro interno no servidor",
+      cause: error,
+    });
+  }
+};
+
+export const publicErrorHandledProcedure = t.procedure.use(errorHandlingMiddleware);
+// Esse tipo de procedure que criamos irá executar o errorHandlingMiddleware sempre que ocorrer uma requisição
+
+.
+.
+.
+```
+
+O Prisma tem divisões de erros e códigos na sua [documentação](https://www.prisma.io/docs/orm/reference/error-reference) caso queira se aprofundar mais em tratamentos de erros com prisma.

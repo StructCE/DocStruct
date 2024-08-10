@@ -1,6 +1,6 @@
 ---
 label: "Clean Code no Front-End"
-icon: rocket
+icon: browser
 author:
   name: Matheus das Neves
   avatar: ../assets/logo_struct.png

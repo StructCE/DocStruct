@@ -1,6 +1,6 @@
 ---
 label: "Metodologias Ágeis"
-icon: rocket
+icon: project-symlink
 author:
   name: Matheus das Neves
   avatar: ../assets/logo_struct.png

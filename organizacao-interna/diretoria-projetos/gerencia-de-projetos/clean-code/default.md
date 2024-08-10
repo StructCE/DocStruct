@@ -1,6 +1,6 @@
 ---
 label: "Clean Code"
-icon: rocket
+icon: code
 author:
   name: Matheus das Neves
   avatar: ../assets/logo_struct.png

@@ -1,6 +1,6 @@
 ---
 label: "Gerência de Projetos"
-icon: rocket
+icon: project
 author:
   name: Matheus das Neves
   avatar: ../assets/logo_struct.png
