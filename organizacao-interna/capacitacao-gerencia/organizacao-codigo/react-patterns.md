@@ -9,7 +9,7 @@ date: 2024-08-01
 
 # Padrões e antipadrões
 
-Padrões e antipadrões são estruturas de código que se repitem durante o desenvolvimento de um programa. Os padrões são estruturas que resolvem os problemas e apresenta uma boa estrutura do código. Diferentemente, os antipadrões são estruturas que resolvem os problemas, pelo menos inicialmente, mas possuem um código de baixa qualidade.
+Padrões e antipadrões são estruturas de código que se repetem durante o desenvolvimento de um programa. Os padrões são estruturas que resolvem os problemas e apresentam uma boa estrutura do código. Diferentemente, os antipadrões são estruturas que resolvem os problemas, pelo menos inicialmente, mas possuem um código de baixa qualidade.
 
 As características esperadas de um códigos são legibilidade, entendibilidade, manutenibilidade e extensibilidade. Essas qualidades podem ser atingidas com técnicas de desenvolvimento de software. Aqui será explicado algumas, pois existem diversas.
 
@@ -17,9 +17,9 @@ As características esperadas de um códigos são legibilidade, entendibilidade,
 
 SOLID é um conjunto de práticas muito utilizado para programas orientados à objetos, mas ele pode ser adaptado para a realidade de cada projeto.
 
-### Pricípio da responsabilidade única (Single responsibility)
+### Princípio da responsabilidade única (Single responsibility)
 
-A primeira prática é a responsabilidade única. Ela prega que partes do código seja funções, componentes, arquivos e etc. devem apresentar a solução de um único problema. Se o problema for grande, sempre é possível quebrar ele em diversas partes menores, assim como o código de um projeto pode ser separado em diferentes funções ou arquivos. A separação ajuda a organizar o que a pessoa que vai continuar o projeto vai ler e para um boa compreensão do código e até mesmo reusabilidade do mesmo essa prática pode ser aplicada.
+A primeira prática é a responsabilidade única. Ela prega que partes do código seja funções, componentes, arquivos e etc, devem apresentar a solução de um único problema. Se o problema for grande, sempre é possível quebrar ele em diversas partes menores, assim como o código de um projeto pode ser separado em diferentes funções ou arquivos. Este princípio facilita a compreensão do código e reutilização de seus componentes a desenvolvedores que não estavam inseridos no desenvolvimento do mesmo.
 
 Uns padrões que podem ser interessantes para essa prática é a utilização de `composition pattern`, `custom hooks` e criação de `libs` (bibliotecas) do projeto.
 
@@ -344,7 +344,7 @@ export function UserAvatar({ urlImagem }: { urlImagem: string }) {
 
 ### Princípio da inversão de dependência (Dependency Inversion)
 
-Esse princípio fala que classes devem depender de interfaces e abstrações no lugar de implementações concretas. O react não tem a definição forte de classe como em OOP, mas o que pode ser tirado desse pricípio é que os componentes devem depender de abstrações de outras partes do sistema ou de abstrações de sistemas externos e não depender diretamente da implementação de uma função. Isso possibilita a reusabilidade de código e a estabilidade.
+Esse princípio fala que classes devem depender de interfaces e abstrações no lugar de implementações concretas. O react não tem a definição forte de classe como em OOP, mas o que pode ser tirado desse princípio é que os componentes devem depender de abstrações de outras partes do sistema ou de abstrações de sistemas externos e não depender diretamente da implementação de uma função. Isso possibilita a reusabilidade de código e a estabilidade, tornando as dependências independentes entre si e, consequentemente, diminuindo a complexidade em caso de erros e bugs no código.
 
 O exemplo abaixo apresenta um componente Formulário que estrutura os dados passados por um usuário. Ele só depende do "contrato" da API que explicita quais dados devem ser fornecidos e as possíveis respostas, mas não precisa saber como a aplicação vai lidar com esses dados depois.
 
