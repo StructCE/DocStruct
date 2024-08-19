@@ -11,7 +11,7 @@ date: 07-08-2024
 
 Aqui você verá algumas práticas e design patterns para se usar na construção do Back-End de um projeto. Mas primeiramente, vamos definir e esclarecer o que seria o Back-End.
 
-O Back-End seria a parte do projeto composta pelo banco de dados e api, OK, mas o que é um banco de dados e api?
+O Back-End seria a parte do projeto composta pelo banco de dados e api que irá suprir as necessidades do front-end, OK, mas o que é um banco de dados e api?
 
 Banco de dados é um aglomerado de tabelas que possuem seus respectivos atributos e, em SQL, fazem relações entre si, é onde criamos uma estrutura de objetos (por isso banco de dados é praticamente POO) para representar informações que precisamos armazenar. Então, fazemos a estrutura das informações que queremos armazenar (conhecido como Schema), fazemos nossas chamadas (querys) para o banco de dados e criamos, alteramos, listamos ou deletamos determinada informação.
 
@@ -166,7 +166,7 @@ export const productRouter = createTRPCRouter({
 });
 ```
 
-Agora, vamos fazer desenvolver as tipagens usadas para as saídas da nossa route de produtos:
+Agora, vamos desenvolver as tipagens usadas para as saídas da nossa route de produtos:
 
 ```ts src/server/interfaces/product/product.route.interface.ts
 type ProductsWithNameAndAmount = {
@@ -192,7 +192,7 @@ E, finalmente, caso tenha havido alguma dúvida em relação à organização da
 
 ## Tratamento de erros
 
-O desenvolvimento de uma api requer lidar e tratar com situações de erros. Em typescript, usando-se tRPC e Prisma, podemos lidar com erros do seguinte jeito direto na nossa route:
+O desenvolvimento de uma api requer lidar e tratar com situações de erros. Em typescript, usando-se tRPC e Prisma, podemos lidar com erros direto na nossa route do seguinte jeito::
 
 ```ts src/server/api/routers/product.ts
 .
