@@ -27,6 +27,10 @@ Uns padrões que podem ser interessantes para essa prática é a utilização de
 
 O padrão de composição fala que um componente maior pode ser quebrado quase que atomicamente em componentes menores para facilitar a reusabilidade e a manuteção do código. Outro problema que ele resolve é o `props` sendo passadas entre vários componentes até o alvo e um "oceano" de `props` para customizar um componente.
 
+!!!
+A função cn, utilizada nos exemplos abaixo, resolve conflitos de classes e é importante para o código, pois ele permite a reusabilidade do componente entre diferentes contextos. As classes escritas no componente da página vão ter prioridade sobre aquelas escritas na definição do componente.
+!!!
+
 === Exemplo composition pattern
 
 Abaixo tem a abstração de um código que não segue o composition pattern, mas tenta reaproveitar o mesmo componente para outras várias áreas dos site.
@@ -39,28 +43,50 @@ export default function Post({
   hasContent,
   hasReplies,
 }: {
-  post: Prisma.PostGetPayload<{ include: { replies: true } }>;
+  post: Prisma.PostGetPayload<{ include: { replies: true; createdBy: true } }>;
   hasLikeCount?: bool;
   hasContent?: bool;
   hasReplies?: bool;
 }) {
   return (
-    <div>
-      <h3>{post.title}</h3>
-      {hasContent && <p>post.content</p>}
-      {hasLikeCount && <p>post.rating</p>}
-      {hasReplies && (
-        <div>
-          {post.replies.map((reply, index) => {
-            return (
-              <div key={index}>
-                <p>{reply.createdBy}</p>
-                <p>{reply.content}</p>
-              </div>
-            );
-          })}
+    <div className="Algumas classes">
+      <div className="Algumas classes">
+        <div className="Algumas classes">
+          <img src={post.user.image} className="Algumas classes" />
         </div>
-      )}
+        <div className="Algumas classes">
+          <p className="Algumas classes">{post.user.name}</p>
+          <p className="Algumas classes">{post.createdAt}</p>
+        </div>
+      </div>
+      <div className="Algumas classes">
+        <h3 className="Algumas classes">{post.title}</h3>
+        <div className="Algumas classes" />
+      </div>
+      <div className="Algumas classes">
+        {hasContent && (
+          <div className="Algumas classes">
+            <p className="Algumas classes">post.content</p>
+          </div>
+        )}
+        {hasLikeCount && (
+          <div className="Algumas classes">
+            <p className="Algumas classes">post.rating</p>
+          </div>
+        )}
+        {hasReplies && (
+          <div className="Algumas classes">
+            {post.replies.map((reply, index) => {
+              return (
+                <div className="Algumas classes" key={index}>
+                  <p className="Algumas classes">{reply.createdBy}</p>
+                  <p className="Algumas classes">{reply.content}</p>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -81,6 +107,33 @@ export function PostRoot({
 }
 ```
 
+```tsx /components/post/header.tsx
+import cn from "/lib/utils.ts";
+export function PostHeader({
+  className,
+  userName,
+  creationDate,
+  imageSrc,
+}: {
+  className?: string;
+  userName: string;
+  creationDate: string;
+  imageSrc: string;
+}) {
+  return (
+    <div className={cn("Algumas classes", className)}>
+      <div className="Algumas classes">
+        <img src={imageSrc} className="Algumas classes" />
+      </div>
+      <div className="Algumas classes">
+        <p className="Algumas classes">{userName}</p>
+        <p className="Algumas classes">{creationDate}</p>
+      </div>
+    </div>
+  );
+}
+```
+
 ```tsx /components/post/title.tsx
 import cn from "/lib/utils.ts";
 export function PostTitle({
@@ -90,7 +143,12 @@ export function PostTitle({
   children: ReactNode;
   className?: string;
 }) {
-  return <h3 className={cn("Algumas classes", className)}>{children}</h3>;
+  return (
+    <div className={cn("Algumas classes", className)}>
+      <h3 className="Algumas classes">{children}</h3>
+      <div className="Algumas classes" />
+    </div>
+  );
 }
 ```
 
@@ -103,7 +161,11 @@ export function PostContent({
   children: ReactNode;
   className?: string;
 }) {
-  return <p className={cn("Algumas coisas", className)}>{children}</p>;
+  return (
+    <div className={cn("Algumas coisas", className)}>
+      <p className="Algumas classes">{children}</p>
+    </div>
+  );
 }
 ```
 
@@ -116,7 +178,11 @@ export function PostLinkCount({
   likeCount: number;
   className?: string;
 }) {
-  return <p className={cn("Algumas coisas", className)}>{likeCount}</p>;
+  return (
+    <div className={cn("Algumas coisas", className)}>
+      <p className="Algumas coisas">{likeCount}</p>
+    </div>
+  );
 }
 ```
 
@@ -131,8 +197,8 @@ export function PostReply({
 }) {
   return (
     <div className={cn("Algumas coisas", className)}>
-      <p>{reply.createdBy}</p>
-      <p>{reply.content}</p>
+      <p className="Algumas classes">{reply.createdBy}</p>
+      <p className="Algumas classes">{reply.content}</p>
     </div>
   );
 }
@@ -141,6 +207,7 @@ export function PostReply({
 ```tsx /components/post/index.tsx
 import cn from "/lib/utils.ts";
 import { PostRoot } from "./root.tsx";
+import { PostHeader } from "./header.tsx";
 import { PostTitle } from "./title.tsx";
 import { PostContent } from "./content.tsx";
 import { PostLikeCount } from "./likeCount.tsx";
@@ -148,6 +215,7 @@ import { PostReply } from "./reply.tsx";
 
 export const Post = {
   Root: PostRoot,
+  Header: PostHeader,
   Title: PostTitle,
   Content: PostContent,
   LikeCount: PostLikeCount,
@@ -171,11 +239,14 @@ export default function Feed() {
     {posts.map((post, index) => {
       return (
         <Post.Root key={index}>
+          <Post.Header imageSrc={post.user.image} userName={post.user.name} creationDate={post.createdAt}>
           <Post.Title>{post.title}</Post.Title>
-          <Post.content className="Algumas classes para adaptar o componente.">
-            {post.content}
-          </Post.content>
-          <Post.LikeCount likeCount={post.rating} />
+          <div className="Algumas coisas">
+            <Post.content className="Algumas classes para adaptar o componente.">
+              {post.content}
+            </Post.content>
+            <Post.LikeCount likeCount={post.rating} />
+          </div>
         </Post.Root>
       );
     })}
@@ -279,7 +350,7 @@ export function cn(...inputs: ClassValue[]) {
 
 Esse princípio diz que o código deve ser extensível, mas deve ser fechado a modificações. Em outras palavras, o código pode acrescentar novas features, mas não deve ser passível nas existentes, pois elas podem quebrar algum código dependente.
 
-Uma forma de seguir esse princípio é utilizando o composition pattern visto anteriormente.
+Uma forma de seguir esse princípio é utilizando o composition pattern visto anteriormente. Ele permite que os componentes sejam fechados a manutenção por não permitir uma alteração direta no código do componente, mas sim uma alteração no componente da página. Essa característica diminuí o atrito entre diferentes partes do código e fortalece a reutilização. O componente Root é "eternamente" expandível, pois ele aceita qualquer `ReactNode` válido, desse modo, ele garante que `features` futuras possão ser criadas com um custo mínimo.
 
 ### Princípio da substituição de Liskov (Liskov substitution)
 
