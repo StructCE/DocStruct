@@ -302,10 +302,10 @@ export default function useLocalStorage(key, initialValue) {
 }
 ```
 
-```tsx /userForm.tsx
+```tsx /useUserForm.tsx
 import useLocalStorage from "/hooks/useLocalStorage";
 
-export default function userForm() {
+export default function useUserForm() {
   const [nome, setNome] = useLocalStorage("nome", "");
   const [idade, setIdade] = useLocalStorage("idade", "");
 
@@ -317,15 +317,32 @@ export default function userForm() {
     setNome(e.target.value);
   };
 
-  const handleidadeChange = (e) => {
+  const handleIdadeChange = (e) => {
     setIdade(e.target.value);
   };
+  return {
+    nome,
+    setNome,
+    idade,
+    setIdade,
+    handleSubmit,
+    handleNomeChange,
+    handleIdadeChange,
+  };
+}
+```
+
+```tsx /userForm.tsx
+import useUserForm from "./useUserForm";
+
+export default function userForm() {
+  const form = useUserForm();
 
   return (
     <form>
-      <input onChange={handleNomeChange} defaultValue={name} />
-      <input onChange={handleIdadeChange} defaultValue={idade} />
-      <button onSubmit={handleSubmit}></button>
+      <input onChange={form.handleNomeChange} defaultValue={form.name} />
+      <input onChange={form.handleIdadeChange} defaultValue={form.idade} />
+      <button onSubmit={form.handleSubmit}></button>
     </form>
   );
 }
