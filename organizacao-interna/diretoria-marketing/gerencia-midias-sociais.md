@@ -3,7 +3,7 @@ label: "Cargo - Gerente de Medias Sociais"
 icon: mention
 order: 2
 author:
-  name: Sarah
+  name: Henrique Izar
   avatar: ../assets/logo_struct.png
 date: 2024-05-31
 ---
@@ -11,6 +11,7 @@ date: 2024-05-31
 # Mídias Sociais
 
 ## Nesse cargo suas funções serão:
+
 - Manutenção das redes sociais (LinkedIn, Instagram Facebook)
 
 - Manutenção do Linktree
@@ -30,7 +31,9 @@ Para gerenciamento do instagram utilizamos algumas ferramentas:
 
 ## Gerenciamento com Meta Business Suite no Instagram e Facebook
 
-![](/organizacao-interna/diretoria-marketing/imagens/meta.png)
+:::img_logo_meta
+![](/organizacao-interna/diretoria-marketing/imagens/midia-social/meta.png)
+:::
 
 ### O que é o Meta Business Suite?
 
@@ -48,6 +51,8 @@ O Meta Business Suite é uma ferramenta integrada que permite o gerenciamento si
 
 O acesso é feito através de um navegador web no endereço business.facebook.com ou pelo aplicativo disponível para dispositivos móveis, você só conseguirá fazer o login se a conta do instagram da Struct estiver logada.
 
+[!ref target="blank" text="Login Meta"](https://business.facebook.com/)
+
 - Como Usar:
   - Criar Postagem:
     - Acesse o Meta Business Suite
@@ -62,11 +67,15 @@ O acesso é feito através de um navegador web no endereço business.facebook.co
   - Métricas:
     - Navegue até a aba "Insights" ou em portugues “Percepções” para visualizar métricas como alcance, impressões, engajamento e desempenho de cada post. Uma sugestão interessante é exibir essas métricas em todas as reuniões gerais uma vez por mês.
 
-![](/organizacao-interna/diretoria-marketing/imagens/grafico.png)
+![](/organizacao-interna/diretoria-marketing/imagens/midia-social/grafico.png)
+
+>
 
 ## Linktr.ee
 
-![](/organizacao-interna/diretoria-marketing/imagens/linkedin.png)
+:::img_tree_logo
+![](/organizacao-interna/diretoria-marketing/imagens/midia-social/tree.png)
+:::
 
 ### Uso do Linktr.ee no Instagram
 
@@ -78,18 +87,26 @@ O Linktr.ee é uma ferramenta que permite criar uma página de links personaliza
 
 Provavelmente você vai precisar acessar o Linktree quando for editar o link do formulário do processo seletivo ou quando for editar algum link. Para acessar o Linktree você deve pegar as credenciais com a presidência ou quem estiver com o banco de senhas da Struct e efetuar o login com essas credenciais. Obs: Login com a conta do instagram da Struct não funciona.
 
+[!ref target="blank" text="Login Linktree"](https://linktr.ee/)
+
+>
+
 ## LinkedIn
 
-![](/organizacao-interna/diretoria-marketing/imagens/linkedin.png)
+:::img_linkedin_logo
+![](/organizacao-interna/diretoria-marketing/imagens/midia-social/linkedin.png)
+:::
 
 ### Gerenciamento do LinkedIn
 
 #### Acesso à Conta:
-O acesso do  LinkedIn da empresa é como se fosse uma “passa e repassa”. No LinkedIn o acesso é feito usando sua conta normal/pessoal do Linkedin, mas quem permite a você poder gerenciar a conta é o super administrador, que atribui seu email ou nome ao gerenciamento de administradores
+
+O acesso do LinkedIn da empresa é como se fosse uma “passa e repassa”. No LinkedIn o acesso é feito usando sua conta normal/pessoal do Linkedin, mas quem permite a você poder gerenciar a conta é o super administrador, que atribui seu email ou nome ao gerenciamento de administradores
 
 #### Uso do LinkedIn para Postagens de Projetos
+
 -Objetivos das Postagens:
-  -O LinkedIn da empresa é utilizado para compartilhar projetos concluídos dos clientes e projetos internos realizados pelos squads. É importante destacar os membros que participaram do projeto, que seria o arroba do gerente do projeto e o arroba dos desenvolvedores.
+-O LinkedIn da empresa é utilizado para compartilhar projetos concluídos dos clientes e projetos internos realizados pelos squads. É importante destacar os membros que participaram do projeto, que seria o arroba do gerente do projeto e o arroba dos desenvolvedores.
 
 - Formato das Postagens:
   As postagens no LinkedIn seguem um formato visual específico diferente do instagram:
@@ -105,8 +122,14 @@ O acesso do  LinkedIn da empresa é como se fosse uma “passa e repassa”. No 
   - Acompanhar as Newsletters Internas: Ler as newsletters para se manter informado sobre os resultados dos projetos e outras atividades relevantes.
   - Drive da Diretoria de Projetos: Para o designer do Instagram, o drive da Diretoria Projetos contém informações super úteis, como, o figma do projeto, participantes do projetos o que é o projeto.
 
-
-
-
-
-
+<style>
+  .img_logo_meta {
+    width: 95px;
+  }
+  .img_tree_logo {
+    width: 75px;
+  }
+  .img_linkedin_logo {
+        width: 80px;
+  }
+</style>
