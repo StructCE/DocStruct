@@ -1,7 +1,7 @@
 ---
 order: 1
 icon: rocket
-label: "DockerFile e Docker Compose para uma aplicação específica do repo t3"
+label: "Aplicação na T3"
 author:
   name: Gabriel Ribeiro
   avatar: ../assets/logo_struct.png
@@ -15,17 +15,15 @@ date: 2024-09-02
 
 ## Configurando Docker para um Projeto com o Template T3
 
-
-Agora que entendemos os conceitos de contêiner, imagem, Docker, Dockerfile e Docker Compose, é hora de aprender como configurar o Docker para um projeto que utiliza o template T3.
+Agora que entendemos os conceitos de container, imagem, Docker, Dockerfile e Docker Compose, é hora de aprender como configurar o Docker para um projeto que utiliza o template T3.
 
 O template T3 geralmente envolve uma aplicação Next.js com TypeScript, Prisma (para gerenciamento de banco de dados), e outras ferramentas modernas. Vamos criar um Dockerfile e um arquivo docker-compose.yml para configurar corretamente o ambiente de desenvolvimento.
-
 
 ### Configuração do Next.js
 
 Para otimizar a construção da imagem Docker para uma aplicação Next.js, você deve adicionar a configuração standalone no arquivo next.config.mjs. Isso ajuda a reduzir o tamanho da imagem aproveitando os rastreamentos de saída.
 
-```next.config.mjs
+```next.config.js
 export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
@@ -49,7 +47,7 @@ README.md
 
 ```
 
-###  Criar o Dockerfile
+### Criar o Dockerfile
 
 Crie um Dockerfile com a seguinte configuração para construir e executar a aplicação:
 
@@ -143,12 +141,11 @@ Como pode-se nota este Dockerfile está organizado em três estágios principais
 
 - **Objetivo:** Executar a aplicação.
 - **Detalhes:**
-  - **Base:**  Este estágio utiliza a imagem `distroless`, que é uma imagem extremamente mínima, contendo apenas as bibliotecas essenciais para rodar a aplicação, o que resulta em uma imagem mais segura e leve.
+  - **Base:** Este estágio utiliza a imagem `distroless`, que é uma imagem extremamente mínima, contendo apenas as bibliotecas essenciais para rodar a aplicação, o que resulta em uma imagem mais segura e leve.
   - **Configuração de Produção:** Define a variável de ambiente `NODE_ENV` como `production`.
   - **Cópia dos Artefatos de Build:** Copia os artefatos necessários do estágio de build, como o arquivo `next.config.js`, diretório `public`, `package.json`, e o diretório `.next` com os arquivos estáticos e o código compilado.
   - **Exposição da Porta:** Expõe a porta `3000`, onde a aplicação irá escutar.
-  - **Comando de Início:** Define o comando que será executado quando o contêiner iniciar, que neste caso é `server.js`.
-
+  - **Comando de Início:** Define o comando que será executado quando o container iniciar, que neste caso é `server.js`.
 
 #### Construir e Executar a Imagem Localmente
 
@@ -158,14 +155,14 @@ Para construir e executar a imagem Docker localmente, use os seguintes comandos:
 docker build -t ct3a-docker --build-arg NEXT_PUBLIC_CLIENTVAR=clientvar .
 docker run -p 3000:3000 -e DATABASE_URL="database_url_goes_here" ct3a-docker
 ```
+
 Abra `http://localhost:3000` para visualizar sua aplicação em execução.
 
+### Configuração do Docker Compose
 
-###  Configuração do Docker Compose
+Você também pode usar o Docker Compose para construir e executar múltiplos containers de forma simplificada. Siga os passos abaixo:
 
-Você também pode usar o Docker Compose para construir e executar múltiplos contêineres de forma simplificada. Siga os passos abaixo:
-
-####  Criar o Arquivo docker-compose.yml
+#### Criar o Arquivo docker-compose.yml
 
 Crie um arquivo docker-compose.yml com a seguinte configuração:
 
@@ -187,23 +184,15 @@ services:
       - DATABASE_URL=database_url_goes_here
 ```
 
-A versão `3.9` do Docker Compose é utilizada neste arquivo de configuração, sendo compatível com Docker 18.06.0+ e Docker Compose 1.22.0+. O arquivo define um serviço chamado `app`, que será executado como um contêiner. A plataforma especificada para este contêiner é `linux/amd64`, garantindo que ele seja construído para arquiteturas de 64 bits no Linux. A construção da imagem para este serviço é configurada através da seção `build`, onde o diretório atual (`.`) é definido como o contexto de construção, e o Dockerfile utilizado é identificado como `Dockerfile`. Além disso, argumentos de build, como `NEXT_PUBLIC_CLIENTVAR`, são definidos na seção `args`, com o valor atribuído de clientvar.
+A versão `3.9` do Docker Compose é utilizada neste arquivo de configuração, sendo compatível com Docker 18.06.0+ e Docker Compose 1.22.0+. O arquivo define um serviço chamado `app`, que será executado como um container. A plataforma especificada para este container é `linux/amd64`, garantindo que ele seja construído para arquiteturas de 64 bits no Linux. A construção da imagem para este serviço é configurada através da seção `build`, onde o diretório atual (`.`) é definido como o contexto de construção, e o Dockerfile utilizado é identificado como `Dockerfile`. Além disso, argumentos de build, como `NEXT_PUBLIC_CLIENTVAR`, são definidos na seção `args`, com o valor atribuído de clientvar.
 
-O diretório de trabalho dentro do contêiner é configurado como `/app`, onde todos os comandos serão executados. A seção `ports` mapeia a porta `3000` do contêiner para a porta `3000` do host, permitindo que a aplicação seja acessada externamente através dessa porta. A imagem do contêiner é nomeada como `t3-app`, e, caso já esteja construída, será reutilizada; caso contrário, o Docker Compose construirá a imagem conforme as configurações fornecidas.
+O diretório de trabalho dentro do container é configurado como `/app`, onde todos os comandos serão executados. A seção `ports` mapeia a porta `3000` do container para a porta `3000` do host, permitindo que a aplicação seja acessada externamente através dessa porta. A imagem do container é nomeada como `t3-app`, e, caso já esteja construída, será reutilizada; caso contrário, o Docker Compose construirá a imagem conforme as configurações fornecidas.
 
-Finalmente, a seção `environment` define variáveis de ambiente para o contêiner, sendo que `DATABASE_URL` é configurada com o valor  `database_url_goes_here`, que será utilizado pela aplicação para se conectar ao banco de dados.
-
-
-
-
-
-
-
-
+Finalmente, a seção `environment` define variáveis de ambiente para o container, sendo que `DATABASE_URL` é configurada com o valor `database_url_goes_here`, que será utilizado pela aplicação para se conectar ao banco de dados.
 
 #### Executar o Docker Compose
 
-Para construir a imagem e iniciar o contêiner com Docker Compose, use o comando:
+Para construir a imagem e iniciar o container com Docker Compose, use o comando:
 
 ```bash
 docker compose up
