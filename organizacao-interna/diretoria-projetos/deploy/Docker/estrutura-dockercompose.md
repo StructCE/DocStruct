@@ -51,15 +51,41 @@ services:
     environment:
 ```
 
-No Docker Compose, cada container é tratado como um serviço, portanto, para declarar um container, é necessário especificá-lo dentro da seção services.
+No Docker Compose, cada container é tratado como um serviço, portanto, para declarar um container, é necessário especificá-lo dentro da seção `services`.
 
-Para cada container definido em services, é importante especificar a imagem que será usada. A opção image permite indicar qual imagem será utilizada no container. Por exemplo, para criar um container MySQL, usamos image: mysql. Se você precisar construir uma imagem a partir de um Dockerfile, em vez de usar image, você usará a opção build, onde especificará o Dockerfile e o contexto para a construção da imagem.
+Para cada container definido em `services`, é importante especificar a imagem que será usada. A opção `image` permite indicar qual imagem será utilizada no container.  Isso pode ser uma imagem pública do Docker Hub ou uma imagem local que você já tenha criado. Se você precisar construir uma imagem a partir de um Dockerfile, em vez de usar `image`, você utilizará a opção `build`.
 
-A opção ports define quais portas do host serão mapeadas para o container, permitindo que ele ofereça serviços externamente. Por outro lado, a opção expose define as portas que o container abrirá para se comunicar com outros containers na mesma rede interna.
+A instrução `build` é usada quando você deseja criar uma imagem personalizada com base no seu Dockerfile. Nessa configuração, você precisa definir dois elementos principais: o caminho do Dockerfile e o contexto. O contexto é o diretório no qual o Docker deve buscar todos os arquivos necessários para a construção da imagem, incluindo o próprio Dockerfile. Geralmente, o contexto é o diretório atual (`.`), mas ele pode ser um caminho para outro diretório, ou até mesmo uma URL de um repositório GitHub que contenha o Dockerfile e os recursos necessários. Isso permite grande flexibilidade ao construir imagens. Por exemplo:
 
-A opção networks especifica em quais redes o container irá participar, podendo incluir drivers e sub-redes. Já em volumes, você define os volumes que o container utilizará, permitindo que ele acesse ou crie volumes específicos no host.
+```docker-compose.yml
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+```
 
-Em environment, você pode definir as variáveis de ambiente que o container usará. A opção depends_on permite definir quais containers são necessários para a execução da sua aplicação. Por exemplo, uma aplicação PHP pode depender de um container MySQL para funcionar corretamente.
+Neste exemplo, o Docker Compose vai usar o Dockerfile chamado `Dockerfile.dev` e buscará os arquivos no diretório atual (`.`) para construir a imagem. No entanto, se você quiser construir uma imagem a partir de um repositório GitHub, o `context` pode ser uma URL, como neste exemplo:
+
+```docker-compose.yml
+services:
+  web:
+    build:
+      context: https://github.com/usuario/repo.git
+      dockerfile: Dockerfile
+```
+
+Aqui, o Docker buscará o Dockerfile e os arquivos necessários diretamente do repositório GitHub especificado.
+
+Em resumo, o context define onde o Docker deve procurar pelos arquivos necessários para construir a imagem, enquanto a opção dockerfile especifica qual Dockerfile será usado no processo de construção. Isso permite a flexibilidade de criar imagens personalizadas tanto localmente quanto a partir de fontes remotas.
+
+A opção `ports` define o mapeamento entre as portas do host (localhost) e as portas do container. O mapeamento segue o formato `portaDoLocalHost:portaDoContainer`, onde a primeira porta refere-se à porta do host, e a segunda porta é a porta exposta no container onde o conteúdo ou serviço está alocado. Por exemplo, `ports: "8080:80"` faz com que o conteúdo do container disponível na porta 80 possa ser acessado no host através da porta 8080. Isso permite que o serviço dentro do container seja acessível externamente.
+
+Por outro lado, a opção `expose` define as portas que o container abrirá para se comunicar com outros containers na mesma rede interna.
+
+A opção `networks` especifica em quais redes o container irá participar, podendo incluir drivers e sub-redes. Já em volumes, você define os volumes que o container utilizará, permitindo que ele acesse ou crie volumes específicos no host.
+
+Em `environment`, você pode definir as variáveis de ambiente que o container usará. A opção depends_on permite definir quais containers são necessários para a execução da sua aplicação. Por exemplo, uma aplicação PHP pode depender de um container MySQL para funcionar corretamente.
 
 ### Exemplo de um Arquivo Compose
 

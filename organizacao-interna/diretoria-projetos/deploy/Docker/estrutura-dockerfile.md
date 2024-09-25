@@ -113,9 +113,7 @@ LABEL description="Imagem para a aplicação Next.js"
 
 ### EXPOSE
 
-Existe uma certa confusão em relação ao uso da instrução **EXPOSE**. Muitos acreditam que ela define em qual porta a aplicação irá rodar dentro do container, mas, na verdade, o objetivo principal é apenas de documentação.
-
-Essa instrução não realiza a publicação da porta de fato; seu propósito é comunicar as intenções de quem escreveu o Dockerfile para quem irá executar o container, indicando quais portas devem ser expostas para comunicação interna entre containers.
+A instrução **EXPOSE** no Dockerfile serve a dois propósitos principais. Primeiro, atua como documentação, informando quais portas a aplicação dentro do container pretende utilizar, o que facilita o entendimento para quem lê o Dockerfile ou executa o container. Além disso, EXPOSE tem um papel funcional: ela define as portas que serão abertas para permitir a comunicação entre containers na mesma rede Docker. No entanto, essa instrução não publica a porta externamente, ou seja, não permite que seja acessada fora do container, a menos que a publicação seja configurada com a flag -p durante a execução do container. Por exemplo, no Dockerfile abaixo:
 
 ```dockerfile
 FROM ubuntu:18.04
@@ -124,7 +122,8 @@ RUN apt-get install openjdk-8-jdk -y
 EXPOSE 8080
 ```
 
-Logo, o Dockerfile acima não faz a publicação da porta, apenas serve como documentação.
+A porta 8080 será exposta para outros containers na mesma rede, mas não estará disponível externamente sem o uso de configurações adicionais. Assim, EXPOSE não apenas documenta, mas também define quais portas estarão abertas para a comunicação entre containers.
+
 
 
 ### VOLUME
