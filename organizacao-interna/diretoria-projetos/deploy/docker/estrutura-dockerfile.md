@@ -69,7 +69,7 @@ RUN apt-get install openjdk-8-jdk -y
 CMD touch arquivo-de-boas-vindas
 ```
 
-Um detalhe superimportante de mencionar é que quando estamos trabalhando com **CMD** é que quando executarmos o comando `docker run -it <id da imagem> /bin/bash` , ele sobrescreveria o comando `CMD touch arquivo-de-boas-vindas` e executaria apenas o `/bin/bash`.
+Um detalhe super importante de mencionar é que quando estamos trabalhando com **CMD** é que quando executarmos o comando `docker run -it <id da imagem> /bin/bash` , ele sobrescreveria o comando `CMD touch arquivo-de-boas-vindas` e executaria apenas o `/bin/bash`.
 
 Um outro teste também poderia ser:
 
@@ -125,7 +125,6 @@ EXPOSE 8080
 A porta 8080 será exposta para outros containers na mesma rede, mas não estará disponível externamente sem o uso de configurações adicionais. Assim, EXPOSE não apenas documenta, mas também define quais portas estarão abertas para a comunicação entre containers.
 
 
-
 ### VOLUME
 
 Essa instrução cria uma pasta em nosso container que será compartilhada entre o container e o host, funcionando do seguinte modo:
@@ -139,7 +138,6 @@ VOLUME /data
 
 Quando criarmos um container dessa imagem, ele criará uma pasta chamada data. Todo arquivo criado dentro dessa pasta será acessível a partir da máquina host no caminho `/var/lib/docker/volumes`.
 
-
 ### WORKDIR
 
 Essa instrução tem o propósito de definir o nosso ambiente de trabalho. Com ela, definimos onde as instruções CMD, RUN, ENTRYPOINT, ADD e COPY executarão suas tarefas, além de definir o diretório padrão que será aberto ao executarmos o container.
@@ -148,7 +146,6 @@ Essa instrução tem o propósito de definir o nosso ambiente de trabalho. Com e
 
 O comando **ENV** define variáveis de ambiente que estarão disponíveis durante o processo de construção e execução do contêiner. Essas variáveis podem ser usadas para configurar o comportamento da aplicação ou para armazenar informações sensíveis, como credenciais e URLs de serviços. Como veremos mais adiante na aplicação específica do repositório T3.
 
-
 ### ARG
 
-O comando **ARG** define variáveis de build, que são usadas durante a construção da imagem Docker. Diferente das variáveis definidas com ENV, as variáveis ARG só estão disponíveis durante o processo de construção e não persistem no contêiner final.
+O comando **ARG** define variáveis de build, que são usadas durante a construção da imagem Docker. Diferente das variáveis definidas com ENV, as variáveis ARG só estão disponíveis durante o processo de construção e não persistem no container final.
