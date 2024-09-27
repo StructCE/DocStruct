@@ -24,6 +24,17 @@ export const publicProcedure = t.procedure;
 
 <br>
 
+### Inicialização do App Router
+Seguidamente, inicializaremos nossa instância principal do roteador, comumente chamada de `appRouter`, na qual adicionaremos procedimentos anteriormente. Por fim, precisamos exportar o tipo do roteador que usaremos posteriormente no lado do cliente.
+
+```ts import { router } from './trpc';
+ 
+const appRouter = router({
+});
+
+export type AppRouter = typeof appRouter; // NÃO exporte o prórpio roteador
+```
+
 ### Por que exportar?
 
 Exportamos duas propriedades que definimos no arquivo `trpc.ts` para facilitar o uso delas em quaisquer outros arquivos e alguma possível manutenção dessa aplicação, pois precisaremos fazer alterações no "arquivo fonte" e não em todos os lugares onde as usarmos.
@@ -97,6 +108,28 @@ const name = z.string({
 
 Para mais informações sobre o a validação de dados, clique [aqui](https://zod.dev)
 !!!
+
+## Adicionando um procedimento
+O tRPC faz uma distinção entre procedimentos de consulta e mutação, semelhante ao GraphQL.
+
+A maneira como um procedimento funciona no servidor não muda muito entre uma consulta e uma mutação. O nome do método é diferente, e a forma como o cliente usará esse procedimento muda,mas todo o resto é o mesmo.
+
+Adicione uma `userCreate` mutação definindo-a como uma nova propriedade em nosso objeto roteador:
+
+```ts 
+const appRouter = router({
+  userCreate: publicProcedure
+    .input(z.object({ name: z.string() }))
+    .mutation(async (opts) => {
+      const { input } = opts;
+      // Crie um novo usuário no banco de dados
+      const user = await db.user.create(input);
+      return user;
+    }),
+});
+```
+
+
 
 ## Servidor
 
@@ -191,3 +224,9 @@ Para mais informações sobre tRPC, consulte [aqui](https://trpc.io/docs/quickst
         margin-bottom: 20px;
     }
 </style>
+
+
+!!! Informação
+A versão 11 do tRPC ainda está em andamento.
+* A funcionalidade é estável e pode ser utilizada em produção, mas pode ocorrer pequenas mudanças na API entre os patches até alcançar a versão 11.0.0
+* Os pacotes são publicados com a `next`tag - no npm
