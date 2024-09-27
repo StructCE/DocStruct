@@ -20,21 +20,21 @@ Todo projeto envolve a entrega de um resultado final, que pode ser dividido em e
 
 Recomenda-se ao início de projeto, que se estabeleça a forma como as informações, dúvidas e atualizações serão transmitidas para o cliente. Dentre eles incluem: qual meio de comunicação utilizar (chat por mensagem, email, etc); qual a frequência de reuniões de alinhamento (semanal, quinzenal, mensal); como os feedbacks serão recebidos; prazo de cada entrega; com qual intervalo e por onde serão repassados as atualizações.
 
+O gerente tem a obrigação de cumprir esses requisitos durante todo o desenvolvimento do projeto a tanto a sua equipe quanto, através da intermediação do Acompanhador de Gerência, ao cliente.
+
 ## Iniciando o Projeto
 
-Ao iniciar um projeto, o primeiro passo é analisar o contrato feito com o cliente. Nele estão informações importantes como o prazo do projeto (quando começa e quando termina), etapas definidas pela diretoria de projetos (quantas semanas vai durar as principais entregas do projeto como prototipação/design, backend, esquema do banco de dados, frontend e garantia para eventuais mudanças inclusas no contrato). Além disso estão listados nossos direitos e deveres como empresa, e os direitos/deveres do cliente. É extremamente importante que o gerente saiba dessas cláusulas para ter noção de como se proteger e como oferecer as garantias, espera-se que o cliente faça a parte dele, então fica na responsabilidade do Gerente e Acompanhador cumprir com as garantias do lado da Struct.
+Ao iniciar um projeto, o primeiro passo é analisar o contrato feito com o cliente e análise de requisitos feito na fase de diagnóstico do projeto. Neles estão informações importantes como o prazo do projeto (quando começa e quando termina), etapas e diagnósticos feitos pela equipe de comercial juntamente com a de projetos (backlog/módulos, fluxograma, diagrama do banco de dados, cronograma e planejamento). Além disso estão listados nossos direitos e deveres como empresa, e os direitos/deveres do cliente. É extremamente importante que o gerente saiba dessas cláusulas para ter noção de como se proteger e como oferecer as garantias, espera-se que o cliente faça a parte dele, então fica na responsabilidade do Gerente e Acompanhador cumprir com as garantias do lado da Struct.
 
-Depois de analisar o contrato e coletar todas as informações importantes, o próximo passo é criar o backlog do projeto. Nele estará todas as semanas detalhadas do projeto, com cada etapa bem definida do que será feito e o que se espera conseguir ao realizar ela.
+Com as informações coletadas pelo diagnóstico do projeto, provavelmente já será possível a organização da equipe e do desenvolvimento. Porém, caso haja necessidade de alguma mudança, desde que não mude o tamanho do escopo do projeto, mostramos como é feito um backlog:
 
 ## Criando Backlog e gerenciamento em cada Sprint
 
-No processo de criação do Backlog estão inclusas algumas etapas iniciais do projeto. Antes de tudo é necessário fazer a etapa de prototipação.
-Na prototipação o SQUAD de Design elabora o Figma do projeto. Depois que o Figma é finalizado, o Acompanhador passa o resultado para o cliente e recolhe os feedbacks ou a aprovação do cliente, para aí sim, seguir para próxima etapa. Este ponto do projeto é essencial para alinharmos com as expectativas que o cliente possui em relação ao produto que será desenvolvido.
-Durante o processo de prototipação, o Gerente deve cuidar do gerenciamento de Backlog e do Sprint Backlog, da seguinte forma:
+A criação do Backlog está dependente da prototipação do projeto, este processo começa no diagnóstico a partir da equipe de comercial e de projetos e envolve, posteriormente, o figma feito pelo squad de design. Esta prototipaçao incipiente se deve ao fato de tentar esclarecer e definir o escopo do projeto para o cliente e para nossa equipe, escritos formalmente no contrato. Apesar de o ideal ser se manter no escopo definido no contrato, há a possibilidade de mudanças principalmente no momento de criação do design, mas deve se atentar ao máximo ao escopo definido no contrato, sem se estender muito.
 
 - **Backlog:** Nesta etapa o Gerente recolhe todas as tarefas que forma elaboradas no contrato, e organiza-as da forma como achar melhor para o desenvolvimento do projeto, alguns exemplos são:
 
-  - Agrupar as tarefas em categorias semelhantes como: Frontend, Backend, Banco de Dasdos etc.
+  - Agrupar as tarefas em categorias semelhantes como: Frontend, Backend, Banco de Dados etc.
   - Dividir grandes tarefas em tarefas menores. Ex: Frontend do projeto pode ser dividido em páginas e componentes (dentro do frontend, foque em desenvolver primeiro os componentes que serão mais utilizados no serviço).
 
   Nesta parte é importante criar as tarefas pensando no tempo que custará para ser desenvolvida. Geralmente trabalhamos em ciclos semanais, então é interessante criar as tarefas que serão feitas de forma que elas consigam ser concluidas num intervalo de uma semana (Divida as grandes tarefas que duram mais de uma semana em tarefas menores, ou atribua mais tarefas a um desenvolvedor caso essas tarefas sejam curtas e de para resolver em menos de uma semana).
