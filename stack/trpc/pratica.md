@@ -14,7 +14,7 @@ A primeira tarefa a ser feita é iniciar o tRPC no back-end. O tRPC funciona atr
 
 Assim, criaremos um arquivo `trpc.ts` onde inicializaremos o tRPC por meio de uma `const t` (nome usado somente para exemplo) e exportaremos as propriedades `router`e `procedure` da instância.
 
-```ts "./server/trpc.ts"
+```ts "src/server/api/trpc.ts"
 import { initTRPC } from "@trpc/server";
 
 const t = initTRPC.create();
@@ -25,14 +25,14 @@ export const publicProcedure = t.procedure;
 <br>
 
 ### Inicialização do App Router
+
 Seguidamente, inicializaremos nossa instância principal do roteador, comumente chamada de `appRouter`, na qual adicionaremos procedimentos anteriormente. Por fim, precisamos exportar o tipo do roteador que usaremos posteriormente no lado do cliente.
 
-```ts import { router } from './trpc';
- 
-const appRouter = router({
-});
+```ts "src/server/api/root.ts
+import { router } from "./trpc";
+const appRouter = router({});
 
-export type AppRouter = typeof appRouter; // NÃO exporte o prórpio roteador
+export type AppRouter = typeof appRouter;
 ```
 
 ### Por que exportar?
@@ -54,7 +54,7 @@ Então, importamos em outro arquivo, mais por questão de organização, as prop
 
 Para fazer as definições, é usado um objeto/dicionário onde as chaves serão os nomes das rotas e os valores serão as ações efetuadas no momento em que elas forem chamadas pelo lado cliente.
 
-```ts "./server/index.ts"
+```ts "src/server/api/root.ts"
 import { db } from "./db"; // Banco de dados previamente construído
 import { publicProcedure, router } from "./trpc"; // Propriedades que exportamos no trpc.ts
 
@@ -110,13 +110,14 @@ Para mais informações sobre o a validação de dados, clique [aqui](https://zo
 !!!
 
 ## Adicionando um procedimento
+
 O tRPC faz uma distinção entre procedimentos de consulta e mutação, semelhante ao GraphQL.
 
-A maneira como um procedimento funciona no servidor não muda muito entre uma consulta e uma mutação. O nome do método é diferente, e a forma como o cliente usará esse procedimento muda,mas todo o resto é o mesmo.
+A maneira como um procedimento funciona no servidor não muda muito entre uma consulta e uma mutação. O nome do método é diferente, e a forma como o cliente usará esse procedimento muda, mas todo o resto é o mesmo.
 
 Adicione uma `userCreate` mutação definindo-a como uma nova propriedade em nosso objeto roteador:
 
-```ts 
+```ts
 const appRouter = router({
   userCreate: publicProcedure
     .input(z.object({ name: z.string() }))
@@ -128,8 +129,6 @@ const appRouter = router({
     }),
 });
 ```
-
-
 
 ## Servidor
 
@@ -225,8 +224,8 @@ Para mais informações sobre tRPC, consulte [aqui](https://trpc.io/docs/quickst
     }
 </style>
 
-
 !!! Informação
 A versão 11 do tRPC ainda está em andamento.
-* A funcionalidade é estável e pode ser utilizada em produção, mas pode ocorrer pequenas mudanças na API entre os patches até alcançar a versão 11.0.0
-* Os pacotes são publicados com a `next`tag - no npm
+
+- A funcionalidade é estável e pode ser utilizada em produção, mas pode ocorrer pequenas mudanças na API entre os patches até alcançar a versão 11.0.0
+- Os pacotes são publicados com a `next`tag - no npm
