@@ -70,7 +70,7 @@ Ao final de cada dia do ENEJ, recomendamos que a Struct se reúna e troque ideia
 
 ## Eventos organizados pela Concentro
 
-Como EJ federada pela Concentro, pagamos uma taxa de semestralidade, a qual permite que a federação organize eventos dos quais podemos usufruir. Diante disso, os principais eventos feitos pela Concentro são o Líderes da Nação(LDN), o Sábado Júnior, o Concentra e o Prêmio Concentro. Assim, algumas semanas antes do início de cada evento, é liberada uma porcentagem de ingresso por EJ para que seus membros possam adquirir.
+Como EJ federada pela Concentro, pagamos uma taxa de semestralidade, a qual permite que a federação organize eventos dos quais podemos usufruir. Diante disso, os principais eventos feitos pela Concentro são o Líderes da Nação(LDN), o Sábado Júnior, o Concentra e o Prêmio Concentro. Assim, algumas semanas antes do início de cada evento, é liberada uma porcentagem de ingresso por EJ para que seus membros possam adquirir, com exceção do Concentra, que possui ingresso pago.
 
 ### LDN
 
@@ -100,6 +100,8 @@ Já o Sábado Júnior é feito no meio do ano e é uma ótima oportunidade para 
 </figure>
 
 ### Concentra
+
+O Concentra é o "mini-ENEJ" que a Concentro realiza, equivalente à outros eventos macro que ocorrem uma vez por ano em cada federação. Geralmente ocorrendo no final do ano antes de Dezembro, o evento tem duração de 2 dias com uma estrutura geralmente maior do que o Sábado Júnior, por isso uma taxa de ingresso além da semestralidade. Ao contrário do ENEJ, os membros não dormem no local, mas há disponibilidade de transportes para a ida e volta do evento. As atividades consistem de Palestras, Construções, Rodas de conversa e benches, similarmente ao Sábado Jr., com um momento de reconhecimento no último dia referente aos indicadores do ano. Para maior proveito, deve ser comunicado dentro da Struct o orçamento dedicado para levar os membros ao evento.
 
 ### Prêmio Concentro
 
