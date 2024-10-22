@@ -20,9 +20,9 @@ O Imersão é um evento organizado pela Struct, que promove palestras com temát
 
 ### Para fazer a reserva do local no caso da FAL é necessário se comunicar com:
 
-- A FAL - para confirmar a disponibilidade do local;
+- A [FAL](falunb@unb.br) - para confirmar a disponibilidade do local;
 - Professor orientador / Professor do curso que tenha disponibilidade - para fazer o processo SEI de reserva e envio de documentos;
-- RU - para reservar e pagar as refeições para os dias escolhidos, geralmente lá só abre mediante solicitação.
+- RU - para reservar e pagar as refeições para os dias escolhidos, geralmente lá só abre mediante solicitação. - (61)99917-0092 (Paulo Romero)
 
 ### Documentos:
 
@@ -30,7 +30,7 @@ O Imersão é um evento organizado pela Struct, que promove palestras com temát
 - Lista de participantes;
 - Cronograma do evento;
 - Lista de solicitação de materiais; 
-- Lista de refeições por membro.
+- Lista de refeições por membro.-
 
 ## Palestras
 
