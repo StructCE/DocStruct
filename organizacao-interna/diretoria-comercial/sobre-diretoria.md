@@ -1,4 +1,5 @@
 ---
+order: A
 label: "Bem-vindo a Diretoria de Comercial"
 icon: rocket
 author:
@@ -10,6 +11,8 @@ date: 2024-05-03
 # Introdução
 
 A Diretoria de Comercial desempenha um papel fundamental dentro da empresa, sendo responsável pela comunicação com os clientes e possíveis clientes. Suas atividades englobam desde o estabelecimento do primeiro contato até o fechamento de contratos, assegurando um fluxo contínuo de projetos para a organização.
+
+---
 
 ## Responsabilidades
 
