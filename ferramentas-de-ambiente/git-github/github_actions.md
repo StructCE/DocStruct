@@ -6,6 +6,7 @@ author:
   name: Victor Costa
   avatar: ../assets/logo_struct.png
 date: 2024-10-10
+last_updated: 2024-11-20
 category: Explicação
 ---
 
