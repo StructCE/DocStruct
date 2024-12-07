@@ -1,6 +1,6 @@
 ---
-order: 6
-icon: rocket
+order: 2
+icon: question
 label: "O que é GitHub Actions?"
 author:
   name: Victor Costa

@@ -1,7 +1,7 @@
 ---
-order: 7
+order: 1
 icon: rocket
-label: "Como o git hub actions ao seu projeto?"
+label: "Aplicação em projeto"
 author:
   name: Victor Costa
   avatar: ../assets/logo_struct.png
@@ -9,7 +9,7 @@ date: 2024-11-20
 category: Explicação
 ---
 
-## **Como o git hub actions ao seu projeto?**
+## **Como usar o github actions no seu projeto?**
 
 Após criar seu projeto usando o "T3", o primeiro passo é criar a pasta `.github` no diretório raiz. Dentro desta pasta recém-criada, adicione outra pasta chamada `workflows`. Agora, na pasta `workflows`, crie um arquivo com o nome de sua preferência, mas com a extensão `.yaml`. Este arquivo conterá as instruções para o GitHub Actions.
 
