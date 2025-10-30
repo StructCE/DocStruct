@@ -13,7 +13,7 @@ tags:
 
 # Antes de iniciar...
 
-Antes de iniciar a explicação sobre como usar docker para desenvolver suas aplicações, é necessário falar sobre alguns conceitos essenciais para a compreensão dos próximos tópicos
+Antes de iniciar a explicação sobre como usar docker para desenvolver suas aplicações, é necessário falar sobre alguns conceitos essenciais para a compreensão dos próximos tópicos. A documentação introdutória oficial para este assunto está disponível em https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/.
 
 # Docker images
 

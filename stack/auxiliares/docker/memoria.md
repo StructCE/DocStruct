@@ -13,7 +13,7 @@ tags:
 
 # Persistência de dados e containers
 
-Quando um container é iniciado, ele usa os arquivos configurados na image. Embora o container possa criar, deletar e alterar arquivos ao longo de sua execução, os dados alterados são apagados ao finalizar o container. Para lidar com persistencia de dados, há 2 mecanismos possíveis, volume e bind.
+Quando um container é iniciado, ele usa os arquivos configurados na image. Embora o container possa criar, deletar e alterar arquivos ao longo de sua execução, os dados alterados são apagados ao finalizar o container. Para lidar com persistencia de dados, há 2 mecanismos possíveis, volume e bind. A documentação introdutória oficial para este assunto está disponível em https://docs.docker.com/get-started/docker-concepts/running-containers/persisting-container-data/.
 
 ## Volumes
 

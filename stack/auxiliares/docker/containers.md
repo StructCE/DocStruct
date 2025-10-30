@@ -18,7 +18,7 @@ Se já temos uma image, podemos executar um container a partir dessa image, para
 
 `docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
-Caso o docker não encontre localmente a image que você deseja rodar, ele fará uma busca no registro remoto configurado, o registro padrão é o dockerhub.
+Caso o docker não encontre localmente a image que você deseja rodar, ele fará uma busca no registro remoto configurado, o registro padrão é o dockerhub. A documentação introdutória oficial para este assunto está disponível em https://docs.docker.com/get-started/docker-concepts/running-containers/publishing-ports/
 
 ## Flags para o comando run
 

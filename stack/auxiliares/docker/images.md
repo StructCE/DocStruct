@@ -14,7 +14,7 @@ tags:
 
 # Criando uma image
 
-Para criar uma image, utilizamos uma dockerfile, que é um arquivo contendo instruções acerca de como construir a image requerida. Uma boa prática é sempre criar a dockerfile no mesmo diretório dos arquivos que serão necessários para o container.É comum escrever os comandos dentro de uma dockerfile utilizando letras maiúsculas, abaixo estão alguns comandos mais comunmente utilizados.
+Para criar uma image, utilizamos uma dockerfile, que é um arquivo contendo instruções acerca de como construir a image requerida. Uma boa prática é sempre criar a dockerfile no mesmo diretório dos arquivos que serão necessários para o container. É comum escrever os comandos dentro de uma dockerfile utilizando letras maiúsculas, abaixo estão alguns comandos mais comunmente utilizados. A documentação introdutória oficial para este assunto pode ser acessada em https://docs.docker.com/get-started/docker-concepts/building-images/.
 
 ## Comandos mais utilizados
 

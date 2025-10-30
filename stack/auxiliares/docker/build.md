@@ -19,7 +19,7 @@ Com uma dockerfile em mãos, prosseguimos para construir, ou fazer o build de um
 
 Onde `[OPTIONS]` indica as flags e `PATH|URL` indica o contexto de execução, que pode ser um diretório local ou um repositório remoto.
 
-O comando build busca um arquivo com o nome Dockerfile dentro do contexto de execução e o usa para construir a image, por isso é mais conveniente sempre usar esse nome. Abaixo estão algumas flags interessantes que podem ser usadas para modificar o comportamento do comando build.
+O comando build busca um arquivo com o nome Dockerfile dentro do contexto de execução e o usa para construir a image, por isso é mais conveniente sempre usar esse nome. Abaixo estão algumas flags interessantes que podem ser usadas para modificar o comportamento do comando build. A documentação introdutória para este assunto pode ser acessada em https://docs.docker.com/get-started/docker-concepts/building-images/build-tag-and-publish-an-image/.
 
 ## Flags frequentemente usadas
 
