@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 2
 icon: cache
 label: "Durabilidade de memória"
 author:

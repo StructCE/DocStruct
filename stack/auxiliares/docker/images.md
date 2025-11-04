@@ -1,5 +1,5 @@
 ---
-order: 4
+order: 5
 icon: paste
 label: "Escrevendo images"
 author:
@@ -33,6 +33,8 @@ Para criar uma image, utilizamos uma dockerfile, que é um arquivo contendo inst
 -`EXPOSE <port>`: esse comando meramente indica ao usuário em qual porta o construtor da image gostaria que o container fosse exposto, porém não realiza de fato nenhuma ação.
 
 -`CMD [“<command>”, “<arg1>”]`: especifica o comando padrão a ser executado pela image.
+
+-`ARG <name>`: declara uma variável que deve receber um valor durante a build da image.
 
 ## Exemplo prático
 
