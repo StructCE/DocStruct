@@ -29,21 +29,21 @@ O comando build busca um arquivo com o nome Dockerfile dentro do contexto de exe
 
 `--label <variable>=“<value>”`: permite adicionar metadados à build.
 
--`t <name>:<tag>`: adiciona tags à imagem, como nome e versão, caso não seja especificado o docker sempre utiliza a tag “:latest” como padrão.
+`-t <name>:<tag>`: adiciona tags à imagem, como nome e versão, caso não seja especificado o docker sempre utiliza a tag “:latest” como padrão.
 
-## Comandos relacionas à images
+## Comandos relacionados à images
 
 Aqui estão alguns comandos mais frequentemente utilizados para gerenciar images docker.
 
--`docker image ls`: lista as images presentes no sistema.
+- `docker image ls`: lista as images presentes no sistema.
 
--`docker image pull [OPTIONS] NAME[:TAG|@DIGEST]`: faz download de uma image em um registro remoto.
+- `docker image pull [OPTIONS] NAME[:TAG|@DIGEST]`: faz download de uma image em um registro remoto.
 
--`docker image push [OPTIONS] NAME[:TAG]`: faz upload de uma image para um registro remoto.
+- `docker image push [OPTIONS] NAME[:TAG]`: faz upload de uma image para um registro remoto.
 
--`docker image rm [OPTIONS] IMAGE [IMAGE...]`: remove uma ou mais images.
+- `docker image rm [OPTIONS] IMAGE [IMAGE...]`: remove uma ou mais images.
 
--`docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`: cria uma nova tag para uma image já existente.
+- `docker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`: cria uma nova tag para uma image já existente.
 
 ## Retomando o exemplo
 
@@ -51,5 +51,5 @@ Para fazer a build do servidor python simples demonstrado na seção anterior, u
 
 `docker build -t python-server:v1 .`
 
-Utilizamos a flag `t` para nomear a image python-server, com a tag v1. Use o comando `docker image ls` para verificar que a image está de fato no seu sistema.  
+Utilizamos a flag `-t` para nomear a image python-server, com a tag v1. Use o comando `docker image ls` para verificar que a image está de fato no seu sistema.  
 

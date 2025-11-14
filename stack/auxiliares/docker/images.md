@@ -3,7 +3,7 @@ order: 5
 icon: paste
 label: "Escrevendo images"
 author:
-  name: 
+  name: Pedro Santos
 date: 2025-10-28
 category: Explicação
 tags:
@@ -14,7 +14,7 @@ tags:
 
 # Criando uma image
 
-Para criar uma image, utilizamos uma dockerfile, que é um arquivo contendo instruções acerca de como construir a image requerida. Uma boa prática é sempre criar a dockerfile no mesmo diretório dos arquivos que serão necessários para o container. É comum escrever os comandos dentro de uma dockerfile utilizando letras maiúsculas, abaixo estão alguns comandos mais comunmente utilizados. A documentação introdutória oficial para este assunto pode ser acessada em https://docs.docker.com/get-started/docker-concepts/building-images/.
+Para criar uma image, utilizamos uma dockerfile, que é um arquivo contendo instruções acerca de como construir a image requerida. Uma boa prática é sempre criar a dockerfile no mesmo diretório dos arquivos que serão necessários para o container. É comum escrever os comandos dentro de uma dockerfile utilizando letras maiúsculas, abaixo estão alguns comandos mais mente utilizados. A documentação introdutória oficial para este assunto pode ser acessada em https://docs.docker.com/get-started/docker-concepts/building-images/.
 
 ## Comandos mais utilizados
 
@@ -24,7 +24,7 @@ Para criar uma image, utilizamos uma dockerfile, que é um arquivo contendo inst
 
 -`COPY <src> <dest>`: copia o arquivo `src` para dentro da image no path `dest`.
 
--`ADD <src> <dest>`: faz a mesma coisa que copy, mas permite que src seja uma URL.É importante notar que, caso `src` seja um arquivo .tar, este comando irá automaticamente fazer a extração dos arquivos no interior do .tar.
+-`ADD <src> <dest>`: faz a mesma coisa que COPY, mas permite que src seja uma URL. É importante notar que, caso `src` seja um arquivo .tar, este comando irá automaticamente fazer a extração dos arquivos no interior do .tar.
 
 -`RUN <command>`: faz com que o construtor execute o comando especificado.
 
@@ -57,7 +57,7 @@ server.serve_forever()
 ```
 
 ```html Dockerteste/index.html
-<h1> Hello world <h1>
+<h1> Hello world </h1>
 ```
 
 ```docker Dockerteste/Dockerfile
@@ -76,22 +76,22 @@ CMD ["python3", "server.py"]
 
 Cada comando na Dockerfile de exemplo realiza os seguintes passos:
 
--`FROM ubuntu`: especifica que queremos usar uma image já existente do SO ubuntu.
+- `FROM ubuntu`: especifica que queremos usar uma image já existente do SO ubuntu.
 
--`RUN apt-get update`: executa o comando de busca de atualizações.
+- `RUN apt-get update`: executa o comando de busca de atualizações.
 
--`RUN apt-get install -y python3`: executa o comando para instalação do python.
+- `RUN apt-get install -y python3`: executa o comando para instalação do python.
 
--`WORKDIR /server`: cria o diretório `/server` e o configura como diretório de trabalho atual.
+- `WORKDIR /server`: cria o diretório `/server` e o configura como diretório de trabalho atual.
 
--`COPY index.html`: copia `index.html` para o diretório `/server`.
+- `COPY index.html`: copia `index.html` para o diretório `/server`.
 
--`COPY server.py`: copia `server.py` para o diretório `/server`.
+- `COPY server.py`: copia `server.py` para o diretório `/server`.
 
--`EXPOSE 8000`: mostra que queremos expor o container na porta 8000.
+- `EXPOSE 8000`: mostra que queremos expor o container na porta 8000.
 
--`CMD ["python3", "server.py"]`: executa o comando "python3 server.py" ao iniciar o container.
+- `CMD ["python3", "server.py"]`: executa o comando "python3 server.py" ao iniciar o container.
 
 ## Podemos usar um .dockerignore
 
-Caso não queira que o docker ignore completamente um arquivo específico, basta criar um arquivo `.dockerignore` e incluir o nome do arquivo. Assim como o `.gitignore`, os arquivos nomeados serão totalmente ignorados.
+Caso queira que o docker ignore completamente um arquivo específico, basta criar um arquivo `.dockerignore` e incluir o nome do arquivo. Assim como o `.gitignore`, os arquivos nomeados serão totalmente ignorados.

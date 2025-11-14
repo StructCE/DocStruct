@@ -104,19 +104,19 @@ Para fazer o build usando o docker compose, use o comando:
 
 A lista completa de comandos pode ser acessada em https://docs.docker.com/reference/cli/docker/compose/.
 
--`docker compose down [OPTIONS] [SERVICES]`: Interrompe e remove containers, redes e volumes criados por um comando `up`.
+- `docker compose down [OPTIONS] [SERVICES]`: Interrompe e remove containers, redes e volumes criados por um comando `up`.
 
--`docker compose images [OPTIONS] [SERVICE]`: lista as imagens utilizadas por containers.
+- `docker compose images [OPTIONS] [SERVICE]`: lista as imagens utilizadas por containers.
 
--`docker compose kill [OPTIONS] [SERVICE]`: força a interrupção de containers.
+- `docker compose kill [OPTIONS] [SERVICE]`: força a interrupção de containers.
 
--`docker compose ls [OPTIONS]`: lista os projetos compose sendo executados.
+- `docker compose ls [OPTIONS]`: lista os projetos compose sendo executados.
 
--`docker compose ps[OPTIONS] [SERVICE]`: lista e fornece informações acerca dos containers em um projeto compose.
+- `docker compose ps [OPTIONS] [SERVICE]`: lista e fornece informações acerca dos containers em um projeto compose.
 
--`docker compose pull [OPTIONS] [SERVICE]`: faz download de uma image associada a um serviço definido por um arquivo `compose.yaml`.
+- `docker compose pull [OPTIONS] [SERVICE]`: faz download de uma image associada a um serviço definido por um arquivo `compose.yaml`.
 
--`docker compose up [OPTIONS] [SERVICE]`: builda, cria e inicia containers para um serviço.
+- `docker compose up [OPTIONS] [SERVICE]`: builda, cria e inicia containers para um serviço.
 
 ## Documentação para YAML
 

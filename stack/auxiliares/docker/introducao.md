@@ -3,7 +3,7 @@ order: 7
 icon: question
 label: "O que é docker?"
 author:
-  name: 
+  name: Pedro Santos
 date: 2025-10-28
 category: Explicação
 tags:
@@ -17,16 +17,16 @@ Docker é uma plataforma para desenvolvimento, distribuição e execução de ap
 
 # O que é um container?
 
-Um container é uma unidade de software que contém todos os pacotes necessários para rodar uma determinada aplicação. Esses containeres funcionam como processos isolados, rodando em um ambiente próprio. Isso garante alguns benefícios, como:
+Um container é uma unidade de software que contém todos os pacotes necessários para rodar uma determinada aplicação. Esses containers funcionam como processos isolados, rodando em um ambiente próprio. Isso garante alguns benefícios, como:
 
--Independência: como cada container existe em um ambiente isolado, é possível evitar conflitos de dependência entre processos ao incluir diferentes versões de bibliotecas em cada container.
+- Independência: como cada container existe em um ambiente isolado, é possível evitar conflitos de dependência entre processos ao incluir diferentes versões de bibliotecas em cada container.
 
--Velocidade: containers podem ser iniciados e finalizados em um intervalo de tempo muito pequeno(segundos ou minutos), permitindo mais rapidez no desenvolvimento, manutenção e distribuição de aplicações.
+- Velocidade: containers podem ser iniciados e finalizados em um intervalo de tempo muito pequeno(segundos ou minutos), permitindo mais rapidez no desenvolvimento, manutenção e distribuição de aplicações.
 
--Segurança: como cada container é um ambiente isolado, ataques ou falhas de segurança em um container não podem afetar outros containeres e nem a máquina que está executando o processo.
+- Segurança: como cada container é um ambiente isolado, ataques ou falhas de segurança em um container não podem afetar outros containers e nem a máquina que está executando o processo.
 
--Portatibilidade: containers podem rodar em qualquer máquina que suporte o sistema docker, desde computadores pessoais até ambientes de nuvem.
+- Portatibilidade: containers podem rodar em qualquer máquina que suporte o sistema docker, desde computadores pessoais até ambientes de nuvem.
 
 ## Containers não são máquinas virtuais
 
-Enquanto VM’s são abstrações de uma máquina física, containeres são abstrações à nível de aplicação. Máquinas virtuais precisam ter um sistema operacional próprio, o que as faz consumir muitos recursos do sistema. Containeres não precisam de um sistema operacional instalad   o internamente, podendo compartilhar o kernel com outros containeres, o que demanda muito menos recursos.
+Enquanto VM’s são abstrações de uma máquina física, containers são abstrações à nível de aplicação. Máquinas virtuais precisam ter um sistema operacional próprio, o que as faz consumir muitos recursos do sistema. Containers não precisam de um sistema operacional instalado internamente, podendo compartilhar o kernel com outros containers, o que demanda muito menos recursos.
