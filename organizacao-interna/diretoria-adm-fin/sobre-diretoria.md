@@ -1,5 +1,5 @@
 ---
-label: "Bem-vindo a Diretoria Financeira"
+label: 'Bem-vindo a Diretoria Financeira'
 icon: rocket
 order: 4
 author:
@@ -20,9 +20,9 @@ A troca de gestão acontece anualmente \(na Struct, geralmente é efetivada em m
 
 ### Conta bancária
 
-O primeiro passo para começar a exercer suas funções após lidar com os documentos de posse dos diretores é ter acesso à conta bancária da Struct, a qual é administrada em conjunto pelo\(a\) presidente e pelo diretor\(a\) administrativo-financeiro da Struct.
+O primeiro passo para começar a exercer suas funções após lidar com os documentos de posse dos diretores é ter acesso às contas bancárias da Struct, as quais são administradas em conjunto pelo\(a\) presidente e pelo diretor\(a\) administrativo-financeiro da Struct.
 
-Para esse fim, será necessário que você e o\(a\) presidente da Struct compareçam presencialmente à sede do Banco do Brasil da UnB e apresentem alguns documentos que comprovem suas identidades juntamente com os documentos da troca de gestão para obterem acesso à conta bancária. Nesse dia, você também irá criar as senhas que você irá utilizar para ter acesso à conta bancária \(recomenda-se que você anote essas senhas em algum lugar\).
+Para ter acesso a conta do Banco do Brasil, será necessário que você e o\(a\) presidente da Struct compareçam presencialmente à sede do Banco do Brasil da UnB e apresentem alguns documentos que comprovem suas identidades juntamente com os documentos da troca de gestão para obterem acesso à conta bancária. Nesse dia, você também irá criar as senhas que você irá utilizar para ter acesso à conta bancária \(recomenda-se que você anote essas senhas em algum lugar\).
 
 Após o acesso ter sido liberado \(isso demora alguns dias úteis\), você precisará retornar à sede para cadastrar os dispositivos que você irá utilizar para ter acesso à conta bancária. Recomenda-se levar o celular para baixar o app do Banco do Brasil e, talvez, um notebook para acessar o Banco do Brasil pelo website \(talvez seja necessário instalar um software de segurança no notebook\).
 
@@ -45,11 +45,11 @@ Caso o\(a\) presidente da empresa júnior seja alterado na troca de gestão, ser
 
 Após os documentos terem sido entregues ao contador e uma pequena taxa ter sido paga ao contador \(mais detalhes sobre a realização de pagamentos podem ser encontrados na seção de [Obrigações financeiras](#obrigações-financeiras)\), o representante da empresa júnior será alterado.
 
-### Modificações em documentos
+<!-- ### Modificações em documentos
 
 Como diretor\(a\) administrativo-financeiro da Struct, seu nome deve constar em alguns documentos oficiais da Struct. Ao assumir o cargo, será necessário modificar esses documentos para que suas informações estejam neles. No momento, os seguintes documentos devem ser modificados:
 
-- Modelo de contrato de prestação de serviços \(Endereço no Google Drive: "_Presidência -> Galeria de modelos -> MODELO_contrato_prestacao_servicos_"\).
+- Modelo de contrato de prestação de serviços \(Endereço no Google Drive: "_Presidência -> Galeria de modelos -> MODELO_contrato_prestacao_servicos_"\). -->
 
 ## Obrigações financeiras
 
@@ -67,7 +67,7 @@ Os balancetes são documentos mensais que consistem em uma planilha que contém 
 
 ![Exemplo de balancete](../assets/administracao/Balancete.png)
 
-No começo do mês, o primeiro passo para a realização do balancete consiste no obtenção do extrato da conta bancária da Struct, o que é feito por meio do aplicativo ou do website do Banco do Brasil. Esse extrato é um arquivo _pdf_ que deve ser adicionado ao Google Drive na pasta "_Administração e Financeiro -> Balancetes -> [Ano da sua gestão] -> Extratos_" com o nome "_[Número do mês] - [Nome do mês]_". Após o extrato ter sido adicionado ao Google Drive, você deve criar \(por meio do próprio Drive\) um documento do tipo "_Planilhas Google_" com base no modelo "_balancete_x_" e preencher esse documento com os ativos \(dinheiro recebido\) e passivos \(gastos\) presentes no extrato bancário desse mês.
+No começo do mês, o primeiro passo para a realização do balancete consiste no obtenção dos extratos das contas bancárias da Struct, isso é feito por meio dos aplicativos ou dos websites, do Banco do Brasil e do banco Cora. Esses extratos são arquivos _pdf_ que devem ser adicionados ao Google Drive na pasta "_Administração e Financeiro -> Financeiro -> Balancetes -> [Ano da sua gestão] -> Extratos/Planilhas_" com o nome "_[Número do mês] - [Nome do mês]_". Após os extratos terem sido adicionados ao Google Drive, você deve criar \(por meio do próprio Drive\) um documento do tipo "_Planilhas Google_" com base no modelo "_balancete_x_" e preencher esse documento com os ativos \(dinheiro recebido\) e passivos \(gastos\) presentes no extrato bancário desse mês.
 
 O valor dos ativos sempre será colocado na coluna "_Devedor_" e o valor dos passivos, na coluna "_Credor_". Procure sempre descrever o ativo/passivo de forma clara e não ambígua, indicando se ele constitui uma parcela de projeto ou pagamento específico. Além disso, lembre-se de preencher o campo "_Total_" da coluna "_Saldo anterior_" com o saldo inicial do mês. Se tudo tiver sido preenchido corretamente, o campo "_Total_" da coluna "_Saldo final_" deve conter o saldo final do mês conforme indicado no extrato \(se isso não ocorrer, verifique se todos os ativos e passivos foram adicionados corretamente\). Salve o balancete gerado na pasta "_Administração e Financeiro -> Balancetes -> [Ano da sua gestão] -> Planilhas_" com o nome "_[Número do mês] - [Nome do mês]_". Em caso de dúvidas, consulte os balancetes dos meses anteriores.
 
@@ -101,7 +101,7 @@ Para comprar um novo _certificado digital_, basta acessar o site de [certificado
 
 A Struct paga uma empresa de contabilidade para a realização de serviços necessários ao funcionamento da Struct. Esses serviços incluem a emissão de documentos necessários para regularizar a situação fiscal da empresa júnior, a alteração do representante legal da Struct e a realização de serviços adicionais.
 
-Como diretor\(a\) administrativo-financeiro da Struct, cabe a você realizar os pagamentos à empresa de contabilidade \(os quais devem ser aprovados pelo\(a\) presidente da Struct\), enviar qualquer documento pedido pela empresa de contabilidade para a realização de seus serviços e requisitar serviços e documentos necessários à Struct \(como a emissão de documentos relativos ao selo EJ\). Lembre-se que essa comunicação geralmente é feita pelo email corporativo da empresa.
+Como diretor\(a\) administrativo-financeiro da Struct, cabe a você realizar os pagamentos à empresa de contabilidade \(os quais devem ser aprovados pelo\(a\) presidente da Struct\), enviar qualquer documento pedido pela empresa de contabilidade para a realização de seus serviços e requisitar serviços e documentos necessários à Struct \(como a emissão de documentos relativos ao selo EJ\). Lembre-se a comunicação com o contador é feita pelo email corporativo da empresa ou pelo grupo de Whatsapp com os membros da diretoria, o\(a\) presidente e um representante da empresa de contabilidade.
 
 #### Email de atualização mensal
 
@@ -122,7 +122,7 @@ Para a obtenção de algumas dessas informações, você deverá entrar em conta
 
 Caso algum cliente requisite um adiamento no pagamento das parcelas, esteja com alguma parcela pendente ou realize um calote, notifique os diretores da Struct, em especial o\(a\) presidente, assim que possível para que uma decisão possa ser tomada sobre o que fazer diante dessa situação.
 
-No momento, toda essa fiscalização está sendo feita por meio do **Trello** da diretoria de ADM-FIN, mas sinta-se livre para adotar qualquer outro meio para registrar essas informações.
+<!-- No momento, toda essa fiscalização está sendo feita por meio do **Trello** da diretoria de ADM-FIN, mas sinta-se livre para adotar qualquer outro meio para registrar essas informações. -->
 
 ### Notas de entrada e saída
 
@@ -172,7 +172,7 @@ Para realizar o pagamento desses impostos, utilize a seção "_Pagamentos -> Lei
 
 Muitas vezes, os membros da Struct realizam gastos em nome da empresa júnior, como, por exemplo, na autenticação de documentos em cartório, na confecção de material publicitário e na compra de comida para alguma atividade da empresa júnior \(por exemplo, pizza no fim de um coding day\). Como diretor\(a\) administrativo-financeiro, é sua obrigação registrar essas dívidas contraídas pela Struct para com os seus membros e pagar elas assim que possível.
 
-Para registrar as dívidas da Struct, utilize a planilha "_Administração e Financeiro -> Dívidas/Gastos/Projetos -> Dívidas_" e anote a data da dívida, em que consistiu o gasto, qual membro realizou o gasto, o valor do gasto e se o gasto foi pago ou não. Assim que possível, entre em contato com o membro que realizou o gasto, obtenha as informações de pagamento do membro, realize uma transferência da conta bancária da Struct para o membro no valor referente a dívida e, por fim, marque a dívida como paga na planilha.
+Para registrar as dívidas da Struct, utilize a planilha "_Administração e Financeiro -> Financeiro -> Reembolsos_" e anote a data da dívida, em que consistiu o gasto, qual membro realizou o gasto, o valor do gasto e se o gasto foi pago ou não. Assim que possível, entre em contato com o membro que realizou o gasto, obtenha as informações de pagamento do membro, realize uma transferência da conta bancária da Struct para o membro no valor referente a dívida e, por fim, marque a dívida como paga na planilha.
 
 A planilha de dívidas também possui campos que indicam o total da dívida da Struct para um membro específico, permitindo que um único pagamento seja realizado para sanar várias dívidas contraídas por esse membro. Para configurar a lógica desses campos, basta você colocar o nome do membro na coluna "_A QUEM_" \(embaixo do total da dívida da Struct\) e utilizar os textos "SIM" e "NÃO" \(em caixa alta\) na coluna "_PAGO?_".
 
@@ -182,9 +182,9 @@ A parte administrativa da diretoria envolve o gerenciamento de documentos e o cu
 
 ### Selo EJ
 
-O selo EJ é um selo criado pela Concentro, com o objetivo de garantir um mínimo de segurança jurídica às organizações ao proporcionar credibilidade para a empresa júnior frente aos seus _stakeholders_. Além disso, o selo EJ também possui o propósito de trazer uniformidade ao Movimento Empresa Júnior brasileiro. Como diretor\(a\) administrativo-financeiro da Struct, é sua obrigação coordenar com o\(a\) presidente da Struct a entrega dos documentos necessários para a emissão do selo EJ a cada ano, verificando regularmente os prazos de entrega no portal Brasil Júnior. Esses documentos também devem ser adicionados ao _Google Drive_ na pasta "_Administração e Financeiro -> Selo EJ -> Selo EJ [Ano da sua gestão]_".
+O selo EJ é um selo criado pela Concentro, com o objetivo de garantir um mínimo de segurança jurídica às organizações ao proporcionar credibilidade para a empresa júnior frente aos seus _stakeholders_. Além disso, o selo EJ também possui o propósito de trazer uniformidade ao Movimento Empresa Júnior brasileiro. Como diretor\(a\) administrativo-financeiro da Struct, é sua obrigação coordenar com o\(a\) presidente da Struct a entrega dos documentos necessários para a emissão do selo EJ a cada ano, verificando regularmente os prazos de entrega no portal Brasil Júnior. Esses documentos também devem ser adicionados ao _Google Drive_ na pasta "_Administração e Financeiro -> Administração -> Documentos da Empresa -> Selo EJ -> Selo EJ [Ano da sua gestão]_".
 
-No _Google Drive_, existem modelos para os documentos necessários na pasta "_Administração e Financeiro -> Modelos_" e exemplos de documentos utilizados para o selo EJ nos anos anteriores nas pastas "_Administração e Financeiro -> Selo EJ -> Selo EJ [Anos anteriores a sua gestão]_".
+No _Google Drive_, existem modelos para os documentos necessários na pasta "_Administração e Financeiro -> Administração -> Organização Interna -> Modelos_" e exemplos de documentos utilizados para o selo EJ nos anos anteriores nas pastas "_Administração e Financeiro -> Administração -> Documentos da Empresa -> Selo EJ -> Selo EJ [Ano da sua gestão]_".
 
 Nas subseções abaixo, temos o detalhamento de alguns documentos geralmente requisitados para o selo EJ.
 
@@ -267,4 +267,10 @@ Este documento é redigido pela Struct e assinado tanto pelo\(a\) coordenador\(a
 
 ### Sede
 
-A sede da Struct é uma sala localizada no prédio SG-11 da Universidade de Brasília \(UnB\). Como diretor\(a\) administrativo-financeiro da Struct, é sua obrigação garantir que a sede esteja sempre limpa e bem organizada, de forma que todos os membros possuam usufruir desse espaço e que ele forneça uma boa impressão da empresa júnior para visitantes. A boa organização da sede deve permitir que qualquer documento ou item seja facilmente encontrado por algum dos membros da Struct. Por fim, o gerenciamento dos item que estejam em falta na sede \(marcadores, papel, inseticida, etc...\) também é uma função da diretoria administrativo-financeira.
+A sede da Struct é uma sala localizada no prédio SG-11 da Universidade de Brasília \(UnB\). Como diretor\(a\) administrativo-financeiro da Struct, é sua obrigação garantir que a sede esteja sempre limpa e bem organizada, de forma que todos os membros possuam usufruir desse espaço e que ele forneça uma boa impressão da empresa júnior para visitantes. É importante cumprir algumas tarefas para garantir isso:
+
+- Realizar uma limpeza no início de cada semestre para remover a poeira acumulada durante as férias.
+- Manter um documento listando os patrimônios da sede e garantir que qualquer alteração seja autorizada e registrada. Esse documento pode ser encontrado no Drive em "_Administração e Financeiro -> Administração -> Organização Interna -> Patrimônios_".
+- Manter uma organização que permita que qualquer documento ou item seja facilmente encontrado por algum dos membros da Struct. É recomendado digitalizar documentos e colocar no Drive.
+- Realizar o gerenciamento dos item que estejam em falta na sede \(marcadores, papel, inseticida, etc...\).
+- Organizar os horários obrigatórios de sede. No início de cada semetre é necessário enviar um formulário para coletar os horários de interesse de todos os membros, depois disso deve-se organizar uma escala visando (se possível) sempre ter algum membro na sede.
