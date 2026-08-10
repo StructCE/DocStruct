@@ -1,41 +1,27 @@
 ---
-order: 2
+order: b
 icon: tools
-label: "Instalação"
+label: "Como instalar o tRPC?"
 ---
 
-# Instalação
+## Escolha seu ambiente
 
-O tRPC possui vários tipos de pacotes com conteúdos extras, para instalar o pacote padrão:
+O tRPC pode ser utilizado em uma varidade muito ampla de **_stacks_ diferentes**. Então, o seu **primeiro passo** é escolher **onde você quer utilizar o tRPC**.
 
-!!! Requisitos
+## Exemplos de Aplicações
 
-- Deve-se certificar que a versão do TypeScript seja igual ou superior à versão 4.7.0.
-- É recomendado a atribuição "strict": true no arquivo `tsconfig.json`, já que não há suporte para o contrário.
-  !!!
+A documentação do tRPC inclui uma seção de `Example Apps`, que são _templates_ e _exemplos práticos_ para você **aproveitar** e implementar o tRPC em **diferentes cenários**.
 
-+++ npm
-`npm install @trpc/server @trpc/client`
-+++ yarn
-`yarn add @trpc/server @trpc/client`
-+++ pnpm
-`pnpm add @trpc/server @trpc/client`
-+++ bun
-`bun add @trpc/server @trpc/client`
-+++
+[!ref icon="/assets/logos-tecnologias/trpc.svg"](https://trpc.io/docs/example-apps)
 
-## Pacotes recomendados
+## Sobre a configuração
 
-Para projetos em Next.js é recomendado a instalação de uma versão que é uma combinação da versão para React (React Query) com algumas ferramentas específicas a mais de integração para o Next:
+Para configurar o tRPC no backend, existem [adapters para diferentes frameworks](https://trpc.io/docs/server/adapters), bem como para [um simples repositório com Node.js](https://trpc.io/docs/quickstart).
 
-+++ npm
-`npm install @trpc/server @trpc/client @trpc/react-query @trpc/next @tanstack/react-query zod`
-+++ yarn
-`yarn add @trpc/server @trpc/client @trpc/react-query @trpc/next @tanstack/react-query zod`
-+++ pnpm
-`pnpm add @trpc/server @trpc/client @trpc/react-query @trpc/next @tanstack/react-query zod`
-+++ bun
-`bun add @trpc/server @trpc/client @trpc/react-query @trpc/next @tanstack/react-query zod`
-+++
+Para o frontend, você pode olhar as integrações do próprio tRPC com [React (construiído a partir do React Query)](https://trpc.io/docs/client/react) ou com [Next.js](https://trpc.io/docs/client/nextjs), ou olhar por integrações de terceiros para uma série de frameworks, ou pode até mesmo configurar para [um simples repositório com TypeScript rodando](https://trpc.io/docs/client/vanilla/setup).
 
-Para projetos somente em React, basta o mesmo procedimento anterior, agora sem o parâmetro `@trpc/next` e `zod` (caso não use zod em React)
+## Próximos passos
+
+Escolhida sua **stack** e instaldao o **tRPC**, basta agora criar sua aplicação seguindo modelos ou design patterns definidos com sua equipe do projeto.
+
+Na próxima seção da nossa documentação, ["Como utilizar o tRPC?"](./utilizacao.md), abordaremos a configuração do tRPC utilizando o [T3 Stack](/stack/), uma combinação popular que inclui Next.js, Prisma, Tailwind CSS, entre outros. Fique atento!
